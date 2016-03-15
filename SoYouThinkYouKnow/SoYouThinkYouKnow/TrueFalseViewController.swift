@@ -10,6 +10,9 @@ import UIKit
 
 class TrueFalseViewController: UIViewController {
     
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     @IBOutlet var questionLabel: UILabel!
     
     @IBOutlet var answerButtons: [UIButton]!
@@ -18,6 +21,13 @@ class TrueFalseViewController: UIViewController {
     
     @IBOutlet weak var nopeButton: UIButton!
     @IBOutlet weak var ayuhButton: UIButton!
+    
+    @IBOutlet var countDownLabel: UILabel!
+    
+    var count = 60
+    
+    var timer = NSTimer()
+    
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
             
@@ -49,7 +59,7 @@ class TrueFalseViewController: UIViewController {
     
     var question: String?
     
-    var answers = ["Wrong","Right"]
+    var answers = ["Ayuh","Nope"]
     
     var questionIdx = 0
     
@@ -62,16 +72,27 @@ class TrueFalseViewController: UIViewController {
         self.ayuhButton.layer.borderColor = UIColor.blackColor().CGColor
         self.nopeButton.layer.borderWidth = 1
         self.nopeButton.layer.borderColor = UIColor.blackColor().CGColor
-        
+        startTimer()
         cardButton.enabled = false
         nextQuestion()
         
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         //titlesForButtons()
+        progressBar.transform = CGAffineTransformScale(progressBar.transform, 1, 5)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func update() {
+        
+        if(count > 0)
+        {
+            countDownLabel.text = String(count--)
+        }
+        
     }
     
     func nextQuestion() {
@@ -91,6 +112,43 @@ class TrueFalseViewController: UIViewController {
         }
         
         questionLabel.text = question
+    }
+    func startTimer () {
+        progressBar.progress = 1.0
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "updateprogressView", userInfo: nil, repeats: true)
+        
+    }
+    
+    func updateprogressView() {
+        progressBar.progress -= 0.01/60
+        if progressBar.progress <= 0 {
+            outOfTime()
+        }
+        
+    }
+    
+    func outOfTime () {
+        timer.invalidate()
+        showAlert()
+        disableButtons()
+    }
+    
+    func disableButtons() {
+        for button in answerButtons {
+            button.enabled = false
+        }
+    }
+    
+    func showAlert() {
+        let alertController = UIAlertController(title: "Maine Minute is up!", message: "Let's see how you did", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
+        })
+        
+        alertController.addAction(ok)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
 }
