@@ -8,9 +8,11 @@
 
 
 import UIKit
+import GameKit
+import SystemConfiguration
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, EGCDelegate {
 
     @IBOutlet weak var welcomeSign: UIImageView!
     
@@ -28,9 +30,7 @@ class ViewController: UIViewController {
         
         self.welcomeSign.clipsToBounds = true
         
-        //print(UIFont.familyNames())
-        
-        //label.textColor =
+        EGC.sharedInstance(self)
         
         loadQuizData()
     
@@ -56,14 +56,63 @@ class ViewController: UIViewController {
         //let pathIMG = NSBundle.mainBundle().pathForResource("ImageQuiz", ofType: "plist")
         //let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
         //imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
-        
-        check()
+       
     }
     
-    func check() {
-        //print(mcArray)
-        //print(scArray)
-        //print(imgArray)
-        print(rowArray)
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Set new view controller delegate, that's when you change UIViewController
+        // If you have several UIViewController just add this in your UIViewControllers for set new Delegate
+        EGC.delegate = self
     }
+    
+    /// ############################################################ ///
+    ///        Mark: - Delegate function of EasyGameCenter           ///
+    /// ############################################################ ///
+    /**
+     Listener Player is authentified
+     Optional function
+     */
+    func EGCAuthentified(authentified:Bool) {
+        print("Player Authentified = \(authentified)")
+    }
+    /**
+     Listener when Achievements is in cache
+     Optional function
+     */
+    func EGCInCache() {
+        // Call when GkAchievement & GKAchievementDescription in cache
+    }
+    
+    /// ############################################################ ///
+    ///  Mark: - Delegate function of EasyGameCenter for MultiPlaye  ///
+    /// ############################################################ ///
+    /**
+     Listener When Match Started
+     Optional function
+     */
+    func EGCMatchStarted() {
+        print("MatchStarted")
+    }
+    /**
+     Listener When Match Recept Data
+     When player send data to all player
+     Optional function
+     */
+        /**
+     Listener When Match End
+     Optional function
+     */
+    func EGCMatchEnded() {
+        print("MatchEnded")
+    }
+    /**
+     Listener When Match Cancel
+     Optional function
+     */
+    func EGCMatchCancel() {
+        print("Match cancel")
+    }
+   
 }

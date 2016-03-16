@@ -78,7 +78,9 @@ class TrueFalseViewController: UIViewController {
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         //titlesForButtons()
-        progressBar.transform = CGAffineTransformScale(progressBar.transform, 1, 5)
+        progressBar.transform = CGAffineTransformScale(progressBar.transform, 1, 10)
+        
+        rowArray!.shuffle()
     }
     
     override func didReceiveMemoryWarning() {

@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32B68917D460AC11355DC140 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E6D2DE6701889AF1E685E6 /* Pods.framework */; };
 		9304978F1C8ADDDD0073B6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304978E1C8ADDDD0073B6C9 /* AppDelegate.swift */; };
 		930497941C8ADDDD0073B6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930497921C8ADDDD0073B6C9 /* Main.storyboard */; };
 		930497961C8ADDDD0073B6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930497951C8ADDDD0073B6C9 /* Assets.xcassets */; };
 		930497991C8ADDDD0073B6C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930497971C8ADDDD0073B6C9 /* LaunchScreen.storyboard */; };
 		930497A11C8B3C8F0073B6C9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930497A01C8B3C8F0073B6C9 /* GameKit.framework */; };
+		933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933489021C99934C00EF7694 /* EasyGameCenter.swift */; };
 		933D1E891C91789B0061B205 /* RightOrWrong.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933D1E881C91789B0061B205 /* RightOrWrong.plist */; };
 		933D1E8B1C917ACE0061B205 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933D1E8A1C917ACE0061B205 /* Configuration.swift */; };
 		933D1E8D1C9180A90061B205 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933D1E8C1C9180A90061B205 /* Score.swift */; };
 		938669AD1C8F278E00E85566 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669AC1C8F278E00E85566 /* Theme.swift */; };
 		938669B11C8F2AD900E85566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669B01C8F2AD900E85566 /* ViewController.swift */; };
+		93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B472DD1C99890B003E66F5 /* Extensions.swift */; };
 		93DFB5F81C90333500A1F99D /* TrueFalseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5F71C90333500A1F99D /* TrueFalseViewController.swift */; };
 		93DFB5FA1C90335200A1F99D /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5F91C90335200A1F99D /* ScoreViewController.swift */; };
 		93DFB5FC1C90336F00A1F99D /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5FB1C90336F00A1F99D /* MultipleChoiceViewController.swift */; };
@@ -26,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		903402244DE32CE1C5B79549 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9304978B1C8ADDDD0073B6C9 /* SoYouThinkYouKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoYouThinkYouKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9304978E1C8ADDDD0073B6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		930497931C8ADDDD0073B6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,17 +38,21 @@
 		9304979A1C8ADDDD0073B6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930497A01C8B3C8F0073B6C9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		930497A21C8B3C990073B6C9 /* SoYouThinkYouKnow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SoYouThinkYouKnow.entitlements; sourceTree = "<group>"; };
+		933489021C99934C00EF7694 /* EasyGameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
 		933D1E881C91789B0061B205 /* RightOrWrong.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RightOrWrong.plist; sourceTree = "<group>"; };
 		933D1E8A1C917ACE0061B205 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		933D1E8C1C9180A90061B205 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		938669AC1C8F278E00E85566 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		938669B01C8F2AD900E85566 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93B472DD1C99890B003E66F5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		93DFB5F71C90333500A1F99D /* TrueFalseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrueFalseViewController.swift; sourceTree = "<group>"; };
 		93DFB5F91C90335200A1F99D /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		93DFB5FB1C90336F00A1F99D /* MultipleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceViewController.swift; sourceTree = "<group>"; };
 		93DFB5FD1C90338800A1F99D /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		93DFB5FF1C9033A000A1F99D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		93DFB6011C9033BA00A1F99D /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		B2E6D2DE6701889AF1E685E6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8874DF0F92134C9F97576D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,18 +61,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				930497A11C8B3C8F0073B6C9 /* GameKit.framework in Frameworks */,
+				32B68917D460AC11355DC140 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0C29CCDCEBE6D8A6BDBD11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8874DF0F92134C9F97576D8 /* Pods.debug.xcconfig */,
+				903402244DE32CE1C5B79549 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		930497821C8ADDDC0073B6C9 = {
 			isa = PBXGroup;
 			children = (
 				930497A01C8B3C8F0073B6C9 /* GameKit.framework */,
 				9304978D1C8ADDDD0073B6C9 /* SoYouThinkYouKnow */,
 				9304978C1C8ADDDD0073B6C9 /* Products */,
+				6C0C29CCDCEBE6D8A6BDBD11 /* Pods */,
+				EACD145F7AA34A1F86356EC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +114,7 @@
 		938669AE1C8F28D200E85566 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				933489021C99934C00EF7694 /* EasyGameCenter.swift */,
 				938669B01C8F2AD900E85566 /* ViewController.swift */,
 				93DFB5F71C90333500A1F99D /* TrueFalseViewController.swift */,
 				93DFB5F91C90335200A1F99D /* ScoreViewController.swift */,
@@ -112,8 +133,17 @@
 				938669AC1C8F278E00E85566 /* Theme.swift */,
 				933D1E8A1C917ACE0061B205 /* Configuration.swift */,
 				933D1E8C1C9180A90061B205 /* Score.swift */,
+				93B472DD1C99890B003E66F5 /* Extensions.swift */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		EACD145F7AA34A1F86356EC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2E6D2DE6701889AF1E685E6 /* Pods.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9304979D1C8ADDDD0073B6C9 /* Build configuration list for PBXNativeTarget "SoYouThinkYouKnow" */;
 			buildPhases = (
+				E50E306DF4A3D1AF86EE4EE9 /* Check Pods Manifest.lock */,
 				930497871C8ADDDD0073B6C9 /* Sources */,
 				930497881C8ADDDD0073B6C9 /* Frameworks */,
 				930497891C8ADDDD0073B6C9 /* Resources */,
+				3AF71BF307ACB3835892A7E4 /* Embed Pods Frameworks */,
+				49F0C07F4C6413E34CCAB44D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +228,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AF71BF307ACB3835892A7E4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49F0C07F4C6413E34CCAB44D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E50E306DF4A3D1AF86EE4EE9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		930497871C8ADDDD0073B6C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -207,7 +288,9 @@
 				93DFB6001C9033A000A1F99D /* MapsViewController.swift in Sources */,
 				93DFB5F81C90333500A1F99D /* TrueFalseViewController.swift in Sources */,
 				933D1E8B1C917ACE0061B205 /* Configuration.swift in Sources */,
+				93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */,
 				93DFB5FE1C90338800A1F99D /* PhotosViewController.swift in Sources */,
+				933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */,
 				938669AD1C8F278E00E85566 /* Theme.swift in Sources */,
 				933D1E8D1C9180A90061B205 /* Score.swift in Sources */,
 				93DFB5FC1C90336F00A1F99D /* MultipleChoiceViewController.swift in Sources */,
@@ -321,6 +404,7 @@
 		};
 		9304979E1C8ADDDD0073B6C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8874DF0F92134C9F97576D8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SoYouThinkYouKnow/SoYouThinkYouKnow.entitlements;
@@ -336,6 +420,7 @@
 		};
 		9304979F1C8ADDDD0073B6C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 903402244DE32CE1C5B79549 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SoYouThinkYouKnow/SoYouThinkYouKnow.entitlements;
