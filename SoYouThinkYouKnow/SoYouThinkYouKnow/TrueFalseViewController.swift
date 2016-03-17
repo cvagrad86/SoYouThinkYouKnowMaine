@@ -143,9 +143,13 @@ class TrueFalseViewController: UIViewController {
     }
     
     func showAlert() {
+        //var vc: UIViewController?
         let alertController = UIAlertController(title: "Maine Minute is up!", message: "Let's see how you did", preferredStyle: UIAlertControllerStyle.Alert)
         
         let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
+            
+            self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
         })
         
         alertController.addAction(ok)

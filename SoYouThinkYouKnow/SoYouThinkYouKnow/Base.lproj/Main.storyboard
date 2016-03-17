@@ -203,6 +203,7 @@
                         <outlet property="questionLabel" destination="dqK-BI-8o8" id="M07-09-CAX"/>
                         <outletCollection property="answerButtons" destination="0Jr-ti-bt0" collectionClass="NSMutableArray" id="lat-0A-IBt"/>
                         <outletCollection property="answerButtons" destination="tzR-N9-Ba0" collectionClass="NSMutableArray" id="Bkh-kb-8Ex"/>
+                        <segue destination="xBW-kw-IRV" kind="show" identifier="ScoreSegue" id="SnX-7N-K4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kU-8l-Ddf" userLabel="First Responder" sceneMemberID="firstResponder"/>
