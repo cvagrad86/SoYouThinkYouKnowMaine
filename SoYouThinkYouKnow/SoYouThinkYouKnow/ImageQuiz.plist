@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>Image</key>
+			<string>chickadee.png</string>
+			<key>CorrectAnswer</key>
+			<string>Maine State Bird</string>
+			<key>Answers</key>
+			<array>
+				<string>Screwdriver</string>
+				<string>Hammer</string>
+				<string>Saw</string>
+				<string>Wrench</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>christinas_world.jpeg.png</string>
+			<key>CorrectAnswer</key>
+			<string>Andrew Wyeth</string>
+			<key>Answers</key>
+			<array>
+				<string>Paris</string>
+				<string>Milan</string>
+				<string>Venice</string>
+				<string>Rome</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>geogre_mitchell.png</string>
+			<key>CorrectAnswer</key>
+			<string>Maine Senator for 15 years</string>
+			<key>Answers</key>
+			<array>
+				<string>Dublin</string>
+				<string>Manchester</string>
+				<string>London</string>
+				<string>Glasgow</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>James_G._Blaine.png</string>
+			<key>CorrectAnswer</key>
+			<string>Lost 1884 Presidential Election to Grover Cleveland</string>
+			<key>Answers</key>
+			<array>
+				<string>Paris</string>
+				<string>Lyon</string>
+				<string>London</string>
+				<string>Berlin</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Joan-Benoit-Samuelson.png</string>
+			<key>CorrectAnswer</key>
+			<string>Winner of 1980 womens olympic marathon</string>
+			<key>Answers</key>
+			<array>
+				<string>Dublin</string>
+				<string>Manchester</string>
+				<string>Berlin</string>
+				<string>Edinburgh</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Josh_Chamberlain.png</string>
+			<key>CorrectAnswer</key>
+			<string>Selected to oversee surrender of Confederates at finish of Civil War</string>
+			<key>Answers</key>
+			<array>
+				<string>Sydney</string>
+				<string>Melbourne</string>
+				<string>Canberra</string>
+				<string>Brisbane</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>judd_nelsonj_nelson1x.png</string>
+			<key>CorrectAnswer</key>
+			<string>Born in Maine&apos;s largest city</string>
+			<key>Answers</key>
+			<array>
+				<string>Vancouver</string>
+				<string>Seattle</string>
+				<string>Denver</string>
+				<string>Utah</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>longfellow.png</string>
+			<key>CorrectAnswer</key>
+			<string>Famous Poet, author of Paul Revere&apos;s Ride</string>
+			<key>Answers</key>
+			<array>
+				<string>Paris</string>
+				<string>Rome</string>
+				<string>London</string>
+				<string>Glasgow</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Louis-Sockalexis-Historic-Photo.png</string>
+			<key>CorrectAnswer</key>
+			<string>First Native American Major League Baseball Player</string>
+			<key>Answers</key>
+			<array>
+				<string>Buenos Aires</string>
+				<string>Houston</string>
+				<string>Rio de Janeiro</string>
+				<string>Brasilia</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>maine_state_flower.png</string>
+			<key>CorrectAnswer</key>
+			<string>Maine State Flower</string>
+			<key>Answers</key>
+			<array>
+				<string>Munich</string>
+				<string>Moscow</string>
+				<string>Belfast</string>
+				<string>Belgrad</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>maine-loon-2.png</string>
+			<key>CorrectAnswer</key>
+			<string>Loon</string>
+			<key>Answers</key>
+			<array>
+				<string>Maine State Bird</string>
+				<string>Live only in the ocean</string>
+				<string>Loon</string>
+				<string>Found on all Maine License plates</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>old_orchard_beach_pier.png</string>
+			<key>CorrectAnswer</key>
+			<string>Maine&apos;s longest beach</string>
+			<key>Answers</key>
+			<array>
+				<string>Portsmouth Naval Ship Yard</string>
+				<string>Maine State Pier</string>
+				<string>Maine&apos;s longest beach</string>
+				<string>Santa Monica Pier</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Paul_Bunyan_statue_in_Bangor.png</string>
+			<key>CorrectAnswer</key>
+			<string>Found in Bangor</string>
+			<key>Answers</key>
+			<array>
+				<string>Maine&apos;s first governor</string>
+				<string>Found in Bangor</string>
+				<string>A ride at Funtown</string>
+				<string>L.L. Bean</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>penobscot_fort_knox_maine.png</string>
+			<key>CorrectAnswer</key>
+			<string>The tallest public bridge observatory in the world</string>
+			<key>Answers</key>
+			<array>
+				<string>The tallest public bridge observatory in the world</string>
+				<string>Bridge entering Maine from NH</string>
+				<string>Fort Williams </string>
+				<string>Photoshop image of the bridge from Boston</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>portlandHeadLight.png</string>
+			<key>CorrectAnswer</key>
+			<string>Maine&apos;s oldest lighthouse</string>
+			<key>Answers</key>
+			<array>
+				<string>Fort Knox</string>
+				<string>Most visited spot in Maine</string>
+				<string>Maine&apos;s tallest lighthouse</string>
+				<string>Maine&apos;s oldest lighthouse</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>thunderhole_seacoastdayhikersdotcom.png</string>
+			<key>CorrectAnswer</key>
+			<string>Part of Maine&apos;s most visited place - Acadia National Park</string>
+			<key>Answers</key>
+			<array>
+				<string>Birthplace of Andre the Seeal</string>
+				<string>Maine State Pier</string>
+				<string>Man on the Mountain</string>
+				<string>Part of Maine&apos;s most visited place - Acadia National Park</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -38,9 +38,9 @@ class ViewController: UIViewController, EGCDelegate {
     
     func loadQuizData() {
         //Multiple Choice Data
-        //let pathMC = NSBundle.mainBundle().pathForResource("MultipleChoice", ofType: "plist")
-        //let dictMC = NSDictionary(contentsOfFile: pathMC!)
-        //mcArray = dictMC!["Questions"]!.mutableCopy() as? Array
+        let pathMC = NSBundle.mainBundle().pathForResource("MultipleChoice", ofType: "plist")
+        let dictMC = NSDictionary(contentsOfFile: pathMC!)
+        mcArray = dictMC!["Questions"]!.mutableCopy() as? Array
         
         //Single Choice Data
         //let pathSC = NSBundle.mainBundle().pathForResource("SingleChoice", ofType: "plist")
@@ -53,9 +53,9 @@ class ViewController: UIViewController, EGCDelegate {
         rowArray = dictROW!["Questions"]!.mutableCopy() as? Array
         
         //Imgage Quiz Data
-        //let pathIMG = NSBundle.mainBundle().pathForResource("ImageQuiz", ofType: "plist")
-        //let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
-        //imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
+        let pathIMG = NSBundle.mainBundle().pathForResource("ImageQuiz", ofType: "plist")
+        let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
+        imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
        
     }
     

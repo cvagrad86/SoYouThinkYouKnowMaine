@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>Question</key>
+			<string>What year is it?</string>
+			<key>CorrectAnswer</key>
+			<string>2015</string>
+			<key>Answers</key>
+			<array>
+				<string>1995</string>
+				<string>2000</string>
+				<string>2010</string>
+				<string>2015</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Who is the father of the gods in greek mythology?</string>
+			<key>CorrectAnswer</key>
+			<string>Zeus</string>
+			<key>Answers</key>
+			<array>
+				<string>Ares</string>
+				<string>Zeus</string>
+				<string>Apollo</string>
+				<string>Jupiter</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is the name of Queen Elizabeth IIs oldest son?</string>
+			<key>CorrectAnswer</key>
+			<string>Prince Charles</string>
+			<key>Answers</key>
+			<array>
+				<string>Prince Maurice</string>
+				<string>Prince Harry</string>
+				<string>Prince Charles</string>
+				<string>Willy</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Who is a famous fictional wizard?</string>
+			<key>CorrectAnswer</key>
+			<string>Harry Potter</string>
+			<key>Answers</key>
+			<array>
+				<string>Harry Potter</string>
+				<string>Sherlock Holmes</string>
+				<string>Iron Man</string>
+				<string>Hawkeye</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these superheroes is not part of The Avengers?</string>
+			<key>CorrectAnswer</key>
+			<string>Spiderman</string>
+			<key>Answers</key>
+			<array>
+				<string>Hulk</string>
+				<string>Thor</string>
+				<string>Black Widow</string>
+				<string>Spiderman</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is Arnold Schwarzeneggers home country?</string>
+			<key>CorrectAnswer</key>
+			<string>Austria</string>
+			<key>Answers</key>
+			<array>
+				<string>Germany</string>
+				<string>Switzerland</string>
+				<string>Austria</string>
+				<string>USA</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these countries is not located in Europe?</string>
+			<key>CorrectAnswer</key>
+			<string>Australia</string>
+			<key>Answers</key>
+			<array>
+				<string>Italy</string>
+				<string>Australia</string>
+				<string>France</string>
+				<string>Greece</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these brands produces supercars?</string>
+			<key>CorrectAnswer</key>
+			<string>Koenigsegg</string>
+			<key>Answers</key>
+			<array>
+				<string>Ferrero</string>
+				<string>Coca Cola</string>
+				<string>Koenigsegg</string>
+				<string>Skoda</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these musicians wrote the song &quot;Mockingbird&quot;?</string>
+			<key>CorrectAnswer</key>
+			<string>Eminem</string>
+			<key>Answers</key>
+			<array>
+				<string>Eminem</string>
+				<string>Rihanna</string>
+				<string>50 Cent</string>
+				<string>Ed Sheeran</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these is not a religion?</string>
+			<key>CorrectAnswer</key>
+			<string>Squash</string>
+			<key>Answers</key>
+			<array>
+				<string>Christianity</string>
+				<string>Buddhism</string>
+				<string>Judaism</string>
+				<string>Squash</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these is the biggest?</string>
+			<key>CorrectAnswer</key>
+			<string>Sun</string>
+			<key>Answers</key>
+			<array>
+				<string>Earth</string>
+				<string>Sun</string>
+				<string>Moon</string>
+				<string>Elephant</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these is the smallest?</string>
+			<key>CorrectAnswer</key>
+			<string>Flea</string>
+			<key>Answers</key>
+			<array>
+				<string>Mouse</string>
+				<string>Flea</string>
+				<string>Lego Brick</string>
+				<string>Marble</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>The fastest running animal is the...?</string>
+			<key>CorrectAnswer</key>
+			<string>Cheetah</string>
+			<key>Answers</key>
+			<array>
+				<string>Lion</string>
+				<string>Zebra</string>
+				<string>Bear</string>
+				<string>Cheetah</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which prefix increases the unit by the factor 1024?</string>
+			<key>CorrectAnswer</key>
+			<string>mega</string>
+			<key>Answers</key>
+			<array>
+				<string>giga</string>
+				<string>tera</string>
+				<string>mega</string>
+				<string>ultra</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>The scary animal in the Jaws movies is a...?</string>
+			<key>CorrectAnswer</key>
+			<string>Shark</string>
+			<key>Answers</key>
+			<array>
+				<string>Shark</string>
+				<string>Bear</string>
+				<string>Lion</string>
+				<string>Whale</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is required for any substance to burn?</string>
+			<key>CorrectAnswer</key>
+			<string>Oxygen</string>
+			<key>Answers</key>
+			<array>
+				<string>Water</string>
+				<string>Wood</string>
+				<string>Oxygen</string>
+				<string>Helium</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is often referred to as &quot;White Gold&quot;?</string>
+			<key>CorrectAnswer</key>
+			<string>Salt</string>
+			<key>Answers</key>
+			<array>
+				<string>Salt</string>
+				<string>Flour</string>
+				<string>Styrofoam</string>
+				<string>Silver</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is the national bird of the USA?</string>
+			<key>CorrectAnswer</key>
+			<string>Bald Eagle</string>
+			<key>Answers</key>
+			<array>
+				<string>Vulture</string>
+				<string>Bald Eagle</string>
+				<string>Ostrich</string>
+				<string>Blackbird</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which one of these animals can&apos;t fly?</string>
+			<key>CorrectAnswer</key>
+			<string>Penguin</string>
+			<key>Answers</key>
+			<array>
+				<string>Eagle</string>
+				<string>Mockingbird</string>
+				<string>Penguin</string>
+				<string>Hawk</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>How many points does a football team get for a touchdown?</string>
+			<key>CorrectAnswer</key>
+			<string>6</string>
+			<key>Answers</key>
+			<array>
+				<string>4</string>
+				<string>5</string>
+				<string>7</string>
+				<string>6</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

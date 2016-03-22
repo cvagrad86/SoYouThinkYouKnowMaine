@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,37 +17,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="So" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2w-JW-GbT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2w-JW-GbT">
                                 <rect key="frame" x="253" y="93" width="94" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="49Y-OO-dBT"/>
+                                    <constraint firstAttribute="width" constant="94" id="YCc-HX-lpQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-45-GCb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-45-GCb">
                                 <rect key="frame" x="253" y="152" width="94" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Dlv-fo-bXz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THINK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFS-od-FJe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THINK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFS-od-FJe">
                                 <rect key="frame" x="241" y="211" width="118" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="TUt-7r-9E4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FG-U7-hGM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FG-U7-hGM">
                                 <rect key="frame" x="253" y="285" width="94" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="b2S-Hn-dzq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Know" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-f3-UaZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Know" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-f3-UaZ">
                                 <rect key="frame" x="241" y="349" width="119" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="oQm-Vf-TIZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7p-r9-wal">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7p-r9-wal">
                                 <rect key="frame" x="242" y="413" width="117" height="51"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,6 +71,29 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W2w-JW-GbT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1R1-Zp-sz5"/>
+                            <constraint firstItem="aFS-od-FJe" firstAttribute="top" secondItem="Et0-45-GCb" secondAttribute="bottom" constant="8" symbolic="YES" id="5aL-bY-boh"/>
+                            <constraint firstItem="Luv-f3-UaZ" firstAttribute="top" secondItem="2FG-U7-hGM" secondAttribute="bottom" constant="13" id="69U-rm-Jce"/>
+                            <constraint firstItem="O7p-r9-wal" firstAttribute="top" secondItem="Luv-f3-UaZ" secondAttribute="bottom" constant="13" id="8dS-d2-rc1"/>
+                            <constraint firstItem="aFS-od-FJe" firstAttribute="trailing" secondItem="O7p-r9-wal" secondAttribute="trailing" id="9hn-uw-x0W"/>
+                            <constraint firstItem="Et0-45-GCb" firstAttribute="top" secondItem="W2w-JW-GbT" secondAttribute="bottom" constant="8" symbolic="YES" id="9l0-wi-OtQ"/>
+                            <constraint firstItem="W2w-JW-GbT" firstAttribute="trailing" secondItem="Et0-45-GCb" secondAttribute="trailing" id="CA1-wb-1Dw"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="O7p-r9-wal" secondAttribute="bottom" constant="136" id="CYr-hc-z30"/>
+                            <constraint firstItem="Luv-f3-UaZ" firstAttribute="centerX" secondItem="W2w-JW-GbT" secondAttribute="centerX" id="KSB-ph-Clm"/>
+                            <constraint firstItem="W2w-JW-GbT" firstAttribute="leading" secondItem="Et0-45-GCb" secondAttribute="leading" id="OVG-9T-PZ3"/>
+                            <constraint firstItem="Et0-45-GCb" firstAttribute="centerX" secondItem="W2w-JW-GbT" secondAttribute="centerX" id="R15-mB-o3x"/>
+                            <constraint firstItem="aFS-od-FJe" firstAttribute="leading" secondItem="Luv-f3-UaZ" secondAttribute="leading" id="Seu-SC-WAE"/>
+                            <constraint firstItem="aFS-od-FJe" firstAttribute="centerX" secondItem="W2w-JW-GbT" secondAttribute="centerX" id="Td4-6N-Dms"/>
+                            <constraint firstItem="2FG-U7-hGM" firstAttribute="centerX" secondItem="Luv-f3-UaZ" secondAttribute="centerX" id="VWA-jo-0XS"/>
+                            <constraint firstItem="W2w-JW-GbT" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="73" id="W0k-Ni-kSC"/>
+                            <constraint firstItem="Et0-45-GCb" firstAttribute="leading" secondItem="2FG-U7-hGM" secondAttribute="leading" id="XPa-mJ-gVs"/>
+                            <constraint firstItem="2FG-U7-hGM" firstAttribute="top" secondItem="aFS-od-FJe" secondAttribute="bottom" constant="23" id="XV5-QD-7g8"/>
+                            <constraint firstItem="2FG-U7-hGM" firstAttribute="centerX" secondItem="W2w-JW-GbT" secondAttribute="centerX" id="gca-df-DsD"/>
+                            <constraint firstItem="O7p-r9-wal" firstAttribute="centerX" secondItem="W2w-JW-GbT" secondAttribute="centerX" id="nva-bK-Gx8"/>
+                            <constraint firstItem="Et0-45-GCb" firstAttribute="trailing" secondItem="2FG-U7-hGM" secondAttribute="trailing" id="s3Y-s1-SXp"/>
+                            <constraint firstItem="Et0-45-GCb" firstAttribute="centerX" secondItem="aFS-od-FJe" secondAttribute="centerX" id="uLo-uv-3iz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

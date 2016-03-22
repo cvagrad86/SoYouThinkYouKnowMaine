@@ -123,7 +123,7 @@ class TrueFalseViewController: UIViewController {
     }
     
     func updateprogressView() {
-        progressBar.progress -= 0.01/60
+        progressBar.progress -= 0.01/2
         if progressBar.progress <= 0 {
             outOfTime()
         }
