@@ -22,9 +22,11 @@ class PhotosViewController: UIViewController {
     
     var mybutton = UIButton!.self
     var correctAnswer: String?
+    //[[Actions]] = [[]]
     var answers = [String]()
     var image: String?
     var questionIdx = 0
+    
     
     @IBOutlet var pictureTiles: [UILabel]!
     @IBOutlet var buttonHandler: [UIButton]!
@@ -34,18 +36,14 @@ class PhotosViewController: UIViewController {
     @IBAction func answerButtonHandler(sender: UIButton) {
         
         if sender.titleLabel!.text == correctAnswer {
-            print("Correct")
             timer.invalidate()
             userScore.text = "Your score = \(counter * 5)"
             currentScore = currentScore + (counter * 5)
             timerLabel.hidden = true
             sender.backgroundColor = UIColor.greenColor()
-            hideAllTiles()
-            
             nextQuestionButton.hidden = false
             
         } else {
-            print("Wrong Answer")
             sender.backgroundColor = UIColor.redColor()
             counter++
         }
@@ -55,19 +53,30 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titlesForButtons()
+       
         nextQuestionButton.hidden = true
+        nextQuestion()
         
+        
+    }
+    
+    @IBAction func nextQuestionButton(sender: AnyObject) {
+        //cardButton.enabled = true
+        if questionIdx < imgArray!.count - 1 {
+            questionIdx++
+        } else {
+            questionIdx = 0
+        }
+        print("next button pressed")
+        nextQuestion()
+        unHide()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func hideAllTiles() {
-        
-        
-    }
+   
     func updateTime() {
         
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
@@ -96,7 +105,7 @@ class PhotosViewController: UIViewController {
         
         startButton.hidden = true
         Hide()
-        print("button pressed")
+        
         updateTime()
         
         let aSelector : Selector = "timerAction"
@@ -112,8 +121,8 @@ class PhotosViewController: UIViewController {
         image = currentQuestion["Image"] as? String
         
         titlesForButtons()
-        
     }
+    
     func titlesForButtons() {
         for (idx,button) in buttonHandler.enumerate() {
             button.setTitle(answers[idx], forState: .Normal)
@@ -128,9 +137,33 @@ class PhotosViewController: UIViewController {
         timerLabel.text = "\(counter)"
     }
     
-    @IBAction func nextQuestion(sender: AnyObject) {
+    func unHide() {
         
+        var numberOfTiles = self.pictureTiles
+        
+        let duration = 0.01
+        let options = UIViewAnimationOptions.CurveEaseOut
+        let delay = 0.01
+        //NSTimeInterval(900 + arc4random_uniform(100)) / 1000
+        
+        for loopNumber in numberOfTiles {
+            UIView.animateWithDuration(duration, delay: delay, options: options, animations: {
+                let randomIndex = arc4random_uniform(UInt32(self.pictureTiles.count))
+                let randomTile = self.pictureTiles[randomIndex.hashValue]
+                randomTile.alpha = 1.0
+                
+                
+                }, completion: { animationFinished in
+                    let randomIndex = arc4random_uniform(UInt32(self.pictureTiles.count))
+                    let randomTile = self.pictureTiles[randomIndex.hashValue]
+                    
+                    randomTile.alpha = 1.0
+                    
+            })
+        }
     }
+
+   
     
     func Hide() {
         

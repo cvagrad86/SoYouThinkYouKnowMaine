@@ -57,8 +57,12 @@ class ViewController: UIViewController, EGCDelegate {
         let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
         imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
        
+        //check()
     }
     
+    func check() {
+        print(imgArray)
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         

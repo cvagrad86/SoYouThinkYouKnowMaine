@@ -10,9 +10,12 @@ import UIKit
 
 class MultipleChoiceViewController: UIViewController {
 
+    var correctAnswer: String?
+    var question: String?
+    var answers = [String]()
+    var questionIdx = 0
+    
     @IBOutlet var questionLabel: UILabel!
-    
-    
     
     @IBOutlet var answerButtons: [UIButton]!
     
@@ -43,13 +46,7 @@ class MultipleChoiceViewController: UIViewController {
         nextQuestion()
     }
     
-    var correctAnswer: String?
-    
-    var question: String?
-    
-    var answers = [String]()
-    
-    var questionIdx = 0
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()

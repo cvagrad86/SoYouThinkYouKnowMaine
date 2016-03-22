@@ -11,23 +11,23 @@
 			<string>Maine State Bird</string>
 			<key>Answers</key>
 			<array>
-				<string>Screwdriver</string>
-				<string>Hammer</string>
-				<string>Saw</string>
-				<string>Wrench</string>
+				<string>Crow</string>
+				<string>Finch</string>
+				<string>Maine State Bird</string>
+				<string>Loon</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Image</key>
 			<string>christinas_world.jpeg.png</string>
 			<key>CorrectAnswer</key>
-			<string>Andrew Wyeth</string>
+			<string>Famous painting by Andrew Wyeth</string>
 			<key>Answers</key>
 			<array>
-				<string>Paris</string>
-				<string>Milan</string>
-				<string>Venice</string>
-				<string>Rome</string>
+				<string>Aunt Mildred </string>
+				<string>Famous painting by Andrew Wyeth</string>
+				<string>Blaine House in Augusta</string>
+				<string>Maine in 1840&apos;s</string>
 			</array>
 		</dict>
 		<dict>
