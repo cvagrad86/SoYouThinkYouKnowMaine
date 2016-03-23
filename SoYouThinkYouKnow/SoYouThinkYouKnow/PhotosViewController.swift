@@ -20,7 +20,7 @@ class PhotosViewController: UIViewController {
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
     
-    var mybutton = UIButton!.self
+    //var mybutton = UIButton!.self
     var correctAnswer: String?
     //[[Actions]] = [[]]
     var answers = [String]()
@@ -30,7 +30,7 @@ class PhotosViewController: UIViewController {
     
     @IBOutlet var pictureTiles: [UILabel]!
     @IBOutlet var buttonHandler: [UIButton]!
-    @IBOutlet weak var myButton: UIButton!
+    //@IBOutlet weak var myButton: UIButton!
     
     @IBOutlet weak var startButton: UIButton!
     @IBAction func answerButtonHandler(sender: UIButton) {
@@ -45,7 +45,7 @@ class PhotosViewController: UIViewController {
             
         } else {
             sender.backgroundColor = UIColor.redColor()
-            counter++
+            counter += 1
         }
         
         
@@ -60,16 +60,20 @@ class PhotosViewController: UIViewController {
         
     }
     
-    @IBAction func nextQuestionButton(sender: AnyObject) {
+    
+    @IBAction func callNextPhoto(sender: AnyObject) {
         //cardButton.enabled = true
         if questionIdx < imgArray!.count - 1 {
-            questionIdx++
+            questionIdx += 1
         } else {
             questionIdx = 0
         }
-        print("next button pressed")
+        
         nextQuestion()
         unHide()
+        startButton.hidden = false
+        nextQuestionButton.hidden = true
+        updateTime()
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,7 +83,7 @@ class PhotosViewController: UIViewController {
    
     func updateTime() {
         
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
         
         var elapsedTime: NSTimeInterval = currentTime - startTime
         
@@ -95,9 +99,9 @@ class PhotosViewController: UIViewController {
         let fraction = UInt64(elapsedTime * 100)
         
         
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        let strFraction = String(format: "%02d", fraction)
+        _ = String(format: "%02d", minutes)
+        _ = String(format: "%02d", seconds)
+        _ = String(format: "%02d", fraction)
         
     }
     
@@ -108,7 +112,7 @@ class PhotosViewController: UIViewController {
         
         updateTime()
         
-        let aSelector : Selector = "timerAction"
+        let aSelector : Selector = #selector(PhotosViewController.timerAction)
         timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target:self, selector: aSelector,     userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
         
@@ -127,26 +131,28 @@ class PhotosViewController: UIViewController {
         for (idx,button) in buttonHandler.enumerate() {
             button.setTitle(answers[idx], forState: .Normal)
             button.titleLabel!.lineBreakMode = .ByWordWrapping
+            button.enabled = true
+            button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         
         imageView.image = UIImage(named: image!)
     }
     
     func timerAction() {
-        ++counter
+        counter += 1
         timerLabel.text = "\(counter)"
     }
     
     func unHide() {
         
-        var numberOfTiles = self.pictureTiles
+        let numberOfTiles = self.pictureTiles
         
         let duration = 0.01
         let options = UIViewAnimationOptions.CurveEaseOut
         let delay = 0.01
         //NSTimeInterval(900 + arc4random_uniform(100)) / 1000
         
-        for loopNumber in numberOfTiles {
+        for _ in numberOfTiles {
             UIView.animateWithDuration(duration, delay: delay, options: options, animations: {
                 let randomIndex = arc4random_uniform(UInt32(self.pictureTiles.count))
                 let randomTile = self.pictureTiles[randomIndex.hashValue]
@@ -167,14 +173,14 @@ class PhotosViewController: UIViewController {
     
     func Hide() {
         
-        var numberOfTiles = self.pictureTiles
+       let numberOfTiles = self.pictureTiles
         
         let duration = 4.0
         let options = UIViewAnimationOptions.CurveEaseOut
         let delay = 4.0
         //NSTimeInterval(900 + arc4random_uniform(100)) / 1000
         
-        for loopNumber in numberOfTiles {
+        for _ in numberOfTiles {
             UIView.animateWithDuration(duration, delay: delay, options: options, animations: {
                 let randomIndex = arc4random_uniform(UInt32(self.pictureTiles.count))
                 let randomTile = self.pictureTiles[randomIndex.hashValue]

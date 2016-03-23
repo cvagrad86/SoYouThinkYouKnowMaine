@@ -37,36 +37,36 @@
 			<string>Maine Senator for 15 years</string>
 			<key>Answers</key>
 			<array>
-				<string>Dublin</string>
-				<string>Manchester</string>
-				<string>London</string>
-				<string>Glasgow</string>
+				<string>Maine Senator for 15 years</string>
+				<string>Governor LePage</string>
+				<string>Only Vice President from Maine</string>
+				<string>John Baldacci</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Image</key>
 			<string>James_G._Blaine.png</string>
 			<key>CorrectAnswer</key>
-			<string>Lost 1884 Presidential Election to Grover Cleveland</string>
+			<string>James Blaine - Lost 1884 Presidential Election to Grover Cleveland</string>
 			<key>Answers</key>
 			<array>
-				<string>Paris</string>
-				<string>Lyon</string>
-				<string>London</string>
-				<string>Berlin</string>
+				<string>James Blaine - Lost 1884 Presidential Election to Grover Cleveland</string>
+				<string>Uncle Grover from Dixfield</string>
+				<string>Governor LePage</string>
+				<string>Joshua Chamberlain</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Image</key>
 			<string>Joan-Benoit-Samuelson.png</string>
 			<key>CorrectAnswer</key>
-			<string>Winner of 1980 womens olympic marathon</string>
+			<string>Joan Benoit - Winner of 1980 womens olympic marathon</string>
 			<key>Answers</key>
 			<array>
-				<string>Dublin</string>
-				<string>Manchester</string>
-				<string>Berlin</string>
-				<string>Edinburgh</string>
+				<string>Joan Benoit - Winner of 1980 womens olympic marathon</string>
+				<string>Margaret Chase Smith</string>
+				<string>Cindy Blodgett - Famous track star</string>
+				<string>Olympia Snowe</string>
 			</array>
 		</dict>
 		<dict>
@@ -76,10 +76,10 @@
 			<string>Selected to oversee surrender of Confederates at finish of Civil War</string>
 			<key>Answers</key>
 			<array>
-				<string>Sydney</string>
-				<string>Melbourne</string>
-				<string>Canberra</string>
-				<string>Brisbane</string>
+				<string>Governor LePage</string>
+				<string>Henry Wadsworth Lonfellow</string>
+				<string>First Governor of Maine</string>
+				<string>Selected to oversee surrender of Confederates at finish of Civil War</string>
 			</array>
 		</dict>
 		<dict>
@@ -89,10 +89,10 @@
 			<string>Born in Maine&apos;s largest city</string>
 			<key>Answers</key>
 			<array>
-				<string>Vancouver</string>
-				<string>Seattle</string>
-				<string>Denver</string>
-				<string>Utah</string>
+				<string>Born in Maine&apos;s largest city</string>
+				<string>That guy from Sixteen Candles</string>
+				<string>Some dude from Old Town</string>
+				<string>Kurt Russell</string>
 			</array>
 		</dict>
 		<dict>
@@ -102,10 +102,10 @@
 			<string>Famous Poet, author of Paul Revere&apos;s Ride</string>
 			<key>Answers</key>
 			<array>
-				<string>Paris</string>
-				<string>Rome</string>
-				<string>London</string>
-				<string>Glasgow</string>
+				<string>Famous Poet, author of Paul Revere&apos;s Ride</string>
+				<string>Governor LePage</string>
+				<string>Joshua Chamberlain</string>
+				<string>Man who named our state Maine</string>
 			</array>
 		</dict>
 		<dict>
@@ -115,10 +115,10 @@
 			<string>First Native American Major League Baseball Player</string>
 			<key>Answers</key>
 			<array>
-				<string>Buenos Aires</string>
-				<string>Houston</string>
-				<string>Rio de Janeiro</string>
-				<string>Brasilia</string>
+				<string>Babe Ruth</string>
+				<string>First Mainer to play for Red Sox</string>
+				<string>Governor LePage</string>
+				<string>First Native American Major League Baseball Player</string>
 			</array>
 		</dict>
 		<dict>
@@ -128,10 +128,10 @@
 			<string>Maine State Flower</string>
 			<key>Answers</key>
 			<array>
-				<string>Munich</string>
-				<string>Moscow</string>
-				<string>Belfast</string>
-				<string>Belgrad</string>
+				<string>Sunflower</string>
+				<string>Major food supply for Moose</string>
+				<string>Maine State Flower</string>
+				<string>Governor LePage</string>
 			</array>
 		</dict>
 		<dict>
