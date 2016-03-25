@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let MapboxAccessToken = "pk.eyJ1IjoiY3ZhZ3JhZDg2IiwiYSI6ImNpa3MzM2UwODA5ZW91eG03c2hkbmlpN2cifQ.yY8BbkFNfrBOJ2KSQ_JCxQ"
         return true
     }
 

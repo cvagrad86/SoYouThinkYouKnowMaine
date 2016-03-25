@@ -66,7 +66,7 @@ class PhotosViewController: UIViewController {
         if questionIdx < imgArray!.count - 1 {
             questionIdx += 1
         } else {
-            questionIdx = 0
+            showAlert()
         }
         
         nextQuestion()
@@ -128,9 +128,11 @@ class PhotosViewController: UIViewController {
     }
     
     func titlesForButtons() {
+        
         for (idx,button) in buttonHandler.enumerate() {
             button.setTitle(answers[idx], forState: .Normal)
             button.titleLabel!.lineBreakMode = .ByWordWrapping
+            button.titleLabel!.textAlignment = .Center
             button.enabled = true
             button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
@@ -196,6 +198,22 @@ class PhotosViewController: UIViewController {
             })
         }
     }
+    
+    func showAlert() {
+        //var vc: UIViewController?
+        let alertController = UIAlertController(title: "Thats all the photos", message: "Let's see how you did", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
+            
+            self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
+        })
+        
+        alertController.addAction(ok)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
     
     
 }

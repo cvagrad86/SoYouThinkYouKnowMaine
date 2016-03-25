@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class TrueFalseViewController: UIViewController {
     
@@ -24,16 +26,18 @@ class TrueFalseViewController: UIViewController {
     
     @IBOutlet var countDownLabel: UILabel!
     
+    var audioPlayer: AVAudioPlayer?
+    
     var count = 60
     
     var timer = NSTimer()
     
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
-            
+            ayuh()
         } else {
             sender.backgroundColor = UIColor.redColor()
-            
+            nope()
         }
         for button in answerButtons {
             button.enabled = false
@@ -48,7 +52,7 @@ class TrueFalseViewController: UIViewController {
     @IBAction func cardButtonHandler(sender: AnyObject) {
         cardButton.enabled = true
         if questionIdx < rowArray!.count - 1 {
-            questionIdx++
+            questionIdx += 1
         } else {
             questionIdx = 0
         }
@@ -88,6 +92,26 @@ class TrueFalseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func ayuh() {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("ayuhSound2", ofType: "mp3")!))
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
+    func nope() {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("nope1", ofType: "m4a")!))
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
     func update() {
         
         if(count > 0)
@@ -123,7 +147,7 @@ class TrueFalseViewController: UIViewController {
     }
     
     func updateprogressView() {
-        progressBar.progress -= 0.01/2
+        progressBar.progress -= 0.01/60
         if progressBar.progress <= 0 {
             outOfTime()
         }

@@ -11,6 +11,10 @@ import UIKit
 class ScoreViewController: UIViewController {
 
     
+    @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

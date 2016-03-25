@@ -41,7 +41,7 @@ class MultipleChoiceViewController: UIViewController {
         if questionIdx < mcArray!.count - 1 {
             questionIdx++
         } else {
-            questionIdx = 0
+            showAlert()
         }
         nextQuestion()
     }
@@ -83,4 +83,20 @@ class MultipleChoiceViewController: UIViewController {
         
         questionLabel.text = question
     }
+    
+    func showAlert() {
+        //var vc: UIViewController?
+        let alertController = UIAlertController(title: "Nice job Bub!", message: "Let's see how you did", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
+            
+            self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
+        })
+        
+        alertController.addAction(ok)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
 }
