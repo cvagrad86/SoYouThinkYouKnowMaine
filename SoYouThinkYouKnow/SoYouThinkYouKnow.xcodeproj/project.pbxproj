@@ -15,6 +15,7 @@
 		930497A11C8B3C8F0073B6C9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930497A01C8B3C8F0073B6C9 /* GameKit.framework */; };
 		931623011CA53A89007BF21D /* nope.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623001CA53A89007BF21D /* nope.mp3 */; };
 		931623031CA53A9A007BF21D /* ayuhSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623021CA53A9A007BF21D /* ayuhSound2.mp3 */; };
+		931623061CA54278007BF21D /* nope3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623051CA54277007BF21D /* nope3.mp3 */; };
 		933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933489021C99934C00EF7694 /* EasyGameCenter.swift */; };
 		933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */; };
 		933CD6111C9FE5D0005C55F2 /* chickadee.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD5FF1C9FE5D0005C55F2 /* chickadee.png */; };
@@ -62,6 +63,7 @@
 		931623001CA53A89007BF21D /* nope.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nope.mp3; sourceTree = "<group>"; };
 		931623021CA53A9A007BF21D /* ayuhSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ayuhSound2.mp3; sourceTree = "<group>"; };
 		931623041CA540EF007BF21D /* nope1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nope1.m4a; sourceTree = "<group>"; };
+		931623051CA54277007BF21D /* nope3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nope3.mp3; sourceTree = "<group>"; };
 		933489021C99934C00EF7694 /* EasyGameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
 		933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MultipleChoice.plist; sourceTree = "<group>"; };
 		933CD5FF1C9FE5D0005C55F2 /* chickadee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chickadee.png; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		9304978D1C8ADDDD0073B6C9 /* SoYouThinkYouKnow */ = {
 			isa = PBXGroup;
 			children = (
+				931623071CA56AC8007BF21D /* app_icon */,
 				931622FF1CA539C9007BF21D /* audio */,
 				938669AF1C8F28DE00E85566 /* data */,
 				938669AE1C8F28D200E85566 /* view */,
@@ -162,8 +165,16 @@
 				931623021CA53A9A007BF21D /* ayuhSound2.mp3 */,
 				931623001CA53A89007BF21D /* nope.mp3 */,
 				931623041CA540EF007BF21D /* nope1.m4a */,
+				931623051CA54277007BF21D /* nope3.mp3 */,
 			);
 			name = audio;
+			sourceTree = "<group>";
+		};
+		931623071CA56AC8007BF21D /* app_icon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = app_icon;
 			sourceTree = "<group>";
 		};
 		933CD5FE1C9FE590005C55F2 /* imageQuiz */ = {
@@ -300,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931623061CA54278007BF21D /* nope3.mp3 in Resources */,
 				933CD6151C9FE5D0005C55F2 /* Joan-Benoit-Samuelson.png in Resources */,
 				933CD61B1C9FE5D0005C55F2 /* maine_state_flower.png in Resources */,
 				933CD6131C9FE5D0005C55F2 /* geogre_mitchell.png in Resources */,

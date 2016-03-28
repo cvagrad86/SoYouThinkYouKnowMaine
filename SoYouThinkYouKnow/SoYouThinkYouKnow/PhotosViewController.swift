@@ -14,15 +14,14 @@ class PhotosViewController: UIViewController {
     var counter = 0
     var currentScore = 0
     var startTime = NSTimeInterval()
-    var timer:NSTimer = NSTimer()
+    var timer:NSTimer?
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
     
-    //var mybutton = UIButton!.self
+  
     var correctAnswer: String?
-    //[[Actions]] = [[]]
     var answers = [String]()
     var image: String?
     var questionIdx = 0
@@ -30,22 +29,21 @@ class PhotosViewController: UIViewController {
     
     @IBOutlet var pictureTiles: [UILabel]!
     @IBOutlet var buttonHandler: [UIButton]!
-    //@IBOutlet weak var myButton: UIButton!
-    
     @IBOutlet weak var startButton: UIButton!
     @IBAction func answerButtonHandler(sender: UIButton) {
         
         if sender.titleLabel!.text == correctAnswer {
-            timer.invalidate()
+            timer!.invalidate()
+            //resetTimer()
+            timerLabel.hidden = true
             userScore.text = "Your score = \(counter * 5)"
             currentScore = currentScore + (counter * 5)
-            timerLabel.hidden = true
             sender.backgroundColor = UIColor.greenColor()
             nextQuestionButton.hidden = false
             
         } else {
             sender.backgroundColor = UIColor.redColor()
-            counter += 1
+            counter += 2
         }
         
         
@@ -55,25 +53,28 @@ class PhotosViewController: UIViewController {
         super.viewDidLoad()
        
         nextQuestionButton.hidden = true
-        nextQuestion()
         
+        imgArray!.shuffle()
+        timerLabel.hidden = true
         
     }
-    
+    func updateScore() {
+        //currentScore
+    }
     
     @IBAction func callNextPhoto(sender: AnyObject) {
-        //cardButton.enabled = true
         if questionIdx < imgArray!.count - 1 {
             questionIdx += 1
         } else {
             showAlert()
         }
-        
         nextQuestion()
         unHide()
         startButton.hidden = false
-        nextQuestionButton.hidden = true
         updateTime()
+        
+        timerLabel.hidden = true
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,34 +85,24 @@ class PhotosViewController: UIViewController {
     func updateTime() {
         
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        var elapsedTime: NSTimeInterval = currentTime - startTime
-        
+        var elapsedTime: NSTimeInterval = currentTime
         let minutes = UInt64(elapsedTime / 60.0)
-        
         elapsedTime -= (NSTimeInterval(minutes) * 60)
-        
         let seconds = UInt64(elapsedTime)
-        
         elapsedTime -= NSTimeInterval(seconds)
-        
-        
         let fraction = UInt64(elapsedTime * 100)
-        
-        
         _ = String(format: "%02d", minutes)
         _ = String(format: "%02d", seconds)
         _ = String(format: "%02d", fraction)
         
+        
     }
     
     @IBAction func revealButton(sender: AnyObject) {
-        
+        nextQuestion()
         startButton.hidden = true
         Hide()
-        
         updateTime()
-        
         let aSelector : Selector = #selector(PhotosViewController.timerAction)
         timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target:self, selector: aSelector,     userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
@@ -123,7 +114,6 @@ class PhotosViewController: UIViewController {
         answers = currentQuestion["Answers"] as! [String]
         correctAnswer = currentQuestion["CorrectAnswer"] as? String
         image = currentQuestion["Image"] as? String
-        
         titlesForButtons()
     }
     
@@ -139,10 +129,19 @@ class PhotosViewController: UIViewController {
         
         imageView.image = UIImage(named: image!)
     }
+    //Mark timer
     
     func timerAction() {
         counter += 1
-        timerLabel.text = "\(counter)"
+        timerLabel.text = "\(timer?.timeInterval)"
+    }
+    
+    func resetTimer(){
+        let aSelector : Selector = #selector(PhotosViewController.timerAction)
+        timer!.invalidate()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector , userInfo: nil , repeats: false)
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+       
     }
     
     func unHide() {

@@ -80,7 +80,7 @@ class TrueFalseViewController: UIViewController {
         cardButton.enabled = false
         nextQuestion()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        let timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TrueFalseViewController.update), userInfo: nil, repeats: true)
         //titlesForButtons()
         progressBar.transform = CGAffineTransformScale(progressBar.transform, 1, 10)
         
@@ -104,7 +104,7 @@ class TrueFalseViewController: UIViewController {
     
     func nope() {
         do {
-            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("nope1", ofType: "m4a")!))
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("nope3", ofType: "mp3")!))
             audioPlayer!.play()
             
         } catch {
@@ -134,6 +134,7 @@ class TrueFalseViewController: UIViewController {
         for (idx,button) in answerButtons.enumerate() {
             button.setTitle(answers[idx], forState: .Normal)
             button.enabled = true
+            button.titleLabel?.font = Theme.Fonts.TitleFont.font
             button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         
@@ -147,7 +148,7 @@ class TrueFalseViewController: UIViewController {
     }
     
     func updateprogressView() {
-        progressBar.progress -= 0.01/60
+        progressBar.progress -= 0.01/2
         if progressBar.progress <= 0 {
             outOfTime()
         }
