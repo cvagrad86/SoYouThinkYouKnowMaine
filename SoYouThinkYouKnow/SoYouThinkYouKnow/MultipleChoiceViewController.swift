@@ -19,6 +19,11 @@ class MultipleChoiceViewController: UIViewController {
     
     @IBOutlet var answerButtons: [UIButton]!
     
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
                     } else {
@@ -56,6 +61,19 @@ class MultipleChoiceViewController: UIViewController {
         mcArray!.shuffle()
         cardButton.enabled = false
         nextQuestion()
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.blackColor().CGColor
+        button1.layer.cornerRadius = 10
+        button1.layer.borderWidth = 2
+        button1.layer.borderColor = UIColor.blackColor().CGColor
+        button2.layer.cornerRadius = 10
+        button2.layer.borderWidth = 2
+        button2.layer.borderColor = UIColor.blackColor().CGColor
+        button3.layer.cornerRadius = 10
+        button3.layer.borderWidth = 2
+        button3.layer.borderColor = UIColor.blackColor().CGColor
+        
     }
     
     override func didReceiveMemoryWarning() {

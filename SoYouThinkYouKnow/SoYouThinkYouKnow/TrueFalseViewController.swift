@@ -21,6 +21,7 @@ class TrueFalseViewController: UIViewController {
     
     @IBOutlet var cardButton: UIButton!
     
+    @IBOutlet weak var score: UILabel!
     @IBOutlet weak var nopeButton: UIButton!
     @IBOutlet weak var ayuhButton: UIButton!
     
@@ -29,15 +30,20 @@ class TrueFalseViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     
     var count = 60
-    
+    var currentscore = 0
     var timer = NSTimer()
     
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
             ayuh()
+        currentscore++
+            
+            print("+1")
         } else {
             sender.backgroundColor = UIColor.redColor()
             nope()
+            currentscore--
+            print("-1")
         }
         for button in answerButtons {
             button.enabled = false
@@ -57,6 +63,7 @@ class TrueFalseViewController: UIViewController {
             questionIdx = 0
         }
         nextQuestion()
+        score.text = "Your score = \(currentscore)"
     }
     
     var correctAnswer: String?
@@ -181,5 +188,8 @@ class TrueFalseViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    
+    
 
 }

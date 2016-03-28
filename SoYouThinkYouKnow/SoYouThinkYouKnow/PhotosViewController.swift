@@ -25,6 +25,7 @@ class PhotosViewController: UIViewController {
     var answers = [String]()
     var image: String?
     var questionIdx = 0
+    //var score = 0
     
     
     @IBOutlet var pictureTiles: [UILabel]!
@@ -40,7 +41,7 @@ class PhotosViewController: UIViewController {
             currentScore = currentScore + (counter * 5)
             sender.backgroundColor = UIColor.greenColor()
             nextQuestionButton.hidden = false
-            
+            print("Your score = \(counter * 5)")
         } else {
             sender.backgroundColor = UIColor.redColor()
             counter += 2
