@@ -20,7 +20,11 @@ class PhotosViewController: UIViewController {
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
     
-  
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    
     var correctAnswer: String?
     var answers = [String]()
     var image: String?
@@ -55,6 +59,19 @@ class PhotosViewController: UIViewController {
        
         nextQuestionButton.hidden = true
         
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.blackColor().CGColor
+        button1.layer.cornerRadius = 10
+        button1.layer.borderWidth = 2
+        button1.layer.borderColor = UIColor.blackColor().CGColor
+        button2.layer.cornerRadius = 10
+        button2.layer.borderWidth = 2
+        button2.layer.borderColor = UIColor.blackColor().CGColor
+        button3.layer.cornerRadius = 10
+        button3.layer.borderWidth = 2
+        button3.layer.borderColor = UIColor.blackColor().CGColor
+        
         imgArray!.shuffle()
         timerLabel.hidden = true
         
@@ -69,7 +86,7 @@ class PhotosViewController: UIViewController {
         } else {
             showAlert()
         }
-        nextQuestion()
+        //nextQuestion()
         unHide()
         startButton.hidden = false
         updateTime()

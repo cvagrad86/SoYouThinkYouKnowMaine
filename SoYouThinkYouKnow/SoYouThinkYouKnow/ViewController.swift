@@ -14,21 +14,76 @@ import SystemConfiguration
 
 class ViewController: UIViewController, EGCDelegate {
 
-    @IBOutlet weak var welcomeSign: UIImageView!
+    
+    @IBOutlet weak var welcomeSign: UIButton!
+    
+    @IBOutlet weak var trueFalseSign: UIButton!
+    
+    @IBOutlet weak var maineMapsSign: UIButton!
+    @IBOutlet weak var multChoiceSign: UIButton!
+    @IBOutlet weak var nameThatPhoto: UIButton!
+    
+    @IBOutlet weak var button: UIButton!
     
     @IBOutlet weak var label: UILabel!
     
-    @IBOutlet weak var backgroundView: UIView!
+    let viewTransitionDelegate = TransitionDelegate()
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController as! WelcomeViewController
+      
+        destinationViewController.transitioningDelegate = viewTransitionDelegate
+        destinationViewController.modalPresentationStyle = .Custom
+        
+    }
+    
+    var animator: UIDynamicAnimator?
+    var gravity: UIGravityBehavior?
+    var buttonAttachment: UIAttachmentBehavior?
+    
+    @IBAction func buttonTapped(sender: AnyObject) {
+        animator = UIDynamicAnimator(referenceView: self.view)
+        gravity = UIGravityBehavior(items: [button, label])
+        var collision = UICollisionBehavior(items: [button, label])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        animator?.addBehavior(collision)
+        
+        buttonAttachment = UIAttachmentBehavior(item: button,
+                                                offsetFromCenter: UIOffsetMake(-5, 0),
+                                                attachedToItem: label,
+                                                offsetFromCenter: UIOffsetMake(20, 0))
+        buttonAttachment?.damping = CGFloat.max
+        
+        var anchor = UIAttachmentBehavior(item: label,
+                                          offsetFromCenter: UIOffsetMake( -1.0 * label.frame.size.width / 2.0, 0),
+                                          attachedToAnchor: CGPointMake(label.frame.origin.x, label.frame.origin.y - 20))
+        animator?.addBehavior(anchor)
+        
+        animator?.addBehavior(gravity!)
+        animator?.addBehavior(buttonAttachment!)
+        
+        delay(2.0) {
+            self.animator?.removeBehavior(self.buttonAttachment!)
+            
+            self.delay(0.5) {
+                self.animator?.removeBehavior(anchor)
+                self.animator?.removeBehavior(collision)
+            }
+        }
+        
+    }
+    
+    func delay(seconds: Double, block: () -> ()) {
+        let delay = seconds * Double(NSEC_PER_SEC)
+        let time: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), block)
+    }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.welcomeSign.layer.cornerRadius = 10
-        
-        self.welcomeSign.layer.borderWidth = 3
-        self.welcomeSign.layer.borderColor = UIColor.blackColor().CGColor
-        
-        self.welcomeSign.clipsToBounds = true
         
         EGC.sharedInstance(self)
         
@@ -60,9 +115,7 @@ class ViewController: UIViewController, EGCDelegate {
         //check()
     }
     
-    func check() {
-        print(imgArray)
-    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         

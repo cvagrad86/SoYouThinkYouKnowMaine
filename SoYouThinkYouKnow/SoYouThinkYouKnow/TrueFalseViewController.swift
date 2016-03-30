@@ -77,7 +77,7 @@ class TrueFalseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.questionLabel.layer.borderWidth = 3
+        self.questionLabel.layer.borderWidth = 1
         self.questionLabel.layer.borderColor = UIColor.blackColor().CGColor
         self.ayuhButton.layer.borderWidth = 1
         self.ayuhButton.layer.borderColor = UIColor.blackColor().CGColor
@@ -141,7 +141,6 @@ class TrueFalseViewController: UIViewController {
         for (idx,button) in answerButtons.enumerate() {
             button.setTitle(answers[idx], forState: .Normal)
             button.enabled = true
-            button.titleLabel?.font = Theme.Fonts.TitleFont.font
             button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         
@@ -156,6 +155,7 @@ class TrueFalseViewController: UIViewController {
     
     func updateprogressView() {
         progressBar.progress -= 0.01/2
+        
         if progressBar.progress <= 0 {
             outOfTime()
         }
