@@ -10,6 +10,8 @@
 import UIKit
 import GameKit
 import SystemConfiguration
+import AVKit
+import AVFoundation
 
 
 class ViewController: UIViewController, EGCDelegate {
@@ -31,11 +33,13 @@ class ViewController: UIViewController, EGCDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationViewController = segue.destinationViewController as! WelcomeViewController
-      
+     
         destinationViewController.transitioningDelegate = viewTransitionDelegate
         destinationViewController.modalPresentationStyle = .Custom
-        
+        audioPlayer!.stop()
     }
+ 
+    var audioPlayer: AVAudioPlayer?
     
     var animator: UIDynamicAnimator?
     var gravity: UIGravityBehavior?
@@ -62,13 +66,14 @@ class ViewController: UIViewController, EGCDelegate {
         animator?.addBehavior(gravity!)
         animator?.addBehavior(buttonAttachment!)
         
-        delay(2.0) {
+        delay(1.0) {
             self.animator?.removeBehavior(self.buttonAttachment!)
             
             self.delay(0.5) {
                 self.animator?.removeBehavior(anchor)
                 self.animator?.removeBehavior(collision)
             }
+            print("sign is off page now")
         }
         
     }
@@ -77,6 +82,7 @@ class ViewController: UIViewController, EGCDelegate {
         let delay = seconds * Double(NSEC_PER_SEC)
         let time: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue(), block)
+        
     }
     
 
@@ -85,22 +91,31 @@ class ViewController: UIViewController, EGCDelegate {
         super.viewDidLoad()
         
         
+        openingAudio()
         EGC.sharedInstance(self)
-        
         loadQuizData()
     
     }
     
+    func openingAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("opening_sound3", ofType: "mp3")!))
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
     func loadQuizData() {
         //Multiple Choice Data
         let pathMC = NSBundle.mainBundle().pathForResource("MultipleChoice", ofType: "plist")
         let dictMC = NSDictionary(contentsOfFile: pathMC!)
         mcArray = dictMC!["Questions"]!.mutableCopy() as? Array
         
-        //Single Choice Data
-        //let pathSC = NSBundle.mainBundle().pathForResource("SingleChoice", ofType: "plist")
-        //let dictSC = NSDictionary(contentsOfFile: pathSC!)
-        //scArray = dictMC!["Questions"]!.mutableCopy() as? Array
+        //Map Data
+        let pathMA = NSBundle.mainBundle().pathForResource("Locations", ofType: "plist")
+        let dictMA = NSDictionary(contentsOfFile: pathMA!)
+        mapArray = dictMA!["Places"]!.mutableCopy() as? Array
         
         //Right or Wrong Data
         let pathROW = NSBundle.mainBundle().pathForResource("RightOrWrong", ofType: "plist")

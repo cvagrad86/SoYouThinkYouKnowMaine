@@ -27,14 +27,16 @@
                                 <rect key="frame" x="111" y="239" width="258" height="67"/>
                                 <state key="normal" image="welcome_sign"/>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8sm-to-BRg"/>
-                                    <segue destination="ITd-qt-L0o" kind="presentation" id="mG8-hm-LaR"/>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ucd-Xm-BO8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7k-8h-Ouj">
                                 <rect key="frame" x="94" y="501" width="270" height="69"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                 <state key="normal" image="maine_maps"/>
+                                <connections>
+                                    <segue destination="BKY-ma-4Qg" kind="show" id="oUe-1R-6IA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-oa-t7m">
                                 <rect key="frame" x="86" y="432" width="241" height="61"/>
@@ -47,6 +49,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcR-dy-NTI">
                                 <rect key="frame" x="105" y="306" width="238" height="61"/>
                                 <state key="normal" image="true_false"/>
+                                <connections>
+                                    <segue destination="qqc-XN-QF7" kind="show" id="xEb-oM-HFB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7by-H9-VwL">
                                 <rect key="frame" x="150" y="306" width="128" height="8"/>
@@ -251,41 +256,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipl-da-zpf">
-                                <rect key="frame" x="103" y="53" width="300" height="80"/>
-                                <state key="normal" image="welcome_sign"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="xBW-kw-IRV" eventType="touchUpInside" id="qXl-da-snY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETG-c9-igS">
-                                <rect key="frame" x="29" y="128" width="300" height="80"/>
-                                <state key="normal" image="mult_choice"/>
-                                <connections>
-                                    <segue destination="Rur-Vt-nHX" kind="show" id="kP3-um-1Pu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juj-xZ-hwF">
-                                <rect key="frame" x="57" y="204" width="300" height="80"/>
-                                <state key="normal" image="mult_choice_locked"/>
-                                <connections>
-                                    <segue destination="BKY-ma-4Qg" kind="show" id="kOD-tQ-kXa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQz-dX-mzk">
-                                <rect key="frame" x="47" y="282" width="300" height="80"/>
-                                <state key="normal" image="welcome_sign"/>
-                                <connections>
-                                    <segue destination="coZ-07-t4R" kind="show" id="AKU-9F-EVx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1H-NE-3P9">
-                                <rect key="frame" x="89" y="358" width="300" height="80"/>
-                                <state key="normal" image="welcome_sign"/>
-                                <connections>
-                                    <segue destination="2H4-Gy-Jxw" kind="show" id="xQS-fK-fXu"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNc-FA-SN9">
                                 <rect key="frame" x="142" y="519" width="143" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -298,14 +268,93 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4t-A4-nCA">
+                                <rect key="frame" x="182" y="160" width="38" height="30"/>
+                                <state key="normal" title="Maps">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BKY-ma-4Qg" kind="show" id="gte-dM-W2X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="det-Sg-Yn5">
+                                <rect key="frame" x="160" y="206" width="82" height="30"/>
+                                <state key="normal" title="Mult Choice">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rur-Vt-nHX" kind="show" id="ZC0-DV-Vk7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeX-0d-bqU">
+                                <rect key="frame" x="181" y="249" width="41" height="30"/>
+                                <state key="normal" title="Photo">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="coZ-07-t4R" kind="show" id="2Q6-9t-hKl"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SON-dd-yMA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score_levels" translatesAutoresizingMaskIntoConstraints="NO" id="dYC-zL-RYn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bse-PE-ASq">
+                                <rect key="frame" x="173" y="706" width="38" height="30"/>
+                                <state key="normal" title="Maps"/>
+                                <connections>
+                                    <segue destination="BKY-ma-4Qg" kind="show" id="SXM-Aj-vx3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp3-DL-HRb">
+                                <rect key="frame" x="247" y="707" width="31" height="30"/>
+                                <state key="normal" title="Mult"/>
+                                <connections>
+                                    <segue destination="Rur-Vt-nHX" kind="show" id="wef-Qe-AoL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEK-SR-X92">
+                                <rect key="frame" x="323" y="707" width="57" height="30"/>
+                                <state key="normal" title="Pictures"/>
+                                <connections>
+                                    <segue destination="coZ-07-t4R" kind="show" id="72v-VK-HhU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBD-pS-QHb">
+                                <rect key="frame" x="0.0" y="0.0" width="141" height="120"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nl-tr-XnR">
+                                <rect key="frame" x="17" y="99" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="bottom" secondItem="SON-dd-yMA" secondAttribute="bottom" id="H3i-bo-avt"/>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="top" secondItem="ZX7-Kl-oGr" secondAttribute="top" id="NX4-FL-X78"/>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="leading" secondItem="SON-dd-yMA" secondAttribute="leading" id="PEN-Me-jaO"/>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="bottom" secondItem="bse-PE-ASq" secondAttribute="bottom" id="ffx-1W-AP7"/>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="trailing" secondItem="SON-dd-yMA" secondAttribute="trailing" id="gez-Tr-Dcc"/>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="leading" secondItem="ZX7-Kl-oGr" secondAttribute="leading" id="gvm-jj-eih"/>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="top" secondItem="SON-dd-yMA" secondAttribute="top" id="lw7-Hh-JOk"/>
+                            <constraint firstItem="dYC-zL-RYn" firstAttribute="bottom" secondItem="wLQ-IW-rgE" secondAttribute="top" id="yRJ-Xu-nup"/>
+                            <constraint firstAttribute="trailing" secondItem="dYC-zL-RYn" secondAttribute="trailing" id="zTb-Le-Rpy"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="button" destination="ETG-c9-igS" id="Aty-cg-aYn"/>
                         <outlet property="highScoreLabel" destination="8vu-1J-3fM" id="Urh-M4-4xq"/>
-                        <outlet property="label" destination="ipl-da-zpf" id="ec7-Yc-lwg"/>
                         <outlet property="scoreLabel" destination="hNc-FA-SN9" id="l5z-zY-Czv"/>
                     </connections>
                 </viewController>
@@ -574,6 +623,7 @@
                         <outlet property="distanceBetweenSpots" destination="F8x-IB-apC" id="GPA-eo-eL4"/>
                         <outlet property="placeChosen" destination="V5C-C8-jAr" id="gOj-Yy-TAi"/>
                         <outlet property="spotToLocate" destination="sqx-Hn-hId" id="jap-f1-dsZ"/>
+                        <outletCollection property="answerButtons" destination="sqx-Hn-hId" collectionClass="NSMutableArray" id="SP6-TK-LXG"/>
                         <segue destination="xBW-kw-IRV" kind="show" identifier="ScoreSegue" id="2BD-vx-aTT"/>
                     </connections>
                 </viewController>
@@ -1550,13 +1600,17 @@
         <image name="imageedit_2_3695476844" width="357" height="356"/>
         <image name="maine_maps" width="394" height="101"/>
         <image name="mult_choice" width="394" height="101"/>
-        <image name="mult_choice_locked" width="394" height="101"/>
         <image name="name_that_photo" width="394" height="101"/>
+        <image name="score_levels" width="750" height="1334"/>
         <image name="tree-trunk-in-woods" width="1024" height="768"/>
         <image name="true_false" width="394" height="101"/>
         <image name="welcome_sign" width="336" height="101"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="72v-VK-HhU"/>
         <segue reference="2BD-vx-aTT"/>
+        <segue reference="gte-dM-W2X"/>
+        <segue reference="wef-Qe-AoL"/>
+        <segue reference="xEb-oM-HFB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -44,6 +44,7 @@
 		933D1E891C91789B0061B205 /* RightOrWrong.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933D1E881C91789B0061B205 /* RightOrWrong.plist */; };
 		933D1E8B1C917ACE0061B205 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933D1E8A1C917ACE0061B205 /* Configuration.swift */; };
 		933D1E8D1C9180A90061B205 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933D1E8C1C9180A90061B205 /* Score.swift */; };
+		936D6F101CACEC8000B58151 /* opening_sound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 936D6F0F1CACEC8000B58151 /* opening_sound3.mp3 */; };
 		938669AD1C8F278E00E85566 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669AC1C8F278E00E85566 /* Theme.swift */; };
 		938669B11C8F2AD900E85566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669B01C8F2AD900E85566 /* ViewController.swift */; };
 		93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B472DD1C99890B003E66F5 /* Extensions.swift */; };
@@ -97,6 +98,7 @@
 		933D1E881C91789B0061B205 /* RightOrWrong.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RightOrWrong.plist; sourceTree = "<group>"; };
 		933D1E8A1C917ACE0061B205 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		933D1E8C1C9180A90061B205 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		936D6F0F1CACEC8000B58151 /* opening_sound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opening_sound3.mp3; sourceTree = "<group>"; };
 		938669AC1C8F278E00E85566 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		938669B01C8F2AD900E85566 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93B472DD1C99890B003E66F5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				931623001CA53A89007BF21D /* nope.mp3 */,
 				931623041CA540EF007BF21D /* nope1.m4a */,
 				931623051CA54277007BF21D /* nope3.mp3 */,
+				936D6F0F1CACEC8000B58151 /* opening_sound3.mp3 */,
 			);
 			name = audio;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936D6F101CACEC8000B58151 /* opening_sound3.mp3 in Resources */,
 				931623061CA54278007BF21D /* nope3.mp3 in Resources */,
 				933CD6151C9FE5D0005C55F2 /* Joan-Benoit-Samuelson.png in Resources */,
 				933CD61B1C9FE5D0005C55F2 /* maine_state_flower.png in Resources */,

@@ -1,14 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
+<dict>
+	<key>Places</key>
+	<array/>
+	<key>New item</key>
 	<dict>
 		<key>lat</key>
-		<string></string>
+		<string>43.161748</string>
 		<key>long</key>
-		<string></string>
+		<string>-70.648258</string>
 		<key>title</key>
-		<string></string>
+		<string>York</string>
+		<key>hint</key>
+		<string>Click on Maine&apos;s oldest city/town</string>
 	</dict>
-</array>
+	<key>New item - 2</key>
+	<dict>
+		<key>lat</key>
+		<string>44.765037</string>
+		<key>long</key>
+		<string>-69.71938</string>
+		<key>title</key>
+		<string>Skowhegan</string>
+		<key>hint</key>
+		<string>Click on location of Maine&apos;s oldest fair</string>
+	</dict>
+	<key>New item - 3</key>
+	<dict>
+		<key>lat</key>
+		<string>44.387612</string>
+		<key>long</key>
+		<string>-68.203912</string>
+		<key>title</key>
+		<string>Acadia National Park</string>
+		<key>hint</key>
+		<string>Click on Maine&apos;s only National Park</string>
+	</dict>
+	<key>New item - 4</key>
+	<dict>
+		<key>lat</key>
+		<string>43.661471</string>
+		<key>long</key>
+		<string>-70.255326</string>
+		<key>title</key>
+		<string>Portland</string>
+		<key>hint</key>
+		<string>Click on Maine&apos;s first capital </string>
+	</dict>
+	<key>New item - 5</key>
+	<dict>
+		<key>lat</key>
+		<string>45.908585</string>
+		<key>long</key>
+		<string>-68.876038</string>
+		<key>title</key>
+		<string>Mt. Katahdin</string>
+		<key>hint</key>
+		<string>Click on Maine&apos;s highest peak</string>
+	</dict>
+	<key>New item - 6</key>
+	<dict>
+		<key>lat</key>
+		<string>47.258650</string>
+		<key>long</key>
+		<string>-68.589491</string>
+		<key>title</key>
+		<string>Fort Kent</string>
+		<key>hint</key>
+		<string>Click on University of Maine at Fort Kent</string>
+	</dict>
+	<key>New item - 7</key>
+	<dict>
+		<key>lat</key>
+		<string>44.552011</string>
+		<key>long</key>
+		<string>-69.631712</string>
+		<key>title</key>
+		<string>Waterville</string>
+		<key>hint</key>
+		<string>Click on the Elm City(Home of Colby College)</string>
+	</dict>
+	<key>New item - 8</key>
+	<dict>
+		<key>lat</key>
+		<string>43.914016</string>
+		<key>long</key>
+		<string>-69.966996</string>
+		<key>title</key>
+		<string>Brunswick</string>
+		<key>hint</key>
+		<string>Click on Merrymeeting Bay - the confluence of Maine&apos;s two largest rivers</string>
+	</dict>
+	<key>New item - 9</key>
+	<dict>
+		<key>lat</key>
+		<string>44.801182</string>
+		<key>long</key>
+		<string>-68.777814</string>
+		<key>title</key>
+		<string>Bangor</string>
+		<key>hint</key>
+		<string>Click on Maine&apos;s second largest city</string>
+	</dict>
+	<key>New item - 10</key>
+	<dict>
+		<key>lat</key>
+		<string>44.670500</string>
+		<key>long</key>
+		<string>-70.151217</string>
+		<key>title</key>
+		<string>Farmington</string>
+		<key>hint</key>
+		<string>Click on the home of the Beavers and Chester Greenfield(inventor of the ear muffs)</string>
+	</dict>
+</dict>
 </plist>
