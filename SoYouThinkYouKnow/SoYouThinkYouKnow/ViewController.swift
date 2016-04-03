@@ -93,7 +93,7 @@ class ViewController: UIViewController, EGCDelegate {
         
         
         openingAudio()
-        //EGC.sharedInstance(self)
+        EGC.sharedInstance(self)
         loadQuizData()
     
     }

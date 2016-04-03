@@ -23,7 +23,7 @@ let place = [
 Place(name:"Bangor", location: CLLocation(
 latitude: 44.801182,
 longitude: -68.777814),
-hint: "Click on Maine's second largest city/town"),
+hint: "Click on Maine's third largest city/town"),
 
 Place(name:"Skowhegan",location: CLLocation(
 latitude: 44.765037,

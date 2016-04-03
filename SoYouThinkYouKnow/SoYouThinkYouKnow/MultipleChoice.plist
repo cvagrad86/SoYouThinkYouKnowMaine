@@ -6,262 +6,262 @@
 	<array>
 		<dict>
 			<key>Question</key>
-			<string>What year is it?</string>
+			<string>Who was governor before LePage?</string>
 			<key>CorrectAnswer</key>
-			<string>2015</string>
+			<string>John Baldacci</string>
 			<key>Answers</key>
 			<array>
-				<string>1995</string>
-				<string>2000</string>
-				<string>2010</string>
-				<string>2015</string>
+				<string>Angus King</string>
+				<string>John Baldacci</string>
+				<string>Joshua Chamberlain</string>
+				<string>Who cares?</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Who is the father of the gods in greek mythology?</string>
+			<string>Which of these is NOT a county in Maine?</string>
 			<key>CorrectAnswer</key>
-			<string>Zeus</string>
+			<string>Strafford</string>
 			<key>Answers</key>
 			<array>
-				<string>Ares</string>
-				<string>Zeus</string>
-				<string>Apollo</string>
-				<string>Jupiter</string>
+				<string>Cumberland</string>
+				<string>Washington</string>
+				<string>Franklin</string>
+				<string>Strafford</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>What is the name of Queen Elizabeth IIs oldest son?</string>
+			<string>US Route 1 extends from Florida all the way to which Maine town?</string>
 			<key>CorrectAnswer</key>
-			<string>Prince Charles</string>
+			<string>Fort Kent</string>
 			<key>Answers</key>
 			<array>
-				<string>Prince Maurice</string>
-				<string>Prince Harry</string>
-				<string>Prince Charles</string>
-				<string>Willy</string>
+				<string>Fort Kent</string>
+				<string>Houlton</string>
+				<string>Greenville</string>
+				<string>Aroostook</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Who is a famous fictional wizard?</string>
+			<string>Which mountain is the SECOND highest in Maine?</string>
 			<key>CorrectAnswer</key>
-			<string>Harry Potter</string>
+			<string>Sugarloaf</string>
 			<key>Answers</key>
 			<array>
-				<string>Harry Potter</string>
-				<string>Sherlock Holmes</string>
-				<string>Iron Man</string>
-				<string>Hawkeye</string>
+				<string>Saddleback</string>
+				<string>Katahdin</string>
+				<string>Sugarloaf</string>
+				<string>Mount Battie</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these superheroes is not part of The Avengers?</string>
+			<string>Which is Maine&apos;s most lucrative($$$) export?</string>
 			<key>CorrectAnswer</key>
-			<string>Spiderman</string>
+			<string>Lobster</string>
 			<key>Answers</key>
 			<array>
-				<string>Hulk</string>
-				<string>Thor</string>
-				<string>Black Widow</string>
-				<string>Spiderman</string>
+				<string>Lobster</string>
+				<string>Lumber</string>
+				<string>Paper</string>
+				<string>Blueberries</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>What is Arnold Schwarzeneggers home country?</string>
+			<string>What does L.L. in L.L. Bean stand for?</string>
 			<key>CorrectAnswer</key>
-			<string>Austria</string>
+			<string>Leon Leonwood</string>
 			<key>Answers</key>
 			<array>
-				<string>Germany</string>
-				<string>Switzerland</string>
-				<string>Austria</string>
-				<string>USA</string>
+				<string>Unknown?</string>
+				<string>Leon Leonwood</string>
+				<string>Little Lenny</string>
+				<string>Larry Latter</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these countries is not located in Europe?</string>
+			<string>Which of these is closest to Maine&apos;s current population?</string>
 			<key>CorrectAnswer</key>
-			<string>Australia</string>
+			<string>1,300,000</string>
 			<key>Answers</key>
 			<array>
-				<string>Italy</string>
-				<string>Australia</string>
-				<string>France</string>
-				<string>Greece</string>
+				<string>1,000,000</string>
+				<string>1,900,000</string>
+				<string>1,300,000</string>
+				<string>950,000</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these brands produces supercars?</string>
+			<string>How does Maine&apos;s land size compare to the rest of the country?</string>
 			<key>CorrectAnswer</key>
-			<string>Koenigsegg</string>
+			<string>39th largest</string>
 			<key>Answers</key>
 			<array>
-				<string>Ferrero</string>
-				<string>Coca Cola</string>
-				<string>Koenigsegg</string>
-				<string>Skoda</string>
+				<string>12th largest</string>
+				<string>39th largest</string>
+				<string>41st largest</string>
+				<string>25th largest</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these musicians wrote the song &quot;Mockingbird&quot;?</string>
+			<string>How many Senators in the MAINE Senate(not Washington D.C.)</string>
 			<key>CorrectAnswer</key>
-			<string>Eminem</string>
+			<string>35</string>
 			<key>Answers</key>
 			<array>
-				<string>Eminem</string>
-				<string>Rihanna</string>
-				<string>50 Cent</string>
-				<string>Ed Sheeran</string>
+				<string>Maine has a Senate?</string>
+				<string>35</string>
+				<string>151</string>
+				<string>9</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these is not a religion?</string>
+			<string>What is the official motto of Maine?</string>
 			<key>CorrectAnswer</key>
-			<string>Squash</string>
+			<string>Dirigo</string>
 			<key>Answers</key>
 			<array>
-				<string>Christianity</string>
-				<string>Buddhism</string>
-				<string>Judaism</string>
-				<string>Squash</string>
+				<string>Dirigo</string>
+				<string>Vacationland</string>
+				<string>Live free or die</string>
+				<string>Pine Street State</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these is the biggest?</string>
+			<string>Which is the smallest of Maine&apos;s counties in terms of land size?</string>
 			<key>CorrectAnswer</key>
-			<string>Sun</string>
+			<string>Sagadahoc</string>
 			<key>Answers</key>
 			<array>
-				<string>Earth</string>
-				<string>Sun</string>
-				<string>Moon</string>
-				<string>Elephant</string>
+				<string>Somerset</string>
+				<string>York</string>
+				<string>Lincoln</string>
+				<string>Sagadahoc</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these is the smallest?</string>
+			<string>What is Maine&apos;s longest river(starting and ending in Maine)?</string>
 			<key>CorrectAnswer</key>
-			<string>Flea</string>
+			<string>Kennebac</string>
 			<key>Answers</key>
 			<array>
-				<string>Mouse</string>
-				<string>Flea</string>
-				<string>Lego Brick</string>
-				<string>Marble</string>
+				<string>Saint John River</string>
+				<string>Saco</string>
+				<string>Kennebec</string>
+				<string>Penobscot</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>The fastest running animal is the...?</string>
+			<string>Which of these famous people is NOT from Maine?</string>
 			<key>CorrectAnswer</key>
-			<string>Cheetah</string>
+			<string>Dan Brown(novelist)</string>
 			<key>Answers</key>
 			<array>
-				<string>Lion</string>
-				<string>Zebra</string>
-				<string>Bear</string>
-				<string>Cheetah</string>
+				<string>Liv Tyler(actress)</string>
+				<string>Dan Brown(novelist)</string>
+				<string>Stephen King(author)</string>
+				<string>Judd Nelson(actor)</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which prefix increases the unit by the factor 1024?</string>
+			<string>Which of these firsts did NOT happen in Maine?</string>
 			<key>CorrectAnswer</key>
-			<string>mega</string>
+			<string>First Legal Lottery in 1963</string>
 			<key>Answers</key>
 			<array>
-				<string>giga</string>
-				<string>tera</string>
-				<string>mega</string>
-				<string>ultra</string>
+				<string>First Navel Battle of Revolutionary war(Machias)</string>
+				<string>First ship built by English colonists in Americas.</string>
+				<string>First sawmill in US was established near York in 1623</string>
+				<string>First Legal Lottery in 1963</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>The scary animal in the Jaws movies is a...?</string>
+			<string>Why is Joshua Chamberlain so well known?</string>
 			<key>CorrectAnswer</key>
-			<string>Shark</string>
+			<string>all of these are correct</string>
 			<key>Answers</key>
 			<array>
-				<string>Shark</string>
-				<string>Bear</string>
-				<string>Lion</string>
-				<string>Whale</string>
+				<string>Famous General from the Civil War</string>
+				<string>all of these are correct</string>
+				<string>Governor of Maine</string>
+				<string>President of Bowdoin College</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>What is required for any substance to burn?</string>
+			<string>What is the easternmost point in Maine(and the US)?</string>
 			<key>CorrectAnswer</key>
-			<string>Oxygen</string>
+			<string>West Quoddy Head</string>
 			<key>Answers</key>
 			<array>
-				<string>Water</string>
-				<string>Wood</string>
-				<string>Oxygen</string>
-				<string>Helium</string>
+				<string>West Quoddy Head</string>
+				<string>Eastport</string>
+				<string>Dont know, never been past Bangor</string>
+				<string>Bar Harbor</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>What is often referred to as &quot;White Gold&quot;?</string>
+			<string>Maine is the number 1 producer of what?</string>
 			<key>CorrectAnswer</key>
-			<string>Salt</string>
+			<string>Blueberries</string>
 			<key>Answers</key>
 			<array>
-				<string>Salt</string>
-				<string>Flour</string>
-				<string>Styrofoam</string>
-				<string>Silver</string>
+				<string>Potholes</string>
+				<string>Blueberries</string>
+				<string>Paper</string>
+				<string>Embarrassing governors</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>What is the national bird of the USA?</string>
+			<string>The official insect of Maine is?</string>
 			<key>CorrectAnswer</key>
-			<string>Bald Eagle</string>
+			<string>Honeybee</string>
 			<key>Answers</key>
 			<array>
-				<string>Vulture</string>
+				<string>Honeybee</string>
 				<string>Bald Eagle</string>
-				<string>Ostrich</string>
-				<string>Blackbird</string>
+				<string>Monarch Butterfly</string>
+				<string>Chickadee</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>Which one of these animals can&apos;t fly?</string>
+			<string>Maine became a state as part of the _______________ Compromise.</string>
 			<key>CorrectAnswer</key>
-			<string>Penguin</string>
+			<string>Missouri</string>
 			<key>Answers</key>
 			<array>
-				<string>Eagle</string>
-				<string>Mockingbird</string>
-				<string>Penguin</string>
-				<string>Hawk</string>
+				<string>French and Indian</string>
+				<string>Boston</string>
+				<string>Wicked Nice</string>
+				<string>Missouri</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Question</key>
-			<string>How many points does a football team get for a touchdown?</string>
+			<string>Which of these is not one of Maine&apos;s top 5 largest cities/towns in terms of population?</string>
 			<key>CorrectAnswer</key>
-			<string>6</string>
+			<string>Biddeford</string>
 			<key>Answers</key>
 			<array>
-				<string>4</string>
-				<string>5</string>
-				<string>7</string>
-				<string>6</string>
+				<string>South Portland</string>
+				<string>Lewiston</string>
+				<string>Biddeford</string>
+				<string>Bangor</string>
 			</array>
 		</dict>
 	</array>

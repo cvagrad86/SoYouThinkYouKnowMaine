@@ -96,6 +96,7 @@ class MultipleChoiceViewController: UIViewController {
             button.titleLabel!.lineBreakMode = .ByWordWrapping
             button.setTitle(answers[idx], forState: .Normal)
             button.enabled = true
+            button.titleLabel?.textAlignment = .Center
             button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         
