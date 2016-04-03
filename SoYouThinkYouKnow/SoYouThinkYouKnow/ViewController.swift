@@ -31,13 +31,14 @@ class ViewController: UIViewController, EGCDelegate {
     
     let viewTransitionDelegate = TransitionDelegate()
     
+   /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationViewController = segue.destinationViewController as! WelcomeViewController
-     
         destinationViewController.transitioningDelegate = viewTransitionDelegate
         destinationViewController.modalPresentationStyle = .Custom
         audioPlayer!.stop()
     }
+ */
  
     var audioPlayer: AVAudioPlayer?
     
@@ -66,7 +67,7 @@ class ViewController: UIViewController, EGCDelegate {
         animator?.addBehavior(gravity!)
         animator?.addBehavior(buttonAttachment!)
         
-        delay(1.0) {
+        delay(3.0) {
             self.animator?.removeBehavior(self.buttonAttachment!)
             
             self.delay(0.5) {
@@ -92,9 +93,14 @@ class ViewController: UIViewController, EGCDelegate {
         
         
         openingAudio()
-        EGC.sharedInstance(self)
+        //EGC.sharedInstance(self)
         loadQuizData()
     
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        audioPlayer?.stop()
+        
     }
     
     func openingAudio () {
@@ -112,10 +118,6 @@ class ViewController: UIViewController, EGCDelegate {
         let dictMC = NSDictionary(contentsOfFile: pathMC!)
         mcArray = dictMC!["Questions"]!.mutableCopy() as? Array
         
-        //Map Data
-        let pathMA = NSBundle.mainBundle().pathForResource("Locations", ofType: "plist")
-        let dictMA = NSDictionary(contentsOfFile: pathMA!)
-        mapArray = dictMA!["Places"]!.mutableCopy() as? Array
         
         //Right or Wrong Data
         let pathROW = NSBundle.mainBundle().pathForResource("RightOrWrong", ofType: "plist")
@@ -127,7 +129,7 @@ class ViewController: UIViewController, EGCDelegate {
         let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
         imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
        
-        //check()
+        
     }
     
     

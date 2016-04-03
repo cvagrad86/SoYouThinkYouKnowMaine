@@ -25,7 +25,7 @@ class TransitionPresentationAnimator: NSObject, UIViewControllerAnimatedTransiti
         toViewController.view.alpha = 0.0
         containerView!.addSubview(toViewController.view)
 
-        UIView.animateWithDuration(animationDuration, delay: 3.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 20.0, options: [],
+        UIView.animateWithDuration(animationDuration, delay: 6.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 20.0, options: [],
             animations: { () -> Void in
                 snapshotView.transform = CGAffineTransformIdentity
             }, completion: { (finished) -> Void in

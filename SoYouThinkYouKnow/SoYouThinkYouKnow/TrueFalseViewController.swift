@@ -109,6 +109,8 @@ class TrueFalseViewController: UIViewController {
         }
     }
     
+   
+    
     func nope() {
         do {
             audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("nope3", ofType: "mp3")!))

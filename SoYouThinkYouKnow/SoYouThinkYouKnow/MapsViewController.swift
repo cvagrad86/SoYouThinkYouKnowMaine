@@ -9,16 +9,22 @@ import UIKit
 import UIKit
 import Mapbox
 import MapKit
+import CoreLocation
 
 class MapsViewController: UIViewController, MGLMapViewDelegate  {
         
         var mapView: MGLMapView?
     
+    @IBOutlet weak var nextButton: UIButton!
+        //this has to come from the array
         var placeToLocate = CLLocation(latitude: 43.661471, longitude: -70.255326)
+    
         var locationManager = CLLocationManager()
         var placeSelected:String?
     
-    var correctAnswer: String?
+    var placeslist = [Place]()
+    
+    //var correctAnswer: String?
     var answers = [String]()
     //var image: String?
     var questionIdx = 0
@@ -27,13 +33,15 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         @IBOutlet weak var placeChosen: UILabel!
         @IBOutlet weak var spotToLocate: UILabel!
         @IBOutlet weak var distanceBetweenSpots: UILabel!
+    //var someDict:[Int:String]
     
-    @IBOutlet var answerButtons: [UILabel]!
+    
     
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            
+            nextButton.hidden = true
+            nextQuestion()
             let styleURL = NSURL(string: "mapbox://styles/cvagrad86/cihlqsphk000gb4kqezw4sjbd")
             mapView = MGLMapView(frame: view.bounds, styleURL: styleURL)
             mapView!.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -57,8 +65,9 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.3235,
                 longitude: -69.1653),
                                                                 zoomLevel: 6, animated: false)
-            print("Screen center: \(centerScreenPoint) = \(mapView!.center)")
-            print(mapArray)
+            //print("Screen center: \(centerScreenPoint) = \(mapView!.center)")
+        
+        
             let addSpot = UILongPressGestureRecognizer(target: self, action: "action:")
             addSpot.minimumPressDuration = 1
             mapView!.addGestureRecognizer(addSpot)
@@ -67,14 +76,36 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             self.view.addSubview(placeChosen)
             self.view.addSubview(spotToLocate)
             self.view.addSubview(distanceBetweenSpots)
+            self.view.addSubview(nextButton)
         }
     
-    func nextQuestion () {
-        let currentQuestion = mapArray![questionIdx]
-        answers = currentQuestion["title"] as! [String]
-        
+    @IBAction func nextMap(sender: AnyObject) {
+        nextQuestion()
+        nextButton.hidden = true
+        questionIdx += 1
     }
     
+    func nextQuestion() -> Place {
+        // initialize current question
+        let thisLocation = CLLocation()
+        var currentQuestion:Place = Place(name: "", location: thisLocation, hint: "")
+
+        if questionIdx < place.count {
+            currentQuestion =  place[questionIdx]
+            spotToLocate.text = currentQuestion.hint
+        } else {
+            showAlert()
+        }
+        //titlesForButtons()
+        
+    return currentQuestion
+    }
+    
+    func titlesForButtons() {
+        for questionIdx in place.enumerate() {
+            spotToLocate.text = nextQuestion().hint
+        }
+    }
     
     
         func distanceCalculated () {
@@ -106,9 +137,25 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             self.distanceBetweenSpots.text = ("You were (\(distance.formatWithDecimalPlaces(1))) miles away")
             
             self.placeChosen.text = ("Your score: \(distance.formatWithDecimalPlaces(1) * 5)")
-            
+            nextButton.hidden = false
         }
+    
+    
+    func showAlert() {
+        //var vc: UIViewController?
+        let alertController = UIAlertController(title: "That's all the Maps!", message: "Time to tally your final score", preferredStyle: UIAlertControllerStyle.Alert)
         
+        let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
+            
+            self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
+        })
+        
+        alertController.addAction(ok)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
         func action(gestureRecognizer:UIGestureRecognizer){
             if gestureRecognizer.state == UIGestureRecognizerState.Began {
                 let touchPoint = gestureRecognizer.locationInView(mapView)
@@ -121,7 +168,9 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         
         
     }
-    
+
+
+
     extension Double {
         func formatWithDecimalPlaces(decimalPlaces: Int) -> Double {
             let formattedString = NSString(format: "%.\(decimalPlaces)f", self) as String
