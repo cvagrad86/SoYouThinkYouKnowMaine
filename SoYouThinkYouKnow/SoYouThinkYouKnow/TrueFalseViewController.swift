@@ -14,17 +14,12 @@ class TrueFalseViewController: UIViewController {
     
     
     @IBOutlet weak var progressBar: UIProgressView!
-    
     @IBOutlet var questionLabel: UILabel!
-    
     @IBOutlet var answerButtons: [UIButton]!
-    
     @IBOutlet var cardButton: UIButton!
-    
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var nopeButton: UIButton!
     @IBOutlet weak var ayuhButton: UIButton!
-    
     @IBOutlet var countDownLabel: UILabel!
     
     var audioPlayer: AVAudioPlayer?
@@ -32,6 +27,10 @@ class TrueFalseViewController: UIViewController {
     var count = 60
     var currentscore = 0
     var timer = NSTimer()
+    var correctAnswer: String?
+    var question: String?
+    var answers = ["Ayuh","Nope"]
+    var questionIdx = 0
     
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
@@ -66,13 +65,7 @@ class TrueFalseViewController: UIViewController {
         score.text = "Your score = \(currentscore)"
     }
     
-    var correctAnswer: String?
     
-    var question: String?
-    
-    var answers = ["Ayuh","Nope"]
-    
-    var questionIdx = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +81,6 @@ class TrueFalseViewController: UIViewController {
         nextQuestion()
         
         let timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TrueFalseViewController.update), userInfo: nil, repeats: true)
-        //titlesForButtons()
         progressBar.transform = CGAffineTransformScale(progressBar.transform, 1, 10)
         
         rowArray!.shuffle()

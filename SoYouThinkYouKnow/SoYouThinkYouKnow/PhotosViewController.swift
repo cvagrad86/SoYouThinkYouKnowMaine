@@ -29,9 +29,7 @@ class PhotosViewController: UIViewController {
     var answers = [String]()
     var image: String?
     var questionIdx = 0
-    //var score = 0
-    
-    
+
     @IBOutlet var pictureTiles: [UILabel]!
     @IBOutlet var buttonHandler: [UIButton]!
     @IBOutlet weak var startButton: UIButton!
@@ -44,6 +42,17 @@ class PhotosViewController: UIViewController {
             currentScore = currentScore + (counter * 5)
             sender.backgroundColor = UIColor.greenColor()
             nextQuestionButton.hidden = false
+            
+            nextQuestionButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            
+            UIView.animateWithDuration(2.0,
+                                       delay: 0,
+                                       usingSpringWithDamping: 0.70,
+                                       initialSpringVelocity: 10.00,
+                                       options: UIViewAnimationOptions.AllowUserInteraction,
+                                       animations: {
+                                        self.nextQuestionButton.transform = CGAffineTransformIdentity
+                }, completion: nil)
             
         } else {
             sender.backgroundColor = UIColor.redColor()
@@ -147,6 +156,8 @@ class PhotosViewController: UIViewController {
         
         imageView.image = UIImage(named: image!)
     }
+    
+    
     //Mark timer
     
     func timerAction() {

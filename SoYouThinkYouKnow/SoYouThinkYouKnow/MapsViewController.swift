@@ -15,20 +15,17 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         
         var mapView: MGLMapView?
     
-    @IBOutlet weak var nextButton: UIButton!
+        //@IBOutlet weak var placeTheyChose: UILabel!
+        @IBOutlet weak var nextButton: UIButton!
     
-        //this has to come from the array
         var placeToLocate = CLLocation(latitude: 43.661471, longitude: -70.255326)
-    
-    
         var locationManager = CLLocationManager()
         var placeSelected:String?
-    
-    var placeslist = [Place]()
-    var answers = [String]()
-    var questionIdx = 0
-    var question: String?
-    var score = 0.00
+        var placeslist = [Place]()
+        var answers = [String]()
+        var questionIdx = 0
+        var question: String?
+        var score = 0.00
     
         @IBOutlet weak var placeChosen: UILabel!
         @IBOutlet weak var spotToLocate: UILabel!
@@ -38,10 +35,12 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
     
     
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
             super.viewDidLoad()
             nextButton.hidden = true
             nextQuestion()
+        
+            //put regular map on based on user choice
             let styleURL = NSURL(string: "mapbox://styles/cvagrad86/cihlqsphk000gb4kqezw4sjbd")
             mapView = MGLMapView(frame: view.bounds, styleURL: styleURL)
             mapView!.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -52,7 +51,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             doubleTap.numberOfTapsRequired = 2
             mapView!.addGestureRecognizer(doubleTap)
  
-            let singleTap = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
+            let singleTap = UITapGestureRecognizer(target: self, action: #selector(MapsViewController.handleSingleTap(_:)))
             singleTap.requireGestureRecognizerToFail(doubleTap)
             mapView!.addGestureRecognizer(singleTap)
         
@@ -69,46 +68,32 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             self.view.addSubview(spotToLocate)
             self.view.addSubview(distanceBetweenSpots)
             self.view.addSubview(nextButton)
+            
         }
     
     @IBAction func nextMap(sender: AnyObject) {
         nextQuestion()
         nextButton.hidden = true
-        questionIdx += 1
+        distanceBetweenSpots.hidden = true
         mapView!.removeAnnotations(mapView!.annotations!)
-    }
+        
+            }
     
     func nextQuestion() -> Place {
-        // initialize current question
         let thisLocation = CLLocation()
         var currentQuestion:Place = Place(name: "", location: thisLocation, hint: "")
-
         if questionIdx < place.count  {
             currentQuestion =  place[questionIdx]
             spotToLocate.text = currentQuestion.hint
             placeToLocate = currentQuestion.location
+            
         } else {
             showAlert()
         }
-        //titlesForButtons()
         
     return currentQuestion
     }
     
-    func titlesForButtons() {
-        for questionIdx in place.enumerate() {
-            //spotToLocate.text = nextQuestion().hint
-            //placeToLocate = nextQuestion().location
-        }
-    }
-    
-        func distanceCalculated () {
-            let userLocation:CLLocation = CLLocation(latitude: 44.310624, longitude: -69.779490)
-            let priceLocation:CLLocation = CLLocation(latitude: 43.661471, longitude: -70.255326)
-            let meters:CLLocationDistance = userLocation.distanceFromLocation(priceLocation)
-            print("\(meters)")
-        }
- 
         
         func handleSingleTap(tap: UITapGestureRecognizer) {
             // convert tap location (CGPoint)
@@ -131,18 +116,32 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             let distance = (meters.formatWithDecimalPlaces(2) * 0.0006214)
             
             let thisTry = distance
+            let correctPlace = nextQuestion().name
             
-            self.distanceBetweenSpots.text = ("You were (\(distance.formatWithDecimalPlaces(1))) miles away")
+            distanceBetweenSpots.hidden = false
+            self.distanceBetweenSpots.text = ("Correct Answer is \(correctPlace). You were (\(distance.formatWithDecimalPlaces(1))) miles away")
             
             nextButton.hidden = false
+            
+            nextButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            
+            UIView.animateWithDuration(2.0,
+                                       delay: 0,
+                                       usingSpringWithDamping: 0.70,
+                                       initialSpringVelocity: 10.00,
+                                       options: UIViewAnimationOptions.AllowUserInteraction,
+                                       animations: {
+                                        self.nextButton.transform = CGAffineTransformIdentity
+                }, completion: nil)
+
+           
+            //placeTheyChose.text = nextQuestion().name
             
             score = (score + thisTry.formatWithDecimalPlaces(1))
             
             self.placeChosen.text = ("Your Score: \(score)")
             
-                //("Your score: \(distance.formatWithDecimalPlaces(1) * 5)")
-            
-            //attempts to get score
+            questionIdx += 1
             
         }
     

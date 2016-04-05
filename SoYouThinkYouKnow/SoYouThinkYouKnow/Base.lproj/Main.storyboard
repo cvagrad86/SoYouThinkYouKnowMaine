@@ -34,14 +34,6 @@
                                     <segue destination="ITd-qt-L0o" kind="presentation" id="k4x-Sg-kI2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7k-8h-Ouj">
-                                <rect key="frame" x="94" y="501" width="270" height="69"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" image="maine_maps"/>
-                                <connections>
-                                    <segue destination="BKY-ma-4Qg" kind="show" id="oUe-1R-6IA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-oa-t7m">
                                 <rect key="frame" x="86" y="432" width="241" height="61"/>
                                 <constraints>
@@ -64,6 +56,18 @@
                                 <state key="normal" image="true_false"/>
                                 <connections>
                                     <segue destination="qqc-XN-QF7" kind="show" id="xEb-oM-HFB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7k-8h-Ouj">
+                                <rect key="frame" x="105" y="501" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="h8c-fr-izS"/>
+                                    <constraint firstAttribute="height" constant="60" id="ttc-x6-Eia"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" image="maine_maps"/>
+                                <connections>
+                                    <segue destination="BKY-ma-4Qg" kind="show" id="oUe-1R-6IA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,6 +95,7 @@
                             <constraint firstItem="mJ7-ME-2CS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="91" id="bTN-0R-99f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mJ7-ME-2CS" secondAttribute="trailing" constant="25" id="cK1-l1-Z72"/>
                             <constraint firstAttribute="trailing" secondItem="hUd-EA-AFA" secondAttribute="trailing" id="dWX-cE-LHk"/>
+                            <constraint firstItem="M7k-8h-Ouj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="17.5" id="eNp-V8-72L"/>
                             <constraint firstItem="fcR-dy-NTI" firstAttribute="top" secondItem="mJ7-ME-2CS" secondAttribute="bottom" id="fN1-j0-ami"/>
                             <constraint firstItem="mJ7-ME-2CS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="219" id="fxi-bT-9Zs"/>
                             <constraint firstItem="fcR-dy-NTI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="hcR-dK-eyv"/>
@@ -119,8 +124,11 @@
                                 <exclude reference="5qR-86-Pdp"/>
                                 <exclude reference="8Tp-HX-XLI"/>
                                 <exclude reference="OBg-3i-rcu"/>
+                                <exclude reference="BQJ-vB-o0R"/>
+                                <exclude reference="Hpy-ey-d85"/>
                                 <exclude reference="kdM-eH-ZFs"/>
                                 <exclude reference="zWE-ed-UQR"/>
+                                <exclude reference="GIf-jy-a6Q"/>
                                 <exclude reference="vLQ-do-36K"/>
                             </mask>
                         </variation>
@@ -636,12 +644,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-IB-apC">
-                                <rect key="frame" x="20" y="654" width="374" height="33"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-Lf-RGr">
                                 <rect key="frame" x="303" y="671" width="111" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -657,14 +659,20 @@
                                     <action selector="nextMap:" destination="BKY-ma-4Qg" eventType="touchUpInside" id="WOX-As-Se5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-IB-apC">
+                                <rect key="frame" x="20" y="620" width="374" height="52"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kHQ-Lf-RGr" secondAttribute="trailing" id="07l-jp-j80"/>
                             <constraint firstItem="sqx-Hn-hId" firstAttribute="leading" secondItem="V5C-C8-jAr" secondAttribute="leading" id="2RO-Td-5LX"/>
+                            <constraint firstItem="F8x-IB-apC" firstAttribute="top" secondItem="Udq-Vf-6Uu" secondAttribute="bottom" constant="-21" id="2f7-m7-wqx"/>
                             <constraint firstItem="sqx-Hn-hId" firstAttribute="centerX" secondItem="Udq-Vf-6Uu" secondAttribute="centerX" id="Bzz-zw-a2m"/>
                             <constraint firstItem="kHQ-Lf-RGr" firstAttribute="trailing" secondItem="V5C-C8-jAr" secondAttribute="trailing" id="DHP-kM-U4b"/>
-                            <constraint firstItem="F8x-IB-apC" firstAttribute="top" secondItem="Udq-Vf-6Uu" secondAttribute="bottom" constant="13" id="GCs-Hm-z1i"/>
                             <constraint firstItem="Udq-Vf-6Uu" firstAttribute="leading" secondItem="HP6-Z6-t8I" secondAttribute="leadingMargin" id="IlK-FJ-uYZ"/>
                             <constraint firstItem="kHQ-Lf-RGr" firstAttribute="top" secondItem="Udq-Vf-6Uu" secondAttribute="bottom" constant="30" id="IsA-UF-sma"/>
                             <constraint firstItem="Udq-Vf-6Uu" firstAttribute="top" secondItem="KtP-LC-1Wm" secondAttribute="bottom" constant="8" symbolic="YES" id="LOW-ym-w9o"/>
@@ -672,9 +680,10 @@
                             <constraint firstItem="als-mb-Xmh" firstAttribute="top" secondItem="kHQ-Lf-RGr" secondAttribute="bottom" constant="28" id="Qg0-p2-Evy"/>
                             <constraint firstItem="V5C-C8-jAr" firstAttribute="bottom" secondItem="als-mb-Xmh" secondAttribute="top" id="Whz-r6-b8E"/>
                             <constraint firstItem="kHQ-Lf-RGr" firstAttribute="trailing" secondItem="sqx-Hn-hId" secondAttribute="trailing" id="Xoe-lH-xWz"/>
-                            <constraint firstItem="Udq-Vf-6Uu" firstAttribute="leading" secondItem="F8x-IB-apC" secondAttribute="leading" id="bkT-2r-T4Y"/>
-                            <constraint firstItem="Udq-Vf-6Uu" firstAttribute="trailing" secondItem="F8x-IB-apC" secondAttribute="trailing" id="ey1-of-qb8"/>
+                            <constraint firstItem="F8x-IB-apC" firstAttribute="trailing" secondItem="Udq-Vf-6Uu" secondAttribute="trailing" id="d8L-G4-Dbx"/>
+                            <constraint firstItem="F8x-IB-apC" firstAttribute="leading" secondItem="Udq-Vf-6Uu" secondAttribute="leading" id="eaE-8b-eQm"/>
                             <constraint firstItem="V5C-C8-jAr" firstAttribute="leading" secondItem="HP6-Z6-t8I" secondAttribute="leading" id="rvr-sm-BZ2"/>
+                            <constraint firstItem="V5C-C8-jAr" firstAttribute="top" secondItem="F8x-IB-apC" secondAttribute="bottom" constant="35" id="wBH-ER-z2r"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -1675,8 +1684,8 @@
         <image name="welcome_sign" width="336" height="101"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oUe-1R-6IA"/>
         <segue reference="xEb-oM-HFB"/>
+        <segue reference="oUe-1R-6IA"/>
         <segue reference="2BD-vx-aTT"/>
     </inferredMetricsTieBreakers>
 </document>
