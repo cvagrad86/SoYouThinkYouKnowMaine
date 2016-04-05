@@ -17,8 +17,10 @@ struct Place {
 
 let place = [
 
-    Place(name: "York", location: CLLocation(latitude: 43.161748,
-        longitude: -70.648258), hint: "Click on Maine's oldest town/city"),
+Place(name: "York", location: CLLocation(
+latitude: 43.161748,
+longitude: -70.648258),
+hint: "Click on Maine's oldest town/city"),
 
 Place(name:"Bangor", location: CLLocation(
 latitude: 44.801182,
@@ -33,7 +35,7 @@ hint: "Click on Maine's oldest running fair"),
 Place(name:"Bar Harbor",location: CLLocation(
 latitude: 44.387612,
 longitude: -68.203912),
-hint: "Click on home of Maine’s online National Park"),
+hint: "Click on home of Maine’s only National Park"),
 
 Place(name:"Portland", location: CLLocation(
 latitude: 43.661471,

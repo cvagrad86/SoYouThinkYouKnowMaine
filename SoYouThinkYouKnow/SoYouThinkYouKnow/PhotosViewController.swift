@@ -39,13 +39,12 @@ class PhotosViewController: UIViewController {
         
         if sender.titleLabel!.text == correctAnswer {
             timer!.invalidate()
-            //resetTimer()
             timerLabel.hidden = true
             userScore.text = "Your score = \(counter * 5)"
             currentScore = currentScore + (counter * 5)
             sender.backgroundColor = UIColor.greenColor()
             nextQuestionButton.hidden = false
-            print("Your score = \(counter * 5)")
+            
         } else {
             sender.backgroundColor = UIColor.redColor()
             counter += 2
@@ -133,6 +132,7 @@ class PhotosViewController: UIViewController {
         correctAnswer = currentQuestion["CorrectAnswer"] as? String
         image = currentQuestion["Image"] as? String
         titlesForButtons()
+        nextQuestionButton.hidden = false
     }
     
     func titlesForButtons() {

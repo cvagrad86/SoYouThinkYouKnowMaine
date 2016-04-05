@@ -44,7 +44,7 @@ class MultipleChoiceViewController: UIViewController {
     @IBAction func cardButtonHandler(sender: AnyObject) {
         cardButton.enabled = true
         if questionIdx < mcArray!.count - 1 {
-            questionIdx++
+            questionIdx += 1
         } else {
             showAlert()
         }

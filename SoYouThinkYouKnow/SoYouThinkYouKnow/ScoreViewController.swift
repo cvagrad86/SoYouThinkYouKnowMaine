@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import GameKit
 
 class ScoreViewController: UIViewController {
 
-    
-    @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+   
+   
+    @IBOutlet weak var levelLabel: UILabel!
     
  
     
@@ -23,6 +26,6 @@ class ScoreViewController: UIViewController {
     }
     
     
-        
+    
     
 }

@@ -16,24 +16,24 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         var mapView: MGLMapView?
     
     @IBOutlet weak var nextButton: UIButton!
+    
         //this has to come from the array
         var placeToLocate = CLLocation(latitude: 43.661471, longitude: -70.255326)
+    
     
         var locationManager = CLLocationManager()
         var placeSelected:String?
     
     var placeslist = [Place]()
-    
-    //var correctAnswer: String?
     var answers = [String]()
-    //var image: String?
     var questionIdx = 0
     var question: String?
-        
+    var score = 0.00
+    
         @IBOutlet weak var placeChosen: UILabel!
         @IBOutlet weak var spotToLocate: UILabel!
         @IBOutlet weak var distanceBetweenSpots: UILabel!
-    //var someDict:[Int:String]
+    
     
     
     
@@ -48,26 +48,18 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             
             view.addSubview(mapView!)
             
-            // double tapping zooms the map, so ensure that can still happen
             let doubleTap = UITapGestureRecognizer(target: self, action: nil)
             doubleTap.numberOfTapsRequired = 2
             mapView!.addGestureRecognizer(doubleTap)
-            
-            // delay single tap recognition until it is clearly not a double
+ 
             let singleTap = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
             singleTap.requireGestureRecognizerToFail(doubleTap)
             mapView!.addGestureRecognizer(singleTap)
-            
-            // convert `mapView.centerCoordinate` (CLLocationCoordinate2D)
-            // to screen location (CGPoint)
-            //let centerScreenPoint: CGPoint = mapView.convertCoordinate(mapView.centerCoordinate, toPointToView: mapView)
+        
             
             var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.3235,
-                longitude: -69.1653),
-                                                                zoomLevel: 6, animated: false)
-            //print("Screen center: \(centerScreenPoint) = \(mapView!.center)")
-        
-        
+                longitude: -69.1653), zoomLevel: 6, animated: false)
+
             let addSpot = UILongPressGestureRecognizer(target: self, action: "action:")
             addSpot.minimumPressDuration = 1
             mapView!.addGestureRecognizer(addSpot)
@@ -83,6 +75,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         nextQuestion()
         nextButton.hidden = true
         questionIdx += 1
+        mapView!.removeAnnotations(mapView!.annotations!)
     }
     
     func nextQuestion() -> Place {
@@ -90,9 +83,10 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         let thisLocation = CLLocation()
         var currentQuestion:Place = Place(name: "", location: thisLocation, hint: "")
 
-        if questionIdx < place.count {
+        if questionIdx < place.count  {
             currentQuestion =  place[questionIdx]
             spotToLocate.text = currentQuestion.hint
+            placeToLocate = currentQuestion.location
         } else {
             showAlert()
         }
@@ -103,10 +97,10 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
     
     func titlesForButtons() {
         for questionIdx in place.enumerate() {
-            spotToLocate.text = nextQuestion().hint
+            //spotToLocate.text = nextQuestion().hint
+            //placeToLocate = nextQuestion().location
         }
     }
-    
     
         func distanceCalculated () {
             let userLocation:CLLocation = CLLocation(latitude: 44.310624, longitude: -69.779490)
@@ -114,6 +108,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             let meters:CLLocationDistance = userLocation.distanceFromLocation(priceLocation)
             print("\(meters)")
         }
+ 
         
         func handleSingleTap(tap: UITapGestureRecognizer) {
             // convert tap location (CGPoint)
@@ -132,12 +127,23 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             mapView!.addAnnotation(polyline)
             
             let meters:CLLocationDistance = placeToLocate.distanceFromLocation(CLLocation(latitude: location.latitude, longitude: location.longitude))
+            
             let distance = (meters.formatWithDecimalPlaces(2) * 0.0006214)
+            
+            let thisTry = distance
             
             self.distanceBetweenSpots.text = ("You were (\(distance.formatWithDecimalPlaces(1))) miles away")
             
-            self.placeChosen.text = ("Your score: \(distance.formatWithDecimalPlaces(1) * 5)")
             nextButton.hidden = false
+            
+            score = (score + thisTry.formatWithDecimalPlaces(1))
+            
+            self.placeChosen.text = ("Your Score: \(score)")
+            
+                //("Your score: \(distance.formatWithDecimalPlaces(1) * 5)")
+            
+            //attempts to get score
+            
         }
     
     
