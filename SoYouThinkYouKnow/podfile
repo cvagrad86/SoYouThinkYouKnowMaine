@@ -1,0 +1,8 @@
+pod 'EasyGameCenter'
+
+use_frameworks!
+
+
+pod "Mapbox-iOS-SDK"
+
+pod 'Canvas', '~> 0.1'
