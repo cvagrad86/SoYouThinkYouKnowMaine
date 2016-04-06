@@ -25,24 +25,24 @@ class TrueFalseViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     
     var count = 60
-    var currentscore = 0
+    var tfscore = 0
     var timer = NSTimer()
     var correctAnswer: String?
     var question: String?
     var answers = ["Ayuh","Nope"]
     var questionIdx = 0
     
+    
+    
+    
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
             ayuh()
-        currentscore++
-            
-            print("+1")
+        tfscore += 1
         } else {
             sender.backgroundColor = UIColor.redColor()
             nope()
-            currentscore--
-            print("-1")
+            tfscore -= 1
         }
         for button in answerButtons {
             button.enabled = false
@@ -51,7 +51,9 @@ class TrueFalseViewController: UIViewController {
             }
         }
         cardButton.enabled = true
-        
+        saveScore()
+        score.text = "Your score = \(tfscore)"
+
     }
     
     @IBAction func cardButtonHandler(sender: AnyObject) {
@@ -62,14 +64,17 @@ class TrueFalseViewController: UIViewController {
             questionIdx = 0
         }
         nextQuestion()
-        score.text = "Your score = \(currentscore)"
     }
     
+    func saveScore () {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(tfscore, forKey: "tfscore")
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        saveScore()
         self.questionLabel.layer.borderWidth = 1
         self.questionLabel.layer.borderColor = UIColor.blackColor().CGColor
         self.ayuhButton.layer.borderWidth = 1
@@ -83,6 +88,7 @@ class TrueFalseViewController: UIViewController {
         let timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TrueFalseViewController.update), userInfo: nil, repeats: true)
         progressBar.transform = CGAffineTransformScale(progressBar.transform, 1, 10)
         
+       
         rowArray!.shuffle()
     }
     
@@ -148,7 +154,7 @@ class TrueFalseViewController: UIViewController {
     }
     
     func updateprogressView() {
-        progressBar.progress -= 0.01/60
+        progressBar.progress -= 0.01/20
         
         if progressBar.progress <= 0 {
             outOfTime()

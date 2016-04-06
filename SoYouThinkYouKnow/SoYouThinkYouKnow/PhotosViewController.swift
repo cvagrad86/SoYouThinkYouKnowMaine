@@ -46,12 +46,10 @@ class PhotosViewController: UIViewController {
             nextQuestionButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
             
             UIView.animateWithDuration(2.0,
-                                       delay: 0,
-                                       usingSpringWithDamping: 0.70,
-                                       initialSpringVelocity: 10.00,
-                                       options: UIViewAnimationOptions.AllowUserInteraction,
-                                       animations: {
-                                        self.nextQuestionButton.transform = CGAffineTransformIdentity
+        delay: 0, usingSpringWithDamping: 0.70,
+        initialSpringVelocity: 10.00,
+        options: UIViewAnimationOptions.AllowUserInteraction,animations: {
+            self.nextQuestionButton.transform = CGAffineTransformIdentity
                 }, completion: nil)
             
         } else {

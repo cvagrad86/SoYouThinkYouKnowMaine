@@ -14,11 +14,12 @@ class MultipleChoiceViewController: UIViewController {
     var question: String?
     var answers = [String]()
     var questionIdx = 0
+    var Highscore = Int()
+    var mcscore = 0
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
-    
     @IBOutlet var answerButtons: [UIButton]!
-    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -26,7 +27,13 @@ class MultipleChoiceViewController: UIViewController {
 
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
+            mcscore += 2
+            scoreLabel.text = "Your score = \(mcscore)"
+            print("+2")
                     } else {
+            mcscore -= 2
+            print("-2")
+            scoreLabel.text = "Your score = \(mcscore)"
             sender.backgroundColor = UIColor.redColor()
             
         }
@@ -37,6 +44,7 @@ class MultipleChoiceViewController: UIViewController {
             }
         }
         cardButton.enabled = true
+        saveScore()
     }
     
     @IBOutlet var cardButton: UIButton!
@@ -45,10 +53,13 @@ class MultipleChoiceViewController: UIViewController {
         cardButton.enabled = true
         if questionIdx < mcArray!.count - 1 {
             questionIdx += 1
+            
+            
         } else {
             showAlert()
         }
         nextQuestion()
+        
     }
     
  
@@ -56,8 +67,7 @@ class MultipleChoiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
+        self.view.addSubview(scoreLabel)
         mcArray!.shuffle()
         cardButton.enabled = false
         nextQuestion()
@@ -74,6 +84,11 @@ class MultipleChoiceViewController: UIViewController {
         button3.layer.borderWidth = 2
         button3.layer.borderColor = UIColor.blackColor().CGColor
         
+    }
+    
+    func saveScore () {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(mcscore, forKey: "mcscore")
     }
     
     override func didReceiveMemoryWarning() {
