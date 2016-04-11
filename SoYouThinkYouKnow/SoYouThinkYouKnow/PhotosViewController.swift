@@ -56,7 +56,8 @@ class PhotosViewController: UIViewController {
             sender.backgroundColor = UIColor.redColor()
             counter += 2
         }
-        
+       
+        Scoring.sharedGameData.photoscore = (counter * 5)
         
     }
     
@@ -232,12 +233,17 @@ class PhotosViewController: UIViewController {
         let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
             
             self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundThree", object: self)
+            
             //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
         })
         
         alertController.addAction(ok)
         
         self.presentViewController(alertController, animated: true, completion: nil)
+        
+        print(currentScore)
     }
 
     

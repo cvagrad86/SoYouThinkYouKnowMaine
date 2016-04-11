@@ -151,7 +151,7 @@
 			<key>Question</key>
 			<string>What is Maine&apos;s longest river(starting and ending in Maine)?</string>
 			<key>CorrectAnswer</key>
-			<string>Kennebac</string>
+			<string>Kennebec</string>
 			<key>Answers</key>
 			<array>
 				<string>Saint John River</string>

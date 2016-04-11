@@ -15,7 +15,7 @@ class MultipleChoiceViewController: UIViewController {
     var answers = [String]()
     var questionIdx = 0
     var Highscore = Int()
-    var mcscore = 0
+    var multchscore = 0
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
@@ -27,13 +27,14 @@ class MultipleChoiceViewController: UIViewController {
 
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
-            mcscore += 2
-            scoreLabel.text = "Your score = \(mcscore)"
+            multchscore += 2
+            scoreLabel.text = "Your score = \(multchscore)"
             print("+2")
+            
                     } else {
-            mcscore -= 2
+            multchscore -= 2
             print("-2")
-            scoreLabel.text = "Your score = \(mcscore)"
+            scoreLabel.text = "Your score = \(multchscore)"
             sender.backgroundColor = UIColor.redColor()
             
         }
@@ -45,6 +46,7 @@ class MultipleChoiceViewController: UIViewController {
         }
         cardButton.enabled = true
         saveScore()
+        Scoring.sharedGameData.mcscore = multchscore
     }
     
     @IBOutlet var cardButton: UIButton!
@@ -84,11 +86,12 @@ class MultipleChoiceViewController: UIViewController {
         button3.layer.borderWidth = 2
         button3.layer.borderColor = UIColor.blackColor().CGColor
         
+
     }
     
     func saveScore () {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(mcscore, forKey: "mcscore")
+        defaults.setInteger(multchscore, forKey: "mcscore")
     }
     
     override func didReceiveMemoryWarning() {
@@ -125,6 +128,8 @@ class MultipleChoiceViewController: UIViewController {
         let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
             
             self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundTwo", object: self)
             //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
         })
         

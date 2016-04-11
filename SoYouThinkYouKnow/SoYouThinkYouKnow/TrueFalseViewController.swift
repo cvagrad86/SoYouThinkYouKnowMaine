@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
+
 class TrueFalseViewController: UIViewController {
     
     
@@ -23,9 +24,8 @@ class TrueFalseViewController: UIViewController {
     @IBOutlet var countDownLabel: UILabel!
     
     var audioPlayer: AVAudioPlayer?
-    
     var count = 60
-    var tfscore = 0
+    var truefalsescore = 0
     var timer = NSTimer()
     var correctAnswer: String?
     var question: String?
@@ -33,16 +33,17 @@ class TrueFalseViewController: UIViewController {
     var questionIdx = 0
     
     
-    
-    
     @IBAction func answerButtonHandler(sender: UIButton) {
         if sender.titleLabel!.text == correctAnswer {
             ayuh()
-        tfscore += 1
+        truefalsescore += 1
+       Scoring.sharedGameData.tfscore = truefalsescore
+       
+            
         } else {
             sender.backgroundColor = UIColor.redColor()
             nope()
-            tfscore -= 1
+            truefalsescore -= 1
         }
         for button in answerButtons {
             button.enabled = false
@@ -52,8 +53,8 @@ class TrueFalseViewController: UIViewController {
         }
         cardButton.enabled = true
         saveScore()
-        score.text = "Your score = \(tfscore)"
-
+        score.text = "Your score = \(truefalsescore)"
+        
     }
     
     @IBAction func cardButtonHandler(sender: AnyObject) {
@@ -68,7 +69,7 @@ class TrueFalseViewController: UIViewController {
     
     func saveScore () {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(tfscore, forKey: "tfscore")
+        defaults.setInteger(truefalsescore, forKey: "tfscore")
     }
     
     
@@ -87,9 +88,9 @@ class TrueFalseViewController: UIViewController {
         
         let timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TrueFalseViewController.update), userInfo: nil, repeats: true)
         progressBar.transform = CGAffineTransformScale(progressBar.transform, 1, 10)
-        
-       
         rowArray!.shuffle()
+    
+    //NSNotificationCenter.defaultCenter().addObserver(self, selector: "endofFirstRound", name: endOfRoundOne, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -154,7 +155,7 @@ class TrueFalseViewController: UIViewController {
     }
     
     func updateprogressView() {
-        progressBar.progress -= 0.01/20
+        progressBar.progress -= 0.01/25
         
         if progressBar.progress <= 0 {
             outOfTime()
@@ -181,12 +182,16 @@ class TrueFalseViewController: UIViewController {
         let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
             
             self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundOne", object: self)
+            
             //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
         })
         
         alertController.addAction(ok)
         
         self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
     
     

@@ -13,20 +13,20 @@ import SystemConfiguration
 import AVKit
 import AVFoundation
 
+let endOfRoundOne = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundOneKey"
+let endOfRoundTwo = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundTwoKey"
+let endOfRoundThree = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundThreeKey"
+let endOfRoundFour = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundFourKey"
 
 class ViewController: UIViewController, EGCDelegate {
 
-    
+    var score = 0
     @IBOutlet weak var welcomeSign: UIButton!
-    
     @IBOutlet weak var trueFalseSign: UIButton!
-    
     @IBOutlet weak var maineMapsSign: UIButton!
     @IBOutlet weak var multChoiceSign: UIButton!
     @IBOutlet weak var nameThatPhoto: UIButton!
-    
     @IBOutlet weak var button: UIButton!
-    
     @IBOutlet weak var label: UILabel!
     
     let viewTransitionDelegate = TransitionDelegate()
@@ -61,12 +61,21 @@ class ViewController: UIViewController, EGCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        //maineMapsSign.enabled = false
+        //nameThatPhoto.enabled = false
+        //trueFalseSign.enabled = false
+        //multChoiceSign.enabled = false
+        //welcomeSign.enabled = true
+    
         openingAudio()
         EGC.sharedInstance(self)
         loadQuizData()
-    
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToMultChoice(_:)), name: "endOfRoundOne", object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToPhotos(_:)), name: "endOfRoundTwo", object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToMaps(_:)), name: "endOfRoundThree", object: nil)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -83,6 +92,39 @@ class ViewController: UIViewController, EGCDelegate {
             print("Error")
         }
     }
+    
+    func goToMultChoice (notification: NSNotification) {
+        //hide the welcome and TF sign - make other 2 locked
+        maineMapsSign.enabled = false
+        nameThatPhoto.enabled = false
+        multChoiceSign.enabled = true
+        welcomeSign.hidden = true
+        trueFalseSign.hidden = true
+        audioPlayer?.stop()
+    }
+    
+    func goToPhotos (notification: NSNotification) {
+        //hide the mc sign - keep maps locked
+        nameThatPhoto.enabled = true
+        multChoiceSign.hidden = true
+        welcomeSign.hidden = true
+        trueFalseSign.hidden = true
+        maineMapsSign.enabled = false
+        audioPlayer?.stop()
+    }
+    
+    func goToMaps(notification: NSNotification) {
+        //go to maps
+        nameThatPhoto.hidden = true
+        multChoiceSign.hidden = true
+        welcomeSign.hidden = true
+        trueFalseSign.hidden = true
+        maineMapsSign.enabled = true
+        audioPlayer?.stop()
+        
+    }
+    
+    
     func loadQuizData() {
         //Multiple Choice Data
         let pathMC = NSBundle.mainBundle().pathForResource("MultipleChoice", ofType: "plist")
@@ -99,7 +141,23 @@ class ViewController: UIViewController, EGCDelegate {
         let pathIMG = NSBundle.mainBundle().pathForResource("ImageQuiz", ofType: "plist")
         let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
         imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
-       
+       /*
+        let  HighscoreDefault = NSUserDefaults.standardUserDefaults()
+        let TFScore = NSUserDefaults.standardUserDefaults()
+        let MCScore = NSUserDefaults.standardUserDefaults()
+        let PhotosScore = NSUserDefaults.standardUserDefaults()
+        let MapsScore = NSUserDefaults.standardUserDefaults()
+        
+        var TFtotal = TFScore.valueForKey("tfscore") as! NSInteger
+        var MCTotal = MCScore.valueForKey("mcscore") as! NSInteger
+        var MapsTotal = MapsScore.valueForKey("mapscore") as! NSInteger
+        var PhotoTotal = PhotosScore.valueForKey("photoscore") as! NSInteger
+
+        //TFtotal = score
+        //MCTotal = score
+//MapsTotal = score
+        //PhotoTotal = score
+ */
         
     }
     

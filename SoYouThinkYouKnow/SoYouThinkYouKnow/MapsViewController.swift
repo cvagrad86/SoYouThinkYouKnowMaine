@@ -139,9 +139,14 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             
             score = (score + thisTry.formatWithDecimalPlaces(1))
             
+            var newscore = Int(score)
+           
+            
             self.placeChosen.text = ("Your Score: \(score)")
             
             questionIdx += 1
+            Scoring.sharedGameData.mapsscore = newscore
+            
             
         }
     
@@ -153,7 +158,9 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
             
             self.performSegueWithIdentifier("ScoreSegue", sender: self)
-            //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundFour", object: self)
+            
         })
         
         alertController.addAction(ok)
