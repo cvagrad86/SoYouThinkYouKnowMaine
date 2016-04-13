@@ -12,7 +12,7 @@ class PhotosViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     var counter = 0
-    var currentScore = 0
+    var currentScore = 1600
     var startTime = NSTimeInterval()
     var timer:NSTimer?
     
@@ -38,8 +38,9 @@ class PhotosViewController: UIViewController {
         if sender.titleLabel!.text == correctAnswer {
             timer!.invalidate()
             timerLabel.hidden = true
-            userScore.text = "Your score = \(counter * 5)"
-            currentScore = currentScore + (counter * 5)
+            currentScore = currentScore - (counter * 10)
+            userScore.text = "Your score = \(currentScore)"
+            
             sender.backgroundColor = UIColor.greenColor()
             nextQuestionButton.hidden = false
             
@@ -54,11 +55,16 @@ class PhotosViewController: UIViewController {
             
         } else {
             sender.backgroundColor = UIColor.redColor()
-            counter += 2
+            counter += 5
         }
        
-        Scoring.sharedGameData.photoscore = (counter * 5)
+        Scoring.sharedGameData.photoscore = currentScore
         
+        if currentScore < 0 {
+            currentScore = 0
+            Scoring.sharedGameData.photoscore = 0
+            showAlert()
+        }
     }
     
     override func viewDidLoad() {
@@ -83,9 +89,7 @@ class PhotosViewController: UIViewController {
         timerLabel.hidden = true
         
     }
-    func updateScore() {
-        //currentScore
-    }
+   
     
     @IBAction func callNextPhoto(sender: AnyObject) {
         if questionIdx < imgArray!.count - 1 {
@@ -97,6 +101,7 @@ class PhotosViewController: UIViewController {
         unHide()
         startButton.hidden = false
         updateTime()
+        counter = 0
         
         timerLabel.hidden = true
         
@@ -128,6 +133,7 @@ class PhotosViewController: UIViewController {
         startButton.hidden = true
         Hide()
         updateTime()
+        nextQuestionButton.hidden = true
         let aSelector : Selector = #selector(PhotosViewController.timerAction)
         timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target:self, selector: aSelector,     userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
@@ -147,9 +153,10 @@ class PhotosViewController: UIViewController {
         
         for (idx,button) in buttonHandler.enumerate() {
             button.setTitle(answers[idx], forState: .Normal)
-            button.titleLabel!.lineBreakMode = .ByWordWrapping
-            button.titleLabel!.textAlignment = .Center
+            button.titleLabel?.lineBreakMode = .ByWordWrapping
+            button.titleLabel?.textAlignment = .Center
             button.enabled = true
+            button.titleLabel?.numberOfLines = 2
             button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         
@@ -243,7 +250,7 @@ class PhotosViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
-        print(currentScore)
+        
     }
 
     

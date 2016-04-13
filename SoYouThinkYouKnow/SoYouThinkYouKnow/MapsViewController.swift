@@ -25,7 +25,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         var answers = [String]()
         var questionIdx = 0
         var question: String?
-        var score = 0.00
+        var score = 1000.00
     
         @IBOutlet weak var placeChosen: UILabel!
         @IBOutlet weak var spotToLocate: UILabel!
@@ -137,7 +137,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
            
             //placeTheyChose.text = nextQuestion().name
             
-            score = (score + thisTry.formatWithDecimalPlaces(1))
+            score = (score - thisTry.formatWithDecimalPlaces(1))
             
             var newscore = Int(score)
            
@@ -146,7 +146,13 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             
             questionIdx += 1
             Scoring.sharedGameData.mapsscore = newscore
+            print(newscore)
             
+            if score < 0.0 {
+                newscore = 0
+                Scoring.sharedGameData.mapsscore = newscore
+                showAlert()
+            }
             
         }
     

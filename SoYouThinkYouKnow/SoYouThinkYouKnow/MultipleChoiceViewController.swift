@@ -29,11 +29,10 @@ class MultipleChoiceViewController: UIViewController {
         if sender.titleLabel!.text == correctAnswer {
             multchscore += 2
             scoreLabel.text = "Your score = \(multchscore)"
-            print("+2")
             
                     } else {
             multchscore -= 2
-            print("-2")
+            
             scoreLabel.text = "Your score = \(multchscore)"
             sender.backgroundColor = UIColor.redColor()
             
@@ -47,6 +46,10 @@ class MultipleChoiceViewController: UIViewController {
         cardButton.enabled = true
         saveScore()
         Scoring.sharedGameData.mcscore = multchscore
+        if self.multchscore < 0 {
+            self.multchscore = 0
+            Scoring.sharedGameData.mcscore = self.multchscore
+        }
     }
     
     @IBOutlet var cardButton: UIButton!
@@ -105,7 +108,7 @@ class MultipleChoiceViewController: UIViewController {
         answers = currentQuestion["Answers"] as! [String]
         correctAnswer = currentQuestion["CorrectAnswer"] as? String
         question = currentQuestion["Question"] as? String
-        
+        cardButton.enabled = false
         titlesForButtons()
     }
     
@@ -115,6 +118,7 @@ class MultipleChoiceViewController: UIViewController {
             button.setTitle(answers[idx], forState: .Normal)
             button.enabled = true
             button.titleLabel?.textAlignment = .Center
+            button.titleLabel?.numberOfLines = 0
             button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         
@@ -128,6 +132,7 @@ class MultipleChoiceViewController: UIViewController {
         let ok = UIAlertAction(title: "Ayuh", style: .Default, handler: { (alert: UIAlertAction!) in
             
             self.performSegueWithIdentifier("ScoreSegue", sender: self)
+            
             
             NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundTwo", object: self)
             //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController

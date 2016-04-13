@@ -14,16 +14,12 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var yourScoreLabel: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
-
     @IBOutlet weak var moveToNextRound: UIButton!
+    
 
     var currentScore = Int()
     var currentRound = Int()
-    var overallGameScore = (
-        Scoring.sharedGameData.tfscore +
-        Scoring.sharedGameData.mcscore +
-        Scoring.sharedGameData.photoscore +
-        Scoring.sharedGameData.mapsscore)
+    var overallGameScore = Int()
 
     var roundOne = Scoring.sharedGameData.tfscore
     var roundTwo = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore)
@@ -33,12 +29,11 @@ class ScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let  HighscoreDefault = NSUserDefaults.standardUserDefaults()
-        let TFScore = NSUserDefaults.standardUserDefaults()
-        let MCScore = NSUserDefaults.standardUserDefaults()
-        let PhotosScore = NSUserDefaults.standardUserDefaults()
-        let MapsScore = NSUserDefaults.standardUserDefaults()
+        //let  HighscoreDefault = NSUserDefaults.standardUserDefaults()
+        //let TFScore = NSUserDefaults.standardUserDefaults()
+        //let MCScore = NSUserDefaults.standardUserDefaults()
+        //let PhotosScore = NSUserDefaults.standardUserDefaults()
+        //let MapsScore = NSUserDefaults.standardUserDefaults()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScoreViewController.endOfFirstRound(_:)), name: "endOfRoundOne", object: nil)
         
@@ -48,24 +43,32 @@ class ScoreViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScoreViewController.endOfFourthRound(_:)), name: "endOfRoundFour", object: nil)
         
+        UIView.animateWithDuration(2.0, delay: 1.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7,
+                                   options: UIViewAnimationOptions.AllowAnimatedContent, animations: ({
+        self.yourScoreLabel.center.x = 32
+        self.yourScoreLabel.center.y = 200
+        self.yourScoreLabel.alpha = 1.0
+        }), completion: nil)
         
-        scoreLabel.text = "Score: \(overallGameScore)"
         
     }
     
     
     func endOfFirstRound (notification: NSNotification) {
+       
+        scoreLabel.text = "Score: \(roundOne)"
+        
         if case 0 ... 4 = roundOne {
             levelLabel.text = "Never Been Heah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never_been_heah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
         if case 5 ... 8 = roundOne {
             levelLabel.text = "One Timah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "one_timah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
         if case 9 ... 11 = roundOne {
             levelLabel.text = "Weekend Warrior"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekend_warrior.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
         if case 12 ... 15 = roundOne {
             levelLabel.text = "Transplant"
@@ -77,7 +80,7 @@ class ScoreViewController: UIViewController {
         }
         if case 21 ... 50 = roundOne {
             levelLabel.text = "TRUE BLUE MAINAH"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "true_blue_mainah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         
         currentRound = 1
@@ -85,87 +88,104 @@ class ScoreViewController: UIViewController {
     }
     
     func endofSecondRound (notification: NSNotification) {
-        if case 0 ... 12 = roundTwo {
+       
+        
+        scoreLabel.text = "Score: \(roundTwo)"
+        
+        if case 0 ... 4 = roundTwo {
             levelLabel.text = "Never Been Heah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never_been_heah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
-        if case 12 ... 16 = roundTwo {
+        if case 5 ... 9 = roundTwo {
             levelLabel.text = "One Timah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "one_timah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
-        if case 17 ... 25 = roundTwo {
+        if case 10 ... 17 = roundTwo {
             levelLabel.text = "Weekend Warrior"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekend_warrior.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
-        if case 26 ... 36 = roundTwo {
+        if case 18 ... 25 = roundTwo {
             levelLabel.text = "Transplant"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
         }
-        if case 37 ... 47 = roundTwo{
+        if case 26 ... 33 = roundTwo{
             levelLabel.text = "Mainah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
         }
-        if case 48 ... 80 = roundTwo {
+        if case 34 ... 40 = roundTwo {
             levelLabel.text = "TRUE BLUE MAINAH"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "true_blue_mainah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 2
     }
     
     func endofThirdRound (notification: NSNotification) {
-        if case 0 ... 4 = roundThree {
+        
+        
+        
+        scoreLabel.text = "Score: \(roundThree)"
+        
+        
+        if case 0 ... 30 = roundThree {
             levelLabel.text = "Never Been Heah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never_been_heah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
-        if case 5 ... 8 = roundThree {
+        if case 31 ... 45 = roundThree {
             levelLabel.text = "One Timah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "one_timah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
-        if case 9 ... 11 = roundThree {
+        if case 46 ... 100 = roundThree {
             levelLabel.text = "Weekend Warrior"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekend_warrior.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
-        if case 12 ... 15 = roundThree {
+        if case 101 ... 200 = roundThree {
             levelLabel.text = "Transplant"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
         }
-        if case 16 ... 20 = roundThree{
+        if case 201 ... 400 = roundThree{
             levelLabel.text = "Mainah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
         }
-        if case 21 ... 35 = roundThree {
+        if case 401 ... 1500 = roundThree {
             levelLabel.text = "TRUE BLUE MAINAH"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "true_blue_mainah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 3
     }
     
     func endOfFourthRound (notification: NSNotification) {
-        if case 0 ... 4 = roundFour {
+        
+       
+        
+        scoreLabel.text = "Score: \(roundFour)"
+        
+        if case 0 ... 150 = roundFour {
             levelLabel.text = "Never Been Heah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never_been_heah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
-        if case 5 ... 8 = roundFour {
+        if case 150 ... 299 = roundFour {
             levelLabel.text = "One Timah"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "one_timah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
-        if case 9 ... 11 = roundFour {
+        if case 300 ... 499 = roundFour {
             levelLabel.text = "Weekend Warrior"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekend_warrior.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
-        if case 12 ... 15 = roundFour {
+        if case 500 ... 649 = roundFour {
             levelLabel.text = "Transplant"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
         }
-        if case 16 ... 20 = roundFour{
+        if case 650 ... 799 = roundFour{
             levelLabel.text = "Mainah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
         }
-        if case 21 ... 35 = roundFour {
+        if case 800 ... 1000 = roundFour {
             levelLabel.text = "TRUE BLUE MAINAH"
-            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "true_blue_mainah.png")!)
+            yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 4
+        
+        Scoring.sharedGameData.overallscore = roundFour
     }
     
     

@@ -136,6 +136,7 @@ class TrueFalseViewController: UIViewController {
         question = currentQuestion["Question"] as? String
         
         titlesForButtons()
+        cardButton.enabled = false
     }
     
     func titlesForButtons() {
@@ -155,10 +156,14 @@ class TrueFalseViewController: UIViewController {
     }
     
     func updateprogressView() {
-        progressBar.progress -= 0.01/25
+        progressBar.progress -= 0.01/10
         
         if progressBar.progress <= 0 {
             outOfTime()
+            if truefalsescore < 0 {
+                truefalsescore = 0
+                Scoring.sharedGameData.tfscore = truefalsescore
+            }
         }
         
     }

@@ -10,52 +10,141 @@ import UIKit
 
 class FinalViewController: UIViewController {
 
-    @IBOutlet var label: UIView!
-    @IBOutlet var button: UIView!
     
-    var animator: UIDynamicAnimator?
-    var gravity: UIGravityBehavior?
-    var buttonAttachment: UIAttachmentBehavior?
+    @IBOutlet weak var roundOneLabel: UILabel!
+    @IBOutlet weak var roundOneScore: UILabel!
+    @IBOutlet weak var roundTwoLabel: UILabel!
+    @IBOutlet weak var roundTwoScore: UILabel!
+    @IBOutlet weak var roundThreeLabel: UILabel!
+    @IBOutlet weak var roundThreeScore: UILabel!
+    @IBOutlet weak var roundFourLabel: UILabel!
+    @IBOutlet weak var roundFourScore: UILabel!
+    @IBOutlet weak var overallScoreLabel: UILabel!
+    @IBOutlet weak var finalScoreLabel2: UILabel!
     
-    @IBAction func buttonTapped(sender: AnyObject) {
-        animator = UIDynamicAnimator(referenceView: self.view)
-        gravity = UIGravityBehavior(items: [button, label])
-        var collision = UICollisionBehavior(items: [button, label])
-        collision.translatesReferenceBoundsIntoBoundary = true
-        animator?.addBehavior(collision)
+    var roundOne = Scoring.sharedGameData.tfscore
+    var roundTwo = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore)
+    var roundThree = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore + Scoring.sharedGameData.photoscore)
+    var roundFour = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore + Scoring.sharedGameData.photoscore + Scoring.sharedGameData.mapsscore)
+    
+    
+    override func viewDidLoad() {
+    
+        roundOneScore.text = "\(Scoring.sharedGameData.tfscore)"
+        roundTwoScore.text = "\(Scoring.sharedGameData.mcscore)"
+        roundThreeScore.text = "\(Scoring.sharedGameData.photoscore)"
+        roundFourScore.text = "\(Scoring.sharedGameData.mapsscore)"
+        overallScoreLabel.text = "\(Scoring.sharedGameData.overallscore)"
         
-        buttonAttachment = UIAttachmentBehavior(item: button,
-                                                offsetFromCenter: UIOffsetMake(-5, 0),
-                                                attachedToItem: label,
-                                                offsetFromCenter: UIOffsetMake(20, 0))
-        buttonAttachment?.damping = CGFloat.max
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endOfFirstRound(_:)), name: "endOfRoundOne", object: nil)
         
-        var anchor = UIAttachmentBehavior(item: label,
-                                          offsetFromCenter: UIOffsetMake( -1.0 * label.frame.size.width / 2.0, 0),
-                                          attachedToAnchor: CGPointMake(label.frame.origin.x, label.frame.origin.y - 20))
-        animator?.addBehavior(anchor)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endofSecondRound(_:)), name: "endOfRoundTwo", object: nil)
         
-        animator?.addBehavior(gravity!)
-        animator?.addBehavior(buttonAttachment!)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endofThirdRound(_:)), name: "endOfRoundThree", object: nil)
         
-        delay(2.0) {
-            self.animator?.removeBehavior(self.buttonAttachment!)
-            
-            self.delay(0.5) {
-                self.animator?.removeBehavior(anchor)
-                self.animator?.removeBehavior(collision)
-            }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endOfFourthRound(_:)), name: "endOfRoundFour", object: nil)
+        
+        overallScore ()
+    }
+    
+    func endOfFirstRound (notification: NSNotification) {
+        
+        
+        
+        if case 0 ... 4 = roundOne {
+                roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+        }
+        if case 5 ... 8 = roundOne {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+        }
+        if case 9 ... 11 = roundOne {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+        }
+        if case 12 ... 15 = roundOne {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+        }
+        if case 16 ... 20 = roundOne{
+           roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+        }
+        if case 21 ... 50 = roundOne {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         
     }
     
-    func delay(seconds: Double, block: () -> ()) {
-        let delay = seconds * Double(NSEC_PER_SEC)
-        let time: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), block)
+    func endofSecondRound (notification: NSNotification) {
+        
+        if case 0 ... 4 = roundTwo {
+            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+        }
+        if case 5 ... 9 = roundTwo {
+           roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+        }
+        if case 10 ... 17 = roundTwo {
+            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+        }
+        if case 18 ... 25 = roundTwo {
+            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+        }
+        if case 26 ... 33 = roundTwo{
+            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+        }
+        if case 34 ... 40 = roundTwo {
+            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+        }
+        
     }
     
+    func endofThirdRound (notification: NSNotification) {
+        
+        if case 0 ... 30 = roundThree {
+           roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+        }
+        if case 31 ... 45 = roundThree {
+            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+        }
+        if case 46 ... 100 = roundThree {
+           roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+        }
+        if case 101 ... 200 = roundThree {
+            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+        }
+        if case 201 ... 400 = roundThree{
+            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+        }
+        if case 401 ... 1500 = roundThree {
+            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+        }
+       
+    }
     
+    func endOfFourthRound (notification: NSNotification) {
+
+        if case 0 ... 150 = roundFour {
+            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+        }
+        if case 150 ... 299 = roundFour {
+            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+        }
+        if case 300 ... 499 = roundFour {
+            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+        }
+        if case 500 ... 649 = roundFour {
+            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+        }
+        if case 650 ... 799 = roundFour{
+            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+        }
+        if case 800 ... 1000 = roundFour {
+            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+        }
+       
+        
+    }
     
+    func overallScore () {
+        
+        Scoring.sharedGameData.overallscore = roundFour
+    }
 
 }

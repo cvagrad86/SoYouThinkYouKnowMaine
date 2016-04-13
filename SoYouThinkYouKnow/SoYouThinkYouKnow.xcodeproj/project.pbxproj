@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		32B68917D460AC11355DC140 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E6D2DE6701889AF1E685E6 /* Pods.framework */; };
+		9303013C1CBE351800A38ED7 /* true_false_instructions1.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301381CBE351800A38ED7 /* true_false_instructions1.png */; };
+		9303013D1CBE351800A38ED7 /* mult_choice_instructions1.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301391CBE351800A38ED7 /* mult_choice_instructions1.png */; };
+		9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9303013A1CBE351800A38ED7 /* maps_instructions1.png */; };
+		9303013F1CBE351800A38ED7 /* photos_instructions1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9303013B1CBE351800A38ED7 /* photos_instructions1.png */; };
+		930301451CBE390800A38ED7 /* weekendwarriorsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301401CBE390800A38ED7 /* weekendwarriorsmall.png */; };
+		930301461CBE390800A38ED7 /* Transplantsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301411CBE390800A38ED7 /* Transplantsmall.png */; };
+		930301471CBE390800A38ED7 /* onetimahsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301421CBE390800A38ED7 /* onetimahsmall.png */; };
+		930301481CBE390800A38ED7 /* never1small.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301431CBE390800A38ED7 /* never1small.png */; };
+		930301491CBE390800A38ED7 /* mainahsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301441CBE390800A38ED7 /* mainahsmall.png */; };
 		9304978F1C8ADDDD0073B6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304978E1C8ADDDD0073B6C9 /* AppDelegate.swift */; };
 		930497941C8ADDDD0073B6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930497921C8ADDDD0073B6C9 /* Main.storyboard */; };
 		930497961C8ADDDD0073B6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930497951C8ADDDD0073B6C9 /* Assets.xcassets */; };
@@ -37,7 +46,6 @@
 		933CD61D1C9FE5D0005C55F2 /* old_orchard_beach_pier.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD60B1C9FE5D0005C55F2 /* old_orchard_beach_pier.png */; };
 		933CD61E1C9FE5D0005C55F2 /* Paul_Bunyan_statue_in_Bangor.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD60C1C9FE5D0005C55F2 /* Paul_Bunyan_statue_in_Bangor.png */; };
 		933CD61F1C9FE5D0005C55F2 /* penobscot_fort_knox_maine.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD60D1C9FE5D0005C55F2 /* penobscot_fort_knox_maine.png */; };
-		933CD6201C9FE5D0005C55F2 /* portlandHeadLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD60E1C9FE5D0005C55F2 /* portlandHeadLight.png */; };
 		933CD6211C9FE5D0005C55F2 /* puffin.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD60F1C9FE5D0005C55F2 /* puffin.png */; };
 		933CD6221C9FE5D0005C55F2 /* thunderhole_seacoastdayhikersdotcom.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD6101C9FE5D0005C55F2 /* thunderhole_seacoastdayhikersdotcom.png */; };
 		933CD6241C9FEE3E005C55F2 /* ImageQuiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933CD6231C9FEE3E005C55F2 /* ImageQuiz.plist */; };
@@ -52,10 +60,16 @@
 		93C12C531CB9433200FFC17A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C12C521CB9433200FFC17A /* Notifications.swift */; };
 		93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C541CBAA33800FFC17A /* mainah.png */; };
 		93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C551CBAA33800FFC17A /* Transplant.png */; };
-		93C12C5C1CBAA33900FFC17A /* weekend_warrior.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C561CBAA33800FFC17A /* weekend_warrior.png */; };
-		93C12C5D1CBAA33900FFC17A /* one_timah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C571CBAA33800FFC17A /* one_timah.png */; };
-		93C12C5E1CBAA33900FFC17A /* true_blue_mainah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C581CBAA33800FFC17A /* true_blue_mainah.png */; };
-		93C12C5F1CBAA33900FFC17A /* never_been_heah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C591CBAA33800FFC17A /* never_been_heah.png */; };
+		93D233791CBB8BF500F1ED25 /* never1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D233781CBB8BF500F1ED25 /* never1.png */; };
+		93D233811CBB957F00F1ED25 /* mainah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337A1CBB957F00F1ED25 /* mainah.png */; };
+		93D233821CBB957F00F1ED25 /* never.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337B1CBB957F00F1ED25 /* never.png */; };
+		93D233831CBB957F00F1ED25 /* never1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337C1CBB957F00F1ED25 /* never1.png */; };
+		93D233841CBB957F00F1ED25 /* onetimah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337D1CBB957F00F1ED25 /* onetimah.png */; };
+		93D233851CBB957F00F1ED25 /* Transplant.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337E1CBB957F00F1ED25 /* Transplant.png */; };
+		93D233861CBB957F00F1ED25 /* trueblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337F1CBB957F00F1ED25 /* trueblue.png */; };
+		93D233871CBB957F00F1ED25 /* weekendwarrior.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D233801CBB957F00F1ED25 /* weekendwarrior.png */; };
+		93D233891CBB9B6000F1ED25 /* trueblue1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D233881CBB9B6000F1ED25 /* trueblue1.png */; };
+		93D2338B1CBCE16500F1ED25 /* portlandHeadLight2.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2338A1CBCE16500F1ED25 /* portlandHeadLight2.png */; };
 		93DFB5F81C90333500A1F99D /* TrueFalseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5F71C90333500A1F99D /* TrueFalseViewController.swift */; };
 		93DFB5FA1C90335200A1F99D /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5F91C90335200A1F99D /* ScoreViewController.swift */; };
 		93DFB5FC1C90336F00A1F99D /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5FB1C90336F00A1F99D /* MultipleChoiceViewController.swift */; };
@@ -66,6 +80,15 @@
 
 /* Begin PBXFileReference section */
 		903402244DE32CE1C5B79549 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		930301381CBE351800A38ED7 /* true_false_instructions1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true_false_instructions1.png; sourceTree = "<group>"; };
+		930301391CBE351800A38ED7 /* mult_choice_instructions1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mult_choice_instructions1.png; sourceTree = "<group>"; };
+		9303013A1CBE351800A38ED7 /* maps_instructions1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps_instructions1.png; sourceTree = "<group>"; };
+		9303013B1CBE351800A38ED7 /* photos_instructions1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photos_instructions1.png; sourceTree = "<group>"; };
+		930301401CBE390800A38ED7 /* weekendwarriorsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weekendwarriorsmall.png; path = scoreLabels/weekendwarriorsmall.png; sourceTree = "<group>"; };
+		930301411CBE390800A38ED7 /* Transplantsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Transplantsmall.png; path = scoreLabels/Transplantsmall.png; sourceTree = "<group>"; };
+		930301421CBE390800A38ED7 /* onetimahsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = onetimahsmall.png; path = scoreLabels/onetimahsmall.png; sourceTree = "<group>"; };
+		930301431CBE390800A38ED7 /* never1small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never1small.png; path = scoreLabels/never1small.png; sourceTree = "<group>"; };
+		930301441CBE390800A38ED7 /* mainahsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainahsmall.png; path = scoreLabels/mainahsmall.png; sourceTree = "<group>"; };
 		9304978B1C8ADDDD0073B6C9 /* SoYouThinkYouKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoYouThinkYouKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9304978E1C8ADDDD0073B6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		930497931C8ADDDD0073B6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,7 +122,6 @@
 		933CD60B1C9FE5D0005C55F2 /* old_orchard_beach_pier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = old_orchard_beach_pier.png; sourceTree = "<group>"; };
 		933CD60C1C9FE5D0005C55F2 /* Paul_Bunyan_statue_in_Bangor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Paul_Bunyan_statue_in_Bangor.png; sourceTree = "<group>"; };
 		933CD60D1C9FE5D0005C55F2 /* penobscot_fort_knox_maine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penobscot_fort_knox_maine.png; sourceTree = "<group>"; };
-		933CD60E1C9FE5D0005C55F2 /* portlandHeadLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portlandHeadLight.png; sourceTree = "<group>"; };
 		933CD60F1C9FE5D0005C55F2 /* puffin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puffin.png; sourceTree = "<group>"; };
 		933CD6101C9FE5D0005C55F2 /* thunderhole_seacoastdayhikersdotcom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thunderhole_seacoastdayhikersdotcom.png; sourceTree = "<group>"; };
 		933CD6231C9FEE3E005C55F2 /* ImageQuiz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImageQuiz.plist; sourceTree = "<group>"; };
@@ -114,10 +136,16 @@
 		93C12C521CB9433200FFC17A /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		93C12C541CBAA33800FFC17A /* mainah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainah.png; path = scoreLabels/mainah.png; sourceTree = "<group>"; };
 		93C12C551CBAA33800FFC17A /* Transplant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Transplant.png; path = scoreLabels/Transplant.png; sourceTree = "<group>"; };
-		93C12C561CBAA33800FFC17A /* weekend_warrior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weekend_warrior.png; path = scoreLabels/weekend_warrior.png; sourceTree = "<group>"; };
-		93C12C571CBAA33800FFC17A /* one_timah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = one_timah.png; path = scoreLabels/one_timah.png; sourceTree = "<group>"; };
-		93C12C581CBAA33800FFC17A /* true_blue_mainah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = true_blue_mainah.png; path = scoreLabels/true_blue_mainah.png; sourceTree = "<group>"; };
-		93C12C591CBAA33800FFC17A /* never_been_heah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never_been_heah.png; path = scoreLabels/never_been_heah.png; sourceTree = "<group>"; };
+		93D233781CBB8BF500F1ED25 /* never1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never1.png; path = scoreLabels/never1.png; sourceTree = "<group>"; };
+		93D2337A1CBB957F00F1ED25 /* mainah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainah.png; path = scoreLabels/mainah.png; sourceTree = "<group>"; };
+		93D2337B1CBB957F00F1ED25 /* never.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never.png; path = scoreLabels/never.png; sourceTree = "<group>"; };
+		93D2337C1CBB957F00F1ED25 /* never1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never1.png; path = scoreLabels/never1.png; sourceTree = "<group>"; };
+		93D2337D1CBB957F00F1ED25 /* onetimah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = onetimah.png; path = scoreLabels/onetimah.png; sourceTree = "<group>"; };
+		93D2337E1CBB957F00F1ED25 /* Transplant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Transplant.png; path = scoreLabels/Transplant.png; sourceTree = "<group>"; };
+		93D2337F1CBB957F00F1ED25 /* trueblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trueblue.png; path = scoreLabels/trueblue.png; sourceTree = "<group>"; };
+		93D233801CBB957F00F1ED25 /* weekendwarrior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weekendwarrior.png; path = scoreLabels/weekendwarrior.png; sourceTree = "<group>"; };
+		93D233881CBB9B6000F1ED25 /* trueblue1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trueblue1.png; path = scoreLabels/trueblue1.png; sourceTree = "<group>"; };
+		93D2338A1CBCE16500F1ED25 /* portlandHeadLight2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portlandHeadLight2.png; sourceTree = "<group>"; };
 		93DFB5F71C90333500A1F99D /* TrueFalseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrueFalseViewController.swift; sourceTree = "<group>"; };
 		93DFB5F91C90335200A1F99D /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		93DFB5FB1C90336F00A1F99D /* MultipleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceViewController.swift; sourceTree = "<group>"; };
@@ -220,12 +248,26 @@
 		933CD5FE1C9FE590005C55F2 /* imageQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				930301401CBE390800A38ED7 /* weekendwarriorsmall.png */,
+				930301411CBE390800A38ED7 /* Transplantsmall.png */,
+				930301421CBE390800A38ED7 /* onetimahsmall.png */,
+				930301431CBE390800A38ED7 /* never1small.png */,
+				930301441CBE390800A38ED7 /* mainahsmall.png */,
+				930301381CBE351800A38ED7 /* true_false_instructions1.png */,
+				930301391CBE351800A38ED7 /* mult_choice_instructions1.png */,
+				9303013A1CBE351800A38ED7 /* maps_instructions1.png */,
+				9303013B1CBE351800A38ED7 /* photos_instructions1.png */,
+				93D233881CBB9B6000F1ED25 /* trueblue1.png */,
+				93D2337A1CBB957F00F1ED25 /* mainah.png */,
+				93D2337B1CBB957F00F1ED25 /* never.png */,
+				93D2337C1CBB957F00F1ED25 /* never1.png */,
+				93D2337D1CBB957F00F1ED25 /* onetimah.png */,
+				93D2337E1CBB957F00F1ED25 /* Transplant.png */,
+				93D2337F1CBB957F00F1ED25 /* trueblue.png */,
+				93D233801CBB957F00F1ED25 /* weekendwarrior.png */,
+				93D233781CBB8BF500F1ED25 /* never1.png */,
 				93C12C541CBAA33800FFC17A /* mainah.png */,
 				93C12C551CBAA33800FFC17A /* Transplant.png */,
-				93C12C561CBAA33800FFC17A /* weekend_warrior.png */,
-				93C12C571CBAA33800FFC17A /* one_timah.png */,
-				93C12C581CBAA33800FFC17A /* true_blue_mainah.png */,
-				93C12C591CBAA33800FFC17A /* never_been_heah.png */,
 				933CD5FF1C9FE5D0005C55F2 /* chickadee.png */,
 				933CD6001C9FE5D0005C55F2 /* christinas_world.jpeg.png */,
 				933CD6011C9FE5D0005C55F2 /* geogre_mitchell.png */,
@@ -240,7 +282,7 @@
 				933CD60B1C9FE5D0005C55F2 /* old_orchard_beach_pier.png */,
 				933CD60C1C9FE5D0005C55F2 /* Paul_Bunyan_statue_in_Bangor.png */,
 				933CD60D1C9FE5D0005C55F2 /* penobscot_fort_knox_maine.png */,
-				933CD60E1C9FE5D0005C55F2 /* portlandHeadLight.png */,
+				93D2338A1CBCE16500F1ED25 /* portlandHeadLight2.png */,
 				933CD60F1C9FE5D0005C55F2 /* puffin.png */,
 				933CD6101C9FE5D0005C55F2 /* thunderhole_seacoastdayhikersdotcom.png */,
 			);
@@ -364,36 +406,50 @@
 				936D6F101CACEC8000B58151 /* opening_sound3.mp3 in Resources */,
 				931623061CA54278007BF21D /* nope3.mp3 in Resources */,
 				933CD6151C9FE5D0005C55F2 /* Joan-Benoit-Samuelson.png in Resources */,
+				93D233861CBB957F00F1ED25 /* trueblue.png in Resources */,
 				93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */,
 				933CD61B1C9FE5D0005C55F2 /* maine_state_flower.png in Resources */,
 				933CD6131C9FE5D0005C55F2 /* geogre_mitchell.png in Resources */,
-				93C12C5E1CBAA33900FFC17A /* true_blue_mainah.png in Resources */,
+				9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */,
 				933CD6181C9FE5D0005C55F2 /* judd_nelsonj_nelson1x.png in Resources */,
+				930301491CBE390800A38ED7 /* mainahsmall.png in Resources */,
 				933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */,
 				933D1E891C91789B0061B205 /* RightOrWrong.plist in Resources */,
+				93D233821CBB957F00F1ED25 /* never.png in Resources */,
+				930301471CBE390800A38ED7 /* onetimahsmall.png in Resources */,
+				930301451CBE390800A38ED7 /* weekendwarriorsmall.png in Resources */,
 				930497991C8ADDDD0073B6C9 /* LaunchScreen.storyboard in Resources */,
-				93C12C5C1CBAA33900FFC17A /* weekend_warrior.png in Resources */,
 				930497961C8ADDDD0073B6C9 /* Assets.xcassets in Resources */,
+				93D233811CBB957F00F1ED25 /* mainah.png in Resources */,
 				9315D1401CAAAFCE003E4FE0 /* Locations.plist in Resources */,
 				931623011CA53A89007BF21D /* nope.mp3 in Resources */,
+				93D233841CBB957F00F1ED25 /* onetimah.png in Resources */,
+				93D233851CBB957F00F1ED25 /* Transplant.png in Resources */,
+				93D233791CBB8BF500F1ED25 /* never1.png in Resources */,
 				930497941C8ADDDD0073B6C9 /* Main.storyboard in Resources */,
+				930301461CBE390800A38ED7 /* Transplantsmall.png in Resources */,
 				933CD6221C9FE5D0005C55F2 /* thunderhole_seacoastdayhikersdotcom.png in Resources */,
 				933CD61C1C9FE5D0005C55F2 /* maine-loon-2.png in Resources */,
+				9303013F1CBE351800A38ED7 /* photos_instructions1.png in Resources */,
 				933CD61F1C9FE5D0005C55F2 /* penobscot_fort_knox_maine.png in Resources */,
+				93D233831CBB957F00F1ED25 /* never1.png in Resources */,
 				933CD6241C9FEE3E005C55F2 /* ImageQuiz.plist in Resources */,
 				933CD6121C9FE5D0005C55F2 /* christinas_world.jpeg.png in Resources */,
-				93C12C5D1CBAA33900FFC17A /* one_timah.png in Resources */,
 				933CD61E1C9FE5D0005C55F2 /* Paul_Bunyan_statue_in_Bangor.png in Resources */,
 				933CD61A1C9FE5D0005C55F2 /* Louis-Sockalexis-Historic-Photo.png in Resources */,
+				930301481CBE390800A38ED7 /* never1small.png in Resources */,
 				933CD6191C9FE5D0005C55F2 /* longfellow.png in Resources */,
-				933CD6201C9FE5D0005C55F2 /* portlandHeadLight.png in Resources */,
 				933CD6211C9FE5D0005C55F2 /* puffin.png in Resources */,
+				9303013C1CBE351800A38ED7 /* true_false_instructions1.png in Resources */,
 				931623031CA53A9A007BF21D /* ayuhSound2.mp3 in Resources */,
+				9303013D1CBE351800A38ED7 /* mult_choice_instructions1.png in Resources */,
+				93D233891CBB9B6000F1ED25 /* trueblue1.png in Resources */,
+				93D2338B1CBCE16500F1ED25 /* portlandHeadLight2.png in Resources */,
 				933CD6141C9FE5D0005C55F2 /* James_G._Blaine.png in Resources */,
 				933CD61D1C9FE5D0005C55F2 /* old_orchard_beach_pier.png in Resources */,
 				933CD6161C9FE5D0005C55F2 /* Josh_Chamberlain.png in Resources */,
 				93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */,
-				93C12C5F1CBAA33900FFC17A /* never_been_heah.png in Resources */,
+				93D233871CBB957F00F1ED25 /* weekendwarrior.png in Resources */,
 				933CD6111C9FE5D0005C55F2 /* chickadee.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
