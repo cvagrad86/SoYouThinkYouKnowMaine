@@ -10,7 +10,12 @@ import UIKit
 
 class FinalViewController: UIViewController {
 
+    @IBOutlet weak var roundOneImage: UIImageView!
+    @IBOutlet weak var roundTwoImage: UIImageView!
+    @IBOutlet weak var roundThreeImage: UIImageView!
     
+    @IBOutlet weak var roundFourImage: UIImageView!
+    @IBOutlet weak var finalScoreImage: UIImageView!
     @IBOutlet weak var roundOneLabel: UILabel!
     @IBOutlet weak var roundOneScore: UILabel!
     @IBOutlet weak var roundTwoLabel: UILabel!
@@ -30,11 +35,30 @@ class FinalViewController: UIViewController {
     
     override func viewDidLoad() {
     
+        roundOneImage.layer.cornerRadius = 10
+        roundOneImage.layer.borderWidth = 2
+        roundOneImage.layer.borderColor = UIColor.blackColor().CGColor
+        roundTwoImage.layer.cornerRadius = 20
+        roundThreeImage.layer.cornerRadius = 20
+        roundFourImage.layer.cornerRadius = 20
+        finalScoreImage.layer.cornerRadius = 10
+        
+        self.view.addSubview(roundOneImage)
+        self.view.addSubview(roundTwoImage)
+        self.view.addSubview(roundThreeImage)
+        self.view.addSubview(roundFourImage)
+        self.view.addSubview(finalScoreImage)
+        
+        //to show percentile 
+        // = \(Double(Scoring.sharedGameData.tfscore) / 40)%
+        
         roundOneScore.text = "\(Scoring.sharedGameData.tfscore)"
         roundTwoScore.text = "\(Scoring.sharedGameData.mcscore)"
         roundThreeScore.text = "\(Scoring.sharedGameData.photoscore)"
         roundFourScore.text = "\(Scoring.sharedGameData.mapsscore)"
-        overallScoreLabel.text = "\(Scoring.sharedGameData.overallscore)"
+        finalScoreLabel2.text = "\(Scoring.sharedGameData.overallscore)"
+        
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endOfFirstRound(_:)), name: "endOfRoundOne", object: nil)
         
@@ -49,25 +73,23 @@ class FinalViewController: UIViewController {
     
     func endOfFirstRound (notification: NSNotification) {
         
-        
-        
         if case 0 ... 4 = roundOne {
-                roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+                roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
         if case 5 ... 8 = roundOne {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
         }
         if case 9 ... 11 = roundOne {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
         }
         if case 12 ... 15 = roundOne {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
         }
         if case 16 ... 20 = roundOne{
-           roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+           roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
         }
         if case 21 ... 50 = roundOne {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
         }
         
     }
@@ -75,22 +97,22 @@ class FinalViewController: UIViewController {
     func endofSecondRound (notification: NSNotification) {
         
         if case 0 ... 4 = roundTwo {
-            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+            roundTwoImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
         if case 5 ... 9 = roundTwo {
-           roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+           roundTwoImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
         }
         if case 10 ... 17 = roundTwo {
-            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            roundTwoImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
         }
         if case 18 ... 25 = roundTwo {
-            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            roundTwoImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
         }
         if case 26 ... 33 = roundTwo{
-            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            roundTwoImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
         }
         if case 34 ... 40 = roundTwo {
-            roundTwoLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            roundTwoImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
         }
         
     }
@@ -98,22 +120,22 @@ class FinalViewController: UIViewController {
     func endofThirdRound (notification: NSNotification) {
         
         if case 0 ... 30 = roundThree {
-           roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+           roundThreeImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
         if case 31 ... 45 = roundThree {
-            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            roundThreeImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
         }
         if case 46 ... 100 = roundThree {
-           roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+           roundThreeImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
         }
         if case 101 ... 200 = roundThree {
-            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            roundThreeImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
         }
         if case 201 ... 400 = roundThree{
-            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            roundThreeImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
         }
         if case 401 ... 1500 = roundThree {
-            roundThreeLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            roundThreeImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
         }
        
     }
@@ -121,22 +143,22 @@ class FinalViewController: UIViewController {
     func endOfFourthRound (notification: NSNotification) {
 
         if case 0 ... 150 = roundFour {
-            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
         if case 150 ... 299 = roundFour {
-            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
         }
         if case 300 ... 499 = roundFour {
-            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
         }
         if case 500 ... 649 = roundFour {
-            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
         }
         if case 650 ... 799 = roundFour{
-            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
         }
         if case 800 ... 1000 = roundFour {
-            roundFourLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
         }
        
         
@@ -145,6 +167,31 @@ class FinalViewController: UIViewController {
     func overallScore () {
         
         Scoring.sharedGameData.overallscore = roundFour
+        print(Scoring.sharedGameData.tfscore)
+        print(Scoring.sharedGameData.mcscore)
+        print(Scoring.sharedGameData.photoscore)
+        print(Scoring.sharedGameData.mapsscore)
+        print(Scoring.sharedGameData.overallscore)
+        
+        if case 0 ... 150 = Scoring.sharedGameData.overallscore {
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+        }
+        if case 150 ... 299 = Scoring.sharedGameData.overallscore {
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+        }
+        if case 300 ... 499 = Scoring.sharedGameData.overallscore {
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+        }
+        if case 500 ... 649 = Scoring.sharedGameData.overallscore {
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+        }
+        if case 650 ... 799 = Scoring.sharedGameData.overallscore{
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+        }
+        if case 800 ... 4000 = Scoring.sharedGameData.overallscore {
+            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+        }
+        
     }
 
 }
