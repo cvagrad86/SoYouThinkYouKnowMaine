@@ -55,6 +55,14 @@
 		933D1E8D1C9180A90061B205 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933D1E8C1C9180A90061B205 /* Score.swift */; };
 		936D6F101CACEC8000B58151 /* opening_sound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 936D6F0F1CACEC8000B58151 /* opening_sound3.mp3 */; };
 		936D6F121CAD827E00B58151 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D6F111CAD827E00B58151 /* Locations.swift */; };
+		936FCCE91CBF7C290095E59D /* WalkthroughVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCE81CBF7C290095E59D /* WalkthroughVC1.swift */; };
+		936FCCEC1CBF80870095E59D /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCEA1CBF80870095E59D /* BWWalkthroughPageViewController.swift */; };
+		936FCCED1CBF80870095E59D /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCEB1CBF80870095E59D /* BWWalkthroughViewController.swift */; };
+		936FCCEF1CBF80DA0095E59D /* MyCustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */; };
+		936FCCF11CBF93A90095E59D /* lobster_coin@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */; };
+		936FCCF31CBF96610095E59D /* bonusCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF21CBF96610095E59D /* bonusCoin.png */; };
+		936FCCF51CBFBB910095E59D /* horn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF41CBFBB900095E59D /* horn.wav */; };
+		936FCCF71CBFBBA00095E59D /* Cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF61CBFBBA00095E59D /* Cow.mp3 */; };
 		938669AD1C8F278E00E85566 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669AC1C8F278E00E85566 /* Theme.swift */; };
 		938669B11C8F2AD900E85566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669B01C8F2AD900E85566 /* ViewController.swift */; };
 		93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B472DD1C99890B003E66F5 /* Extensions.swift */; };
@@ -132,6 +140,14 @@
 		933D1E8C1C9180A90061B205 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		936D6F0F1CACEC8000B58151 /* opening_sound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opening_sound3.mp3; sourceTree = "<group>"; };
 		936D6F111CAD827E00B58151 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		936FCCE81CBF7C290095E59D /* WalkthroughVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughVC1.swift; sourceTree = "<group>"; };
+		936FCCEA1CBF80870095E59D /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		936FCCEB1CBF80870095E59D /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
+		936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomPageViewController.swift; sourceTree = "<group>"; };
+		936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lobster_coin@1x.png"; sourceTree = "<group>"; };
+		936FCCF21CBF96610095E59D /* bonusCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bonusCoin.png; path = scoreLabels/bonusCoin.png; sourceTree = "<group>"; };
+		936FCCF41CBFBB900095E59D /* horn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horn.wav; sourceTree = "<group>"; };
+		936FCCF61CBFBBA00095E59D /* Cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cow.mp3; sourceTree = "<group>"; };
 		938669AC1C8F278E00E85566 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		938669B01C8F2AD900E85566 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93B472DD1C99890B003E66F5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -224,6 +240,8 @@
 				9315D1421CABA650003E4FE0 /* TransitionDelegate.swift */,
 				9315D1431CABA650003E4FE0 /* TransitionDismissalAnimator.swift */,
 				9315D1441CABA650003E4FE0 /* TransitionPresentationAnimator.swift */,
+				936FCCEA1CBF80870095E59D /* BWWalkthroughPageViewController.swift */,
+				936FCCEB1CBF80870095E59D /* BWWalkthroughViewController.swift */,
 			);
 			name = "view transitions";
 			sourceTree = "<group>";
@@ -231,6 +249,8 @@
 		931622FF1CA539C9007BF21D /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				936FCCF61CBFBBA00095E59D /* Cow.mp3 */,
+				936FCCF41CBFBB900095E59D /* horn.wav */,
 				931623021CA53A9A007BF21D /* ayuhSound2.mp3 */,
 				931623001CA53A89007BF21D /* nope.mp3 */,
 				931623041CA540EF007BF21D /* nope1.m4a */,
@@ -250,6 +270,8 @@
 		933CD5FE1C9FE590005C55F2 /* imageQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				936FCCF21CBF96610095E59D /* bonusCoin.png */,
+				936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */,
 				930301401CBE390800A38ED7 /* weekendwarriorsmall.png */,
 				930301411CBE390800A38ED7 /* Transplantsmall.png */,
 				930301421CBE390800A38ED7 /* onetimahsmall.png */,
@@ -304,6 +326,8 @@
 				93DFB5FF1C9033A000A1F99D /* MapsViewController.swift */,
 				93DFB6011C9033BA00A1F99D /* FinalViewController.swift */,
 				9315D1481CABA6B7003E4FE0 /* WelcomeViewController.swift */,
+				936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */,
+				936FCCE81CBF7C290095E59D /* WalkthroughVC1.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -422,9 +446,11 @@
 				930301471CBE390800A38ED7 /* onetimahsmall.png in Resources */,
 				930301451CBE390800A38ED7 /* weekendwarriorsmall.png in Resources */,
 				930497991C8ADDDD0073B6C9 /* LaunchScreen.storyboard in Resources */,
+				936FCCF71CBFBBA00095E59D /* Cow.mp3 in Resources */,
 				930497961C8ADDDD0073B6C9 /* Assets.xcassets in Resources */,
 				93D233811CBB957F00F1ED25 /* mainah.png in Resources */,
 				9303014B1CBE3D3500A38ED7 /* truebluesmall.png in Resources */,
+				936FCCF51CBFBB910095E59D /* horn.wav in Resources */,
 				9315D1401CAAAFCE003E4FE0 /* Locations.plist in Resources */,
 				931623011CA53A89007BF21D /* nope.mp3 in Resources */,
 				93D233841CBB957F00F1ED25 /* onetimah.png in Resources */,
@@ -449,11 +475,13 @@
 				9303013D1CBE351800A38ED7 /* mult_choice_instructions1.png in Resources */,
 				93D233891CBB9B6000F1ED25 /* trueblue1.png in Resources */,
 				93D2338B1CBCE16500F1ED25 /* portlandHeadLight2.png in Resources */,
+				936FCCF31CBF96610095E59D /* bonusCoin.png in Resources */,
 				933CD6141C9FE5D0005C55F2 /* James_G._Blaine.png in Resources */,
 				933CD61D1C9FE5D0005C55F2 /* old_orchard_beach_pier.png in Resources */,
 				933CD6161C9FE5D0005C55F2 /* Josh_Chamberlain.png in Resources */,
 				93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */,
 				93D233871CBB957F00F1ED25 /* weekendwarrior.png in Resources */,
+				936FCCF11CBF93A90095E59D /* lobster_coin@1x.png in Resources */,
 				933CD6111C9FE5D0005C55F2 /* chickadee.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,17 +549,21 @@
 				9304978F1C8ADDDD0073B6C9 /* AppDelegate.swift in Sources */,
 				93DFB5FA1C90335200A1F99D /* ScoreViewController.swift in Sources */,
 				9315D1491CABA6B7003E4FE0 /* WelcomeViewController.swift in Sources */,
+				936FCCED1CBF80870095E59D /* BWWalkthroughViewController.swift in Sources */,
 				93DFB6001C9033A000A1F99D /* MapsViewController.swift in Sources */,
 				93DFB5F81C90333500A1F99D /* TrueFalseViewController.swift in Sources */,
 				933D1E8B1C917ACE0061B205 /* Configuration.swift in Sources */,
 				93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */,
+				936FCCEC1CBF80870095E59D /* BWWalkthroughPageViewController.swift in Sources */,
 				93DFB5FE1C90338800A1F99D /* PhotosViewController.swift in Sources */,
 				933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */,
 				9315D1461CABA650003E4FE0 /* TransitionDismissalAnimator.swift in Sources */,
 				938669AD1C8F278E00E85566 /* Theme.swift in Sources */,
 				9315D1451CABA650003E4FE0 /* TransitionDelegate.swift in Sources */,
+				936FCCE91CBF7C290095E59D /* WalkthroughVC1.swift in Sources */,
 				933D1E8D1C9180A90061B205 /* Score.swift in Sources */,
 				93DFB5FC1C90336F00A1F99D /* MultipleChoiceViewController.swift in Sources */,
+				936FCCEF1CBF80DA0095E59D /* MyCustomPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

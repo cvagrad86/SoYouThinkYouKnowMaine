@@ -157,7 +157,7 @@ class PhotosViewController: UIViewController {
             button.titleLabel?.textAlignment = .Center
             button.enabled = true
             button.titleLabel?.numberOfLines = 2
-            button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
+            button.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
         
         imageView.image = UIImage(named: image!)

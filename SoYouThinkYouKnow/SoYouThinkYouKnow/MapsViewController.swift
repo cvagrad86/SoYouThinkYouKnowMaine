@@ -10,6 +10,9 @@ import UIKit
 import Mapbox
 import MapKit
 import CoreLocation
+import AVKit
+import AVFoundation
+
 
 class MapsViewController: UIViewController, MGLMapViewDelegate  {
         
@@ -26,7 +29,9 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         var questionIdx = 0
         var question: String?
         var score = 1000.00
-    
+        var audioPlayer: AVAudioPlayer?
+   
+    @IBOutlet weak var bonusCoin: UIImageView!
         @IBOutlet weak var placeChosen: UILabel!
         @IBOutlet weak var spotToLocate: UILabel!
         @IBOutlet weak var distanceBetweenSpots: UILabel!
@@ -39,7 +44,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             super.viewDidLoad()
             nextButton.hidden = true
             nextQuestion()
-        
+            bonusCoin.hidden = true
             //put regular map on based on user choice
             let styleURL = NSURL(string: "mapbox://styles/cvagrad86/cihlqsphk000gb4kqezw4sjbd")
             mapView = MGLMapView(frame: view.bounds, styleURL: styleURL)
@@ -76,8 +81,33 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         nextButton.hidden = true
         distanceBetweenSpots.hidden = true
         mapView!.removeAnnotations(mapView!.annotations!)
-        
+        bonusCoin.hidden = true
             }
+    
+    func bonusPoints () {
+       // print("you got a bonus")
+       self.view.addSubview(bonusCoin)
+        self.bonusCoin.hidden = false
+        self.bonusCoin.backgroundColor = UIColor(patternImage: UIImage(named: "bonusCoin.png")!)
+        //bonusAudio ()
+       UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+            self.bonusCoin.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            }, completion: nil)
+        
+
+    }
+    
+    func bonusAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("horn", ofType: "wav")!))
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+
+    
     
     func nextQuestion() -> Place {
         let thisLocation = CLLocation()
@@ -120,7 +150,10 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             
             distanceBetweenSpots.hidden = false
             self.distanceBetweenSpots.text = ("Correct Answer is \(correctPlace). You were (\(distance.formatWithDecimalPlaces(1))) miles away")
-            
+            if distance < 10.0 {
+                bonusCoin.hidden = false
+                bonusPoints()
+            }
             nextButton.hidden = false
             
             nextButton.transform = CGAffineTransformMakeScale(0.9, 0.9)

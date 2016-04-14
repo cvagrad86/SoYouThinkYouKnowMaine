@@ -8,28 +8,63 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-
+class WelcomeViewController: UIViewController, BWWalkthroughViewControllerDelegate {
+    
+    var needWalkthrough:Bool = true
+    var walkthrough:BWWalkthroughViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+            }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if needWalkthrough {
+            self.presentWalkthrough()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func presentWalkthrough(){
+        
+        let stb = UIStoryboard(name: "Main", bundle: nil)
+        walkthrough = stb.instantiateViewControllerWithIdentifier("container") as! BWWalkthroughViewController
+        
+        let page_two = stb.instantiateViewControllerWithIdentifier("page_2_tf")
+        let page_three = stb.instantiateViewControllerWithIdentifier("page_3_mc")
+        let page_four = stb.instantiateViewControllerWithIdentifier("page_4_photos")
+        let page_five = stb.instantiateViewControllerWithIdentifier("page_5_maps")
+        let page_six = stb.instantiateViewControllerWithIdentifier("page_6_scoring")
+        
+        // Attach the pages to the master
+        walkthrough.delegate = self
+       
+        walkthrough.addViewController(page_two)
+        walkthrough.addViewController(page_three)
+        walkthrough.addViewController(page_four)
+        walkthrough.addViewController(page_five)
+        walkthrough.addViewController(page_six)
+        
+        self.presentViewController(walkthrough, animated: true) {
+            ()->() in
+            self.needWalkthrough = false
+        }
     }
-    */
+}
 
+
+extension WelcomeViewController{
+    
+    func walkthroughCloseButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func walkthroughPageDidChange(pageNumber: Int) {
+        if (self.walkthrough.numberOfPages - 1) == pageNumber{
+            self.walkthrough.closeButton?.hidden = false
+        }else{
+            self.walkthrough.closeButton?.hidden = true
+        }
+    }
+    
 }

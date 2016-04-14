@@ -184,7 +184,7 @@ class ScoreViewController: UIViewController {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 4
-        print(roundFour)
+        
         Scoring.sharedGameData.overallscore = roundFour
     }
     

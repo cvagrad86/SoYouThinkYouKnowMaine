@@ -16,6 +16,7 @@ class MultipleChoiceViewController: UIViewController {
     var questionIdx = 0
     var Highscore = Int()
     var multchscore = 0
+    var inARow = 0
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
@@ -29,10 +30,10 @@ class MultipleChoiceViewController: UIViewController {
         if sender.titleLabel!.text == correctAnswer {
             multchscore += 2
             scoreLabel.text = "Your score = \(multchscore)"
-            
+            inARow += 1
                     } else {
             multchscore -= 2
-            
+            inARow = 0
             scoreLabel.text = "Your score = \(multchscore)"
             sender.backgroundColor = UIColor.redColor()
             
@@ -49,6 +50,10 @@ class MultipleChoiceViewController: UIViewController {
         if self.multchscore < 0 {
             self.multchscore = 0
             Scoring.sharedGameData.mcscore = self.multchscore
+        }
+        if inARow > 10 {
+            //show bonus
+            
         }
     }
     

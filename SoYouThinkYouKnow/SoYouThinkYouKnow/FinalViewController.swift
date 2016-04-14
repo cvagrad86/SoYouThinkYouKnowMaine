@@ -73,23 +73,25 @@ class FinalViewController: UIViewController {
     
     func endOfFirstRound (notification: NSNotification) {
         
-        if case 0 ... 4 = roundOne {
-                roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
+        print("we got the score from round one")
+        
+        if case 0 ... 4 = Scoring.sharedGameData.tfscore {
+                roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
-        if case 5 ... 8 = roundOne {
-            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
+        if case 5 ... 8 = Scoring.sharedGameData.tfscore {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
         }
-        if case 9 ... 11 = roundOne {
-            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
+        if case 9 ... 11 = Scoring.sharedGameData.tfscore {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
         }
-        if case 12 ... 15 = roundOne {
-            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
+        if case 12 ... 15 = Scoring.sharedGameData.tfscore {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
         }
-        if case 16 ... 20 = roundOne{
-           roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
+        if case 16 ... 20 = Scoring.sharedGameData.tfscore{
+           roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
         }
-        if case 21 ... 50 = roundOne {
-            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
+        if case 21 ... 50 = Scoring.sharedGameData.tfscore {
+            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
         }
         
     }
