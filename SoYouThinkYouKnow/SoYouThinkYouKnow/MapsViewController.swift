@@ -12,6 +12,7 @@ import MapKit
 import CoreLocation
 import AVKit
 import AVFoundation
+import GoogleMobileAds
 
 
 class MapsViewController: UIViewController, MGLMapViewDelegate  {
@@ -31,6 +32,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         var score = 1000.00
         var audioPlayer: AVAudioPlayer?
    
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var bonusCoin: UIImageView!
         @IBOutlet weak var placeChosen: UILabel!
         @IBOutlet weak var spotToLocate: UILabel!
@@ -45,6 +47,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             nextButton.hidden = true
             nextQuestion()
             bonusCoin.hidden = true
+            
             //put regular map on based on user choice
             let styleURL = NSURL(string: "mapbox://styles/cvagrad86/cihlqsphk000gb4kqezw4sjbd")
             mapView = MGLMapView(frame: view.bounds, styleURL: styleURL)
@@ -62,7 +65,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         
             
             var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.3235,
-                longitude: -69.1653), zoomLevel: 6, animated: false)
+                longitude: -69.1653), zoomLevel: 5.8, animated: false)
 
             let addSpot = UILongPressGestureRecognizer(target: self, action: "action:")
             addSpot.minimumPressDuration = 1
@@ -74,6 +77,10 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             self.view.addSubview(distanceBetweenSpots)
             self.view.addSubview(nextButton)
             
+            
+            bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"
+            bannerView.rootViewController = self
+            bannerView.loadRequest(GADRequest())
         }
     
     @IBAction func nextMap(sender: AnyObject) {
@@ -88,12 +95,13 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
        // print("you got a bonus")
        self.view.addSubview(bonusCoin)
         self.bonusCoin.hidden = false
-        self.bonusCoin.backgroundColor = UIColor(patternImage: UIImage(named: "bonusCoin.png")!)
+        self.bonusCoin.backgroundColor = UIColor(patternImage: UIImage(named: "bonus_coin1.png")!)
         //bonusAudio ()
        UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
             self.bonusCoin.transform = CGAffineTransformMakeScale(1.0, 1.0)
             }, completion: nil)
         
+         NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)
 
     }
     
@@ -150,7 +158,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             
             distanceBetweenSpots.hidden = false
             self.distanceBetweenSpots.text = ("Correct Answer is \(correctPlace). You were (\(distance.formatWithDecimalPlaces(1))) miles away")
-            if distance < 10.0 {
+            if distance < 5.0 {
                 bonusCoin.hidden = false
                 bonusPoints()
             }
@@ -160,7 +168,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             
             UIView.animateWithDuration(2.0,
                                        delay: 0,
-                                       usingSpringWithDamping: 0.70,
+                                       usingSpringWithDamping: 5.70,
                                        initialSpringVelocity: 10.00,
                                        options: UIViewAnimationOptions.AllowUserInteraction,
                                        animations: {

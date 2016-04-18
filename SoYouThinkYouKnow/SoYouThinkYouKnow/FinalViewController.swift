@@ -14,6 +14,8 @@ class FinalViewController: UIViewController {
     @IBOutlet weak var roundTwoImage: UIImageView!
     @IBOutlet weak var roundThreeImage: UIImageView!
     
+    @IBOutlet weak var bonusPointsEarned: SpringLabel!
+    @IBOutlet weak var bonusCoin: UIImageView!
     @IBOutlet weak var roundFourImage: UIImageView!
     @IBOutlet weak var finalScoreImage: UIImageView!
     @IBOutlet weak var roundOneLabel: UILabel!
@@ -32,6 +34,7 @@ class FinalViewController: UIViewController {
     var roundThree = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore + Scoring.sharedGameData.photoscore)
     var roundFour = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore + Scoring.sharedGameData.photoscore + Scoring.sharedGameData.mapsscore)
     
+    var bonus = Scoring.sharedGameData.bonusPoints
     
     override func viewDidLoad() {
     
@@ -68,8 +71,21 @@ class FinalViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endOfFourthRound(_:)), name: "endOfRoundFour", object: nil)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.bonusAdded(_:)), name: "bonusPointAdded", object: nil)
+        self.view.addSubview(bonusCoin)
+        
         overallScore ()
     }
+    func bonusAdded(notification: NSNotification) {
+        bonus += 1
+        bonusPointsEarned.text = ("\(Scoring.sharedGameData.bonusPoints)")
+        
+        
+        //self.bonusCoin.hidden = false
+        self.bonusCoin.backgroundColor = UIColor(patternImage: UIImage(named: "bonus_coin1.png")!)
+        print("bonus added")
+    }
+    
     
     func endOfFirstRound (notification: NSNotification) {
         

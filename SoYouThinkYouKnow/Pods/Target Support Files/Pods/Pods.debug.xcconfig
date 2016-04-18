@@ -1,10 +1,6 @@
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Mapbox-iOS-SDK/dynamic"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.7.1" "${PODS_ROOT}/Mapbox-iOS-SDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK"
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/BWWalkthrough.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Canvas.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/EasyGameCenter.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK"
-OTHER_LDFLAGS = $(inherited) -framework "BWWalkthrough" -framework "Canvas" -framework "EasyGameCenter" -framework "Mapbox"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
-PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Canvas" "${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK" "${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Canvas" -isystem "${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK" -isystem "${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Canvas" -l"c++" -l"sqlite3" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreMedia" -framework "CoreTelephony" -framework "EventKit" -framework "EventKitUI" -framework "GLKit" -framework "GoogleMobileAds" -framework "ImageIO" -framework "Mapbox" -framework "MediaPlayer" -framework "MessageUI" -framework "MobileCoreServices" -framework "QuartzCore" -framework "StoreKit" -framework "SystemConfiguration" -weak_framework "AdSupport"
 PODS_ROOT = ${SRCROOT}/Pods

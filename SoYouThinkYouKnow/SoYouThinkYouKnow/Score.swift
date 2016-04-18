@@ -36,7 +36,7 @@ class Scoring {
     var mapsscore: Int = 0
     var photoscore: Int = 0
     var overallscore: Int = 0
-    
+    var bonusPoints: Int = 0
     
     init () {
         

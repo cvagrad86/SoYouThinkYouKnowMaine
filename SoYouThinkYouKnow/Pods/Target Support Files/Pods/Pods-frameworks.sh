@@ -82,16 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/BWWalkthrough.framework"
-  install_framework "Pods/Canvas.framework"
-  install_framework "Pods/EasyGameCenter.framework"
-  install_framework "${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/BWWalkthrough.framework"
-  install_framework "Pods/Canvas.framework"
-  install_framework "Pods/EasyGameCenter.framework"
-  install_framework "${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework"
-fi

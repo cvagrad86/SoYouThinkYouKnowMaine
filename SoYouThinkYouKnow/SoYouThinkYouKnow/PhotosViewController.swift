@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class PhotosViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class PhotosViewController: UIViewController {
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
     
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -47,7 +49,7 @@ class PhotosViewController: UIViewController {
             nextQuestionButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
             
             UIView.animateWithDuration(2.0,
-        delay: 0, usingSpringWithDamping: 0.70,
+        delay: 0, usingSpringWithDamping: 3.70,
         initialSpringVelocity: 10.00,
         options: UIViewAnimationOptions.AllowUserInteraction,animations: {
             self.nextQuestionButton.transform = CGAffineTransformIdentity
@@ -87,6 +89,10 @@ class PhotosViewController: UIViewController {
         
         imgArray!.shuffle()
         timerLabel.hidden = true
+        
+        bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
         
     }
    

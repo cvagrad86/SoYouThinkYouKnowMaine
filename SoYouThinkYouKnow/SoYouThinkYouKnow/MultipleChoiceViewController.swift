@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class MultipleChoiceViewController: UIViewController {
 
+    @IBOutlet weak var bannerView: GADBannerView!
     var correctAnswer: String?
     var question: String?
     var answers = [String]()
@@ -44,6 +46,8 @@ class MultipleChoiceViewController: UIViewController {
                 button.backgroundColor = UIColor.greenColor()
             }
         }
+        
+        
         cardButton.enabled = true
         saveScore()
         Scoring.sharedGameData.mcscore = multchscore
@@ -53,6 +57,7 @@ class MultipleChoiceViewController: UIViewController {
         }
         if inARow > 10 {
             //show bonus
+            NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)
             
         }
     }
@@ -87,6 +92,7 @@ class MultipleChoiceViewController: UIViewController {
         button1.layer.cornerRadius = 10
         button1.layer.borderWidth = 2
         button1.layer.borderColor = UIColor.blackColor().CGColor
+        
         button2.layer.cornerRadius = 10
         button2.layer.borderWidth = 2
         button2.layer.borderColor = UIColor.blackColor().CGColor
@@ -94,6 +100,9 @@ class MultipleChoiceViewController: UIViewController {
         button3.layer.borderWidth = 2
         button3.layer.borderColor = UIColor.blackColor().CGColor
         
+        bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
 
     }
     

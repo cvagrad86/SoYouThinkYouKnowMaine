@@ -12,6 +12,7 @@ import GameKit
 import SystemConfiguration
 import AVKit
 import AVFoundation
+import GoogleMobileAds
 
 let endOfRoundOne = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundOneKey"
 let endOfRoundTwo = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundTwoKey"
@@ -76,6 +77,8 @@ class ViewController: UIViewController, EGCDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToPhotos(_:)), name: "endOfRoundTwo", object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToMaps(_:)), name: "endOfRoundThree", object: nil)
+        
+         print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
     }
     
     override func viewDidDisappear(animated: Bool) {

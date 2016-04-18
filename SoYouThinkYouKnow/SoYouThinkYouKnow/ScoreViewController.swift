@@ -8,9 +8,11 @@
 
 import UIKit
 import GameKit
+import GoogleMobileAds
 
 class ScoreViewController: UIViewController {
 
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var yourScoreLabel: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -51,6 +53,9 @@ class ScoreViewController: UIViewController {
         }), completion: nil)
         
         
+        bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
     }
     
     

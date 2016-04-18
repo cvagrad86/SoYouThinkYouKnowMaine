@@ -1,19 +1,16 @@
 PODS:
-  - BWWalkthrough (1.1.0)
   - Canvas (0.1.2)
-  - EasyGameCenter (2.3.2)
-  - Mapbox-iOS-SDK (3.1.2)
+  - Google-Mobile-Ads-SDK (7.7.1)
+  - Mapbox-iOS-SDK (3.0.1)
 
 DEPENDENCIES:
-  - BWWalkthrough
   - Canvas (~> 0.1)
-  - EasyGameCenter
+  - Google-Mobile-Ads-SDK (~> 7.0)
   - Mapbox-iOS-SDK
 
 SPEC CHECKSUMS:
-  BWWalkthrough: 0c27ad2773a25c8f4fb9004bc7d6685deb35fecc
   Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
-  EasyGameCenter: e685f2b856708762a876ac514001ae50f3f06be4
-  Mapbox-iOS-SDK: 0a910c2cce1aa8cff5b9ec2a990e7a32332a776a
+  Google-Mobile-Ads-SDK: e27569901b58881d9a94b42f2c642739cfe3970a
+  Mapbox-iOS-SDK: 61e79f3dd8432617bd1a66b2d7273ab5ce923ca9
 
 COCOAPODS: 0.39.0

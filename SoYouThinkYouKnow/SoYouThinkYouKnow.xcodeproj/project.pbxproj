@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32B68917D460AC11355DC140 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E6D2DE6701889AF1E685E6 /* Pods.framework */; };
+		416937D8BA44B3BF7FBC2667 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BA4D2335B74A4179ACCBDD /* libPods.a */; };
 		9303013C1CBE351800A38ED7 /* true_false_instructions1.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301381CBE351800A38ED7 /* true_false_instructions1.png */; };
 		9303013D1CBE351800A38ED7 /* mult_choice_instructions1.png in Resources */ = {isa = PBXBuildFile; fileRef = 930301391CBE351800A38ED7 /* mult_choice_instructions1.png */; };
 		9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9303013A1CBE351800A38ED7 /* maps_instructions1.png */; };
@@ -31,6 +31,7 @@
 		931623011CA53A89007BF21D /* nope.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623001CA53A89007BF21D /* nope.mp3 */; };
 		931623031CA53A9A007BF21D /* ayuhSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623021CA53A9A007BF21D /* ayuhSound2.mp3 */; };
 		931623061CA54278007BF21D /* nope3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623051CA54277007BF21D /* nope3.mp3 */; };
+		932D7BC31CC53B42005133C4 /* bonus_coin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 932D7BC21CC53B42005133C4 /* bonus_coin1.png */; };
 		933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933489021C99934C00EF7694 /* EasyGameCenter.swift */; };
 		933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */; };
 		933CD6111C9FE5D0005C55F2 /* chickadee.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD5FF1C9FE5D0005C55F2 /* chickadee.png */; };
@@ -60,9 +61,37 @@
 		936FCCED1CBF80870095E59D /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCEB1CBF80870095E59D /* BWWalkthroughViewController.swift */; };
 		936FCCEF1CBF80DA0095E59D /* MyCustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */; };
 		936FCCF11CBF93A90095E59D /* lobster_coin@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */; };
-		936FCCF31CBF96610095E59D /* bonusCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF21CBF96610095E59D /* bonusCoin.png */; };
 		936FCCF51CBFBB910095E59D /* horn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF41CBFBB900095E59D /* horn.wav */; };
 		936FCCF71CBFBBA00095E59D /* Cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF61CBFBBA00095E59D /* Cow.mp3 */; };
+		936FCD171CC12B100095E59D /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCF91CC12B100095E59D /* AsyncButton.swift */; };
+		936FCD181CC12B100095E59D /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFA1CC12B100095E59D /* AsyncImageView.swift */; };
+		936FCD191CC12B100095E59D /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFB1CC12B100095E59D /* AutoTextView.swift */; };
+		936FCD1A1CC12B100095E59D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFC1CC12B100095E59D /* BlurView.swift */; };
+		936FCD1B1CC12B100095E59D /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFD1CC12B100095E59D /* DesignableButton.swift */; };
+		936FCD1C1CC12B100095E59D /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFE1CC12B100095E59D /* DesignableImageView.swift */; };
+		936FCD1D1CC12B100095E59D /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFF1CC12B100095E59D /* DesignableLabel.swift */; };
+		936FCD1E1CC12B100095E59D /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD001CC12B100095E59D /* DesignableTabBarController.swift */; };
+		936FCD1F1CC12B100095E59D /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD011CC12B100095E59D /* DesignableTextField.swift */; };
+		936FCD201CC12B100095E59D /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD021CC12B100095E59D /* DesignableTextView.swift */; };
+		936FCD211CC12B100095E59D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD031CC12B100095E59D /* DesignableView.swift */; };
+		936FCD221CC12B100095E59D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD041CC12B100095E59D /* ImageLoader.swift */; };
+		936FCD231CC12B100095E59D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 936FCD051CC12B100095E59D /* Info.plist */; };
+		936FCD241CC12B100095E59D /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD061CC12B100095E59D /* KeyboardLayoutConstraint.swift */; };
+		936FCD251CC12B100095E59D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD071CC12B100095E59D /* LoadingView.swift */; };
+		936FCD261CC12B100095E59D /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936FCD081CC12B100095E59D /* LoadingView.xib */; };
+		936FCD271CC12B100095E59D /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD091CC12B100095E59D /* Misc.swift */; };
+		936FCD281CC12B100095E59D /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD0A1CC12B100095E59D /* SoundPlayer.swift */; };
+		936FCD291CC12B100095E59D /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD0C1CC12B100095E59D /* Spring.swift */; };
+		936FCD2A1CC12B100095E59D /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD0D1CC12B100095E59D /* SpringAnimation.swift */; };
+		936FCD2B1CC12B100095E59D /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD0E1CC12B100095E59D /* SpringButton.swift */; };
+		936FCD2C1CC12B100095E59D /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD0F1CC12B100095E59D /* SpringImageView.swift */; };
+		936FCD2D1CC12B100095E59D /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD101CC12B100095E59D /* SpringLabel.swift */; };
+		936FCD2E1CC12B100095E59D /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD111CC12B100095E59D /* SpringTextField.swift */; };
+		936FCD2F1CC12B100095E59D /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD121CC12B100095E59D /* SpringTextView.swift */; };
+		936FCD301CC12B100095E59D /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD131CC12B100095E59D /* SpringView.swift */; };
+		936FCD311CC12B100095E59D /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD141CC12B100095E59D /* TransitionManager.swift */; };
+		936FCD321CC12B100095E59D /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD151CC12B100095E59D /* TransitionZoom.swift */; };
+		936FCD331CC12B100095E59D /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD161CC12B100095E59D /* UnwindSegue.swift */; };
 		938669AD1C8F278E00E85566 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669AC1C8F278E00E85566 /* Theme.swift */; };
 		938669B11C8F2AD900E85566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669B01C8F2AD900E85566 /* ViewController.swift */; };
 		93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B472DD1C99890B003E66F5 /* Extensions.swift */; };
@@ -88,6 +117,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31BA4D2335B74A4179ACCBDD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		903402244DE32CE1C5B79549 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		930301381CBE351800A38ED7 /* true_false_instructions1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true_false_instructions1.png; sourceTree = "<group>"; };
 		930301391CBE351800A38ED7 /* mult_choice_instructions1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mult_choice_instructions1.png; sourceTree = "<group>"; };
@@ -116,6 +146,7 @@
 		931623021CA53A9A007BF21D /* ayuhSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ayuhSound2.mp3; sourceTree = "<group>"; };
 		931623041CA540EF007BF21D /* nope1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nope1.m4a; sourceTree = "<group>"; };
 		931623051CA54277007BF21D /* nope3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nope3.mp3; sourceTree = "<group>"; };
+		932D7BC21CC53B42005133C4 /* bonus_coin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bonus_coin1.png; path = Assets.xcassets/bonus_coin1.imageset/bonus_coin1.png; sourceTree = "<group>"; };
 		933489021C99934C00EF7694 /* EasyGameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
 		933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MultipleChoice.plist; sourceTree = "<group>"; };
 		933CD5FF1C9FE5D0005C55F2 /* chickadee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chickadee.png; sourceTree = "<group>"; };
@@ -145,9 +176,38 @@
 		936FCCEB1CBF80870095E59D /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
 		936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomPageViewController.swift; sourceTree = "<group>"; };
 		936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lobster_coin@1x.png"; sourceTree = "<group>"; };
-		936FCCF21CBF96610095E59D /* bonusCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bonusCoin.png; path = scoreLabels/bonusCoin.png; sourceTree = "<group>"; };
 		936FCCF41CBFBB900095E59D /* horn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horn.wav; sourceTree = "<group>"; };
 		936FCCF61CBFBBA00095E59D /* Cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cow.mp3; sourceTree = "<group>"; };
+		936FCCF91CC12B100095E59D /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		936FCCFA1CC12B100095E59D /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		936FCCFB1CC12B100095E59D /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
+		936FCCFC1CC12B100095E59D /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		936FCCFD1CC12B100095E59D /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		936FCCFE1CC12B100095E59D /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
+		936FCCFF1CC12B100095E59D /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		936FCD001CC12B100095E59D /* DesignableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTabBarController.swift; sourceTree = "<group>"; };
+		936FCD011CC12B100095E59D /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		936FCD021CC12B100095E59D /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
+		936FCD031CC12B100095E59D /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		936FCD041CC12B100095E59D /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		936FCD051CC12B100095E59D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		936FCD061CC12B100095E59D /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		936FCD071CC12B100095E59D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		936FCD081CC12B100095E59D /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		936FCD091CC12B100095E59D /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		936FCD0A1CC12B100095E59D /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		936FCD0B1CC12B100095E59D /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
+		936FCD0C1CC12B100095E59D /* Spring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spring.swift; sourceTree = "<group>"; };
+		936FCD0D1CC12B100095E59D /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		936FCD0E1CC12B100095E59D /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		936FCD0F1CC12B100095E59D /* SpringImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		936FCD101CC12B100095E59D /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
+		936FCD111CC12B100095E59D /* SpringTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextField.swift; sourceTree = "<group>"; };
+		936FCD121CC12B100095E59D /* SpringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextView.swift; sourceTree = "<group>"; };
+		936FCD131CC12B100095E59D /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		936FCD141CC12B100095E59D /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		936FCD151CC12B100095E59D /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
+		936FCD161CC12B100095E59D /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		938669AC1C8F278E00E85566 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		938669B01C8F2AD900E85566 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93B472DD1C99890B003E66F5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -170,7 +230,6 @@
 		93DFB5FD1C90338800A1F99D /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		93DFB5FF1C9033A000A1F99D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		93DFB6011C9033BA00A1F99D /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
-		B2E6D2DE6701889AF1E685E6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8874DF0F92134C9F97576D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				930497A11C8B3C8F0073B6C9 /* GameKit.framework in Frameworks */,
-				32B68917D460AC11355DC140 /* Pods.framework in Frameworks */,
+				416937D8BA44B3BF7FBC2667 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +277,7 @@
 		9304978D1C8ADDDD0073B6C9 /* SoYouThinkYouKnow */ = {
 			isa = PBXGroup;
 			children = (
+				936FCCF81CC12B100095E59D /* Spring */,
 				9315D1411CABA634003E4FE0 /* view transitions */,
 				931623071CA56AC8007BF21D /* app_icon */,
 				931622FF1CA539C9007BF21D /* audio */,
@@ -270,7 +330,7 @@
 		933CD5FE1C9FE590005C55F2 /* imageQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				936FCCF21CBF96610095E59D /* bonusCoin.png */,
+				932D7BC21CC53B42005133C4 /* bonus_coin1.png */,
 				936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */,
 				930301401CBE390800A38ED7 /* weekendwarriorsmall.png */,
 				930301411CBE390800A38ED7 /* Transplantsmall.png */,
@@ -314,6 +374,43 @@
 			name = imageQuiz;
 			sourceTree = "<group>";
 		};
+		936FCCF81CC12B100095E59D /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				936FCCF91CC12B100095E59D /* AsyncButton.swift */,
+				936FCCFA1CC12B100095E59D /* AsyncImageView.swift */,
+				936FCCFB1CC12B100095E59D /* AutoTextView.swift */,
+				936FCCFC1CC12B100095E59D /* BlurView.swift */,
+				936FCCFD1CC12B100095E59D /* DesignableButton.swift */,
+				936FCCFE1CC12B100095E59D /* DesignableImageView.swift */,
+				936FCCFF1CC12B100095E59D /* DesignableLabel.swift */,
+				936FCD001CC12B100095E59D /* DesignableTabBarController.swift */,
+				936FCD011CC12B100095E59D /* DesignableTextField.swift */,
+				936FCD021CC12B100095E59D /* DesignableTextView.swift */,
+				936FCD031CC12B100095E59D /* DesignableView.swift */,
+				936FCD041CC12B100095E59D /* ImageLoader.swift */,
+				936FCD051CC12B100095E59D /* Info.plist */,
+				936FCD061CC12B100095E59D /* KeyboardLayoutConstraint.swift */,
+				936FCD071CC12B100095E59D /* LoadingView.swift */,
+				936FCD081CC12B100095E59D /* LoadingView.xib */,
+				936FCD091CC12B100095E59D /* Misc.swift */,
+				936FCD0A1CC12B100095E59D /* SoundPlayer.swift */,
+				936FCD0B1CC12B100095E59D /* Spring.h */,
+				936FCD0C1CC12B100095E59D /* Spring.swift */,
+				936FCD0D1CC12B100095E59D /* SpringAnimation.swift */,
+				936FCD0E1CC12B100095E59D /* SpringButton.swift */,
+				936FCD0F1CC12B100095E59D /* SpringImageView.swift */,
+				936FCD101CC12B100095E59D /* SpringLabel.swift */,
+				936FCD111CC12B100095E59D /* SpringTextField.swift */,
+				936FCD121CC12B100095E59D /* SpringTextView.swift */,
+				936FCD131CC12B100095E59D /* SpringView.swift */,
+				936FCD141CC12B100095E59D /* TransitionManager.swift */,
+				936FCD151CC12B100095E59D /* TransitionZoom.swift */,
+				936FCD161CC12B100095E59D /* UnwindSegue.swift */,
+			);
+			path = Spring;
+			sourceTree = "<group>";
+		};
 		938669AE1C8F28D200E85566 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +449,7 @@
 		EACD145F7AA34A1F86356EC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B2E6D2DE6701889AF1E685E6 /* Pods.framework */,
+				31BA4D2335B74A4179ACCBDD /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -432,6 +529,7 @@
 			files = (
 				936D6F101CACEC8000B58151 /* opening_sound3.mp3 in Resources */,
 				931623061CA54278007BF21D /* nope3.mp3 in Resources */,
+				932D7BC31CC53B42005133C4 /* bonus_coin1.png in Resources */,
 				933CD6151C9FE5D0005C55F2 /* Joan-Benoit-Samuelson.png in Resources */,
 				93D233861CBB957F00F1ED25 /* trueblue.png in Resources */,
 				93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */,
@@ -439,6 +537,7 @@
 				933CD6131C9FE5D0005C55F2 /* geogre_mitchell.png in Resources */,
 				9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */,
 				933CD6181C9FE5D0005C55F2 /* judd_nelsonj_nelson1x.png in Resources */,
+				936FCD261CC12B100095E59D /* LoadingView.xib in Resources */,
 				930301491CBE390800A38ED7 /* mainahsmall.png in Resources */,
 				933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */,
 				933D1E891C91789B0061B205 /* RightOrWrong.plist in Resources */,
@@ -450,6 +549,7 @@
 				930497961C8ADDDD0073B6C9 /* Assets.xcassets in Resources */,
 				93D233811CBB957F00F1ED25 /* mainah.png in Resources */,
 				9303014B1CBE3D3500A38ED7 /* truebluesmall.png in Resources */,
+				936FCD231CC12B100095E59D /* Info.plist in Resources */,
 				936FCCF51CBFBB910095E59D /* horn.wav in Resources */,
 				9315D1401CAAAFCE003E4FE0 /* Locations.plist in Resources */,
 				931623011CA53A89007BF21D /* nope.mp3 in Resources */,
@@ -475,7 +575,6 @@
 				9303013D1CBE351800A38ED7 /* mult_choice_instructions1.png in Resources */,
 				93D233891CBB9B6000F1ED25 /* trueblue1.png in Resources */,
 				93D2338B1CBCE16500F1ED25 /* portlandHeadLight2.png in Resources */,
-				936FCCF31CBF96610095E59D /* bonusCoin.png in Resources */,
 				933CD6141C9FE5D0005C55F2 /* James_G._Blaine.png in Resources */,
 				933CD61D1C9FE5D0005C55F2 /* old_orchard_beach_pier.png in Resources */,
 				933CD6161C9FE5D0005C55F2 /* Josh_Chamberlain.png in Resources */,
@@ -541,27 +640,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936FCD2A1CC12B100095E59D /* SpringAnimation.swift in Sources */,
 				936D6F121CAD827E00B58151 /* Locations.swift in Sources */,
 				93C12C531CB9433200FFC17A /* Notifications.swift in Sources */,
 				938669B11C8F2AD900E85566 /* ViewController.swift in Sources */,
 				9315D1471CABA650003E4FE0 /* TransitionPresentationAnimator.swift in Sources */,
+				936FCD191CC12B100095E59D /* AutoTextView.swift in Sources */,
+				936FCD321CC12B100095E59D /* TransitionZoom.swift in Sources */,
+				936FCD251CC12B100095E59D /* LoadingView.swift in Sources */,
+				936FCD241CC12B100095E59D /* KeyboardLayoutConstraint.swift in Sources */,
+				936FCD1C1CC12B100095E59D /* DesignableImageView.swift in Sources */,
+				936FCD1A1CC12B100095E59D /* BlurView.swift in Sources */,
+				936FCD221CC12B100095E59D /* ImageLoader.swift in Sources */,
 				93DFB6021C9033BA00A1F99D /* FinalViewController.swift in Sources */,
+				936FCD2E1CC12B100095E59D /* SpringTextField.swift in Sources */,
 				9304978F1C8ADDDD0073B6C9 /* AppDelegate.swift in Sources */,
 				93DFB5FA1C90335200A1F99D /* ScoreViewController.swift in Sources */,
+				936FCD2B1CC12B100095E59D /* SpringButton.swift in Sources */,
+				936FCD281CC12B100095E59D /* SoundPlayer.swift in Sources */,
+				936FCD1D1CC12B100095E59D /* DesignableLabel.swift in Sources */,
+				936FCD1F1CC12B100095E59D /* DesignableTextField.swift in Sources */,
+				936FCD301CC12B100095E59D /* SpringView.swift in Sources */,
 				9315D1491CABA6B7003E4FE0 /* WelcomeViewController.swift in Sources */,
 				936FCCED1CBF80870095E59D /* BWWalkthroughViewController.swift in Sources */,
 				93DFB6001C9033A000A1F99D /* MapsViewController.swift in Sources */,
+				936FCD201CC12B100095E59D /* DesignableTextView.swift in Sources */,
+				936FCD311CC12B100095E59D /* TransitionManager.swift in Sources */,
+				936FCD211CC12B100095E59D /* DesignableView.swift in Sources */,
 				93DFB5F81C90333500A1F99D /* TrueFalseViewController.swift in Sources */,
 				933D1E8B1C917ACE0061B205 /* Configuration.swift in Sources */,
 				93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */,
 				936FCCEC1CBF80870095E59D /* BWWalkthroughPageViewController.swift in Sources */,
+				936FCD2D1CC12B100095E59D /* SpringLabel.swift in Sources */,
+				936FCD171CC12B100095E59D /* AsyncButton.swift in Sources */,
+				936FCD291CC12B100095E59D /* Spring.swift in Sources */,
 				93DFB5FE1C90338800A1F99D /* PhotosViewController.swift in Sources */,
 				933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */,
+				936FCD331CC12B100095E59D /* UnwindSegue.swift in Sources */,
 				9315D1461CABA650003E4FE0 /* TransitionDismissalAnimator.swift in Sources */,
+				936FCD2C1CC12B100095E59D /* SpringImageView.swift in Sources */,
+				936FCD181CC12B100095E59D /* AsyncImageView.swift in Sources */,
+				936FCD271CC12B100095E59D /* Misc.swift in Sources */,
 				938669AD1C8F278E00E85566 /* Theme.swift in Sources */,
+				936FCD2F1CC12B100095E59D /* SpringTextView.swift in Sources */,
 				9315D1451CABA650003E4FE0 /* TransitionDelegate.swift in Sources */,
+				936FCD1B1CC12B100095E59D /* DesignableButton.swift in Sources */,
 				936FCCE91CBF7C290095E59D /* WalkthroughVC1.swift in Sources */,
 				933D1E8D1C9180A90061B205 /* Score.swift in Sources */,
+				936FCD1E1CC12B100095E59D /* DesignableTabBarController.swift in Sources */,
 				93DFB5FC1C90336F00A1F99D /* MultipleChoiceViewController.swift in Sources */,
 				936FCCEF1CBF80DA0095E59D /* MyCustomPageViewController.swift in Sources */,
 			);

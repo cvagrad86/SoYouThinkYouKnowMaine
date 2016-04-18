@@ -9,11 +9,12 @@
 import UIKit
 import AVKit
 import AVFoundation
-
+import GoogleMobileAds
 
 class TrueFalseViewController: UIViewController {
     
     
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerButtons: [UIButton]!
@@ -91,6 +92,10 @@ class TrueFalseViewController: UIViewController {
         rowArray!.shuffle()
     
     //NSNotificationCenter.defaultCenter().addObserver(self, selector: "endofFirstRound", name: endOfRoundOne, object: nil)
+        
+        bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
     }
     
     override func didReceiveMemoryWarning() {
