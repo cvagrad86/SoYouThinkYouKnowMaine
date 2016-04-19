@@ -14,6 +14,7 @@ class FinalViewController: UIViewController {
     @IBOutlet weak var roundTwoImage: UIImageView!
     @IBOutlet weak var roundThreeImage: UIImageView!
     
+    @IBOutlet weak var newRoundFourImage: SpringImageView!
     @IBOutlet weak var bonusPointsEarned: SpringLabel!
     @IBOutlet weak var bonusCoin: UIImageView!
     @IBOutlet weak var roundFourImage: UIImageView!
@@ -37,19 +38,11 @@ class FinalViewController: UIViewController {
     var bonus = Scoring.sharedGameData.bonusPoints
     
     override func viewDidLoad() {
-    
-        roundOneImage.layer.cornerRadius = 10
-        roundOneImage.layer.borderWidth = 2
-        roundOneImage.layer.borderColor = UIColor.blackColor().CGColor
-        roundTwoImage.layer.cornerRadius = 20
-        roundThreeImage.layer.cornerRadius = 20
-        roundFourImage.layer.cornerRadius = 20
-        finalScoreImage.layer.cornerRadius = 10
         
         self.view.addSubview(roundOneImage)
         self.view.addSubview(roundTwoImage)
         self.view.addSubview(roundThreeImage)
-        self.view.addSubview(roundFourImage)
+        self.view.addSubview(newRoundFourImage)
         self.view.addSubview(finalScoreImage)
         
         //to show percentile 
@@ -60,25 +53,20 @@ class FinalViewController: UIViewController {
         roundThreeScore.text = "\(Scoring.sharedGameData.photoscore)"
         roundFourScore.text = "\(Scoring.sharedGameData.mapsscore)"
         finalScoreLabel2.text = "\(Scoring.sharedGameData.overallscore)"
-        
-        
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endOfFirstRound(_:)), name: "endOfRoundOne", object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endofSecondRound(_:)), name: "endOfRoundTwo", object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endofThirdRound(_:)), name: "endOfRoundThree", object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.endOfFourthRound(_:)), name: "endOfRoundFour", object: nil)
+        bonusPointsEarned.text = ("\(Scoring.sharedGameData.bonusPoints)")
+    
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.bonusAdded(_:)), name: "bonusPointAdded", object: nil)
         self.view.addSubview(bonusCoin)
-        
+        endOfFirstRound ()
+        endOfFourthRound ()
+        endofSecondRound ()
+        endofThirdRound ()
         overallScore ()
     }
     func bonusAdded(notification: NSNotification) {
-        bonus += 1
-        bonusPointsEarned.text = ("\(Scoring.sharedGameData.bonusPoints)")
+       
+        
         
         
         //self.bonusCoin.hidden = false
@@ -87,32 +75,34 @@ class FinalViewController: UIViewController {
     }
     
     
-    func endOfFirstRound (notification: NSNotification) {
+    func endOfFirstRound () {
         
         print("we got the score from round one")
         
         if case 0 ... 4 = Scoring.sharedGameData.tfscore {
-                roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
+                roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
         if case 5 ... 8 = Scoring.sharedGameData.tfscore {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
         }
         if case 9 ... 11 = Scoring.sharedGameData.tfscore {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
         }
         if case 12 ... 15 = Scoring.sharedGameData.tfscore {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
         }
         if case 16 ... 20 = Scoring.sharedGameData.tfscore{
-           roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
+           roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
         }
         if case 21 ... 50 = Scoring.sharedGameData.tfscore {
-            roundOneLabel.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
+            roundOneImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
         }
         
     }
     
-    func endofSecondRound (notification: NSNotification) {
+    func endofSecondRound () {
+        
+        print("we got the score from round two")
         
         if case 0 ... 4 = roundTwo {
             roundTwoImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
@@ -135,8 +125,8 @@ class FinalViewController: UIViewController {
         
     }
     
-    func endofThirdRound (notification: NSNotification) {
-        
+    func endofThirdRound () {
+        print("we got the score from round three")
         if case 0 ... 30 = roundThree {
            roundThreeImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
@@ -158,25 +148,26 @@ class FinalViewController: UIViewController {
        
     }
     
-    func endOfFourthRound (notification: NSNotification) {
-
+    func endOfFourthRound () {
+        print("we got the score from round four")
+        
         if case 0 ... 150 = roundFour {
-            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
+            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1small.png")!)
         }
         if case 150 ... 299 = roundFour {
-            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
+            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahsmall.png")!)
         }
         if case 300 ... 499 = roundFour {
-            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
+            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorsmall.png")!)
         }
         if case 500 ... 649 = roundFour {
-            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
+            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantsmall.png")!)
         }
         if case 650 ... 799 = roundFour{
-            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
+            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahsmall.png")!)
         }
         if case 800 ... 1000 = roundFour {
-            roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
+            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "truebluesmall.png")!)
         }
        
         
@@ -190,6 +181,7 @@ class FinalViewController: UIViewController {
         print(Scoring.sharedGameData.photoscore)
         print(Scoring.sharedGameData.mapsscore)
         print(Scoring.sharedGameData.overallscore)
+        print(Scoring.sharedGameData.bonusPoints)
         
         if case 0 ... 150 = Scoring.sharedGameData.overallscore {
             roundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)

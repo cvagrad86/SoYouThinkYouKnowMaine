@@ -31,6 +31,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         var question: String?
         var score = 1000.00
         var audioPlayer: AVAudioPlayer?
+        var bonus = 0
    
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var bonusCoin: UIImageView!
@@ -92,13 +93,18 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             }
     
     func bonusPoints () {
-       // print("you got a bonus")
+       print("you got a bonus")
+        bonus += 1
+        print("bonus points = \(bonus)")
+        Scoring.sharedGameData.bonusPoints = bonus
+        
        self.view.addSubview(bonusCoin)
         self.bonusCoin.hidden = false
-        self.bonusCoin.backgroundColor = UIColor(patternImage: UIImage(named: "bonus_coin1.png")!)
-        //bonusAudio ()
-       UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
-            self.bonusCoin.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        
+        
+        bonusAudio ()
+       UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+            self.bonusCoin.transform = CGAffineTransformMakeScale(1.5 , 1.5)
             }, completion: nil)
         
          NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)
@@ -107,7 +113,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
     
     func bonusAudio () {
         do {
-            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("horn", ofType: "wav")!))
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bonus_sound1", ofType: "mp3")!))
             audioPlayer!.play()
             
         } catch {
@@ -164,7 +170,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             }
             nextButton.hidden = false
             
-            nextButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            nextButton.transform = CGAffineTransformMakeScale(2.0, 2.0)
             
             UIView.animateWithDuration(2.0,
                                        delay: 0,

@@ -77,8 +77,8 @@ class ViewController: UIViewController, EGCDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToPhotos(_:)), name: "endOfRoundTwo", object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToMaps(_:)), name: "endOfRoundThree", object: nil)
+    
         
-         print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
     }
     
     override func viewDidDisappear(animated: Bool) {

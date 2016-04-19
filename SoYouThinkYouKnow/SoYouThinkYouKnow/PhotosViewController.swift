@@ -46,7 +46,7 @@ class PhotosViewController: UIViewController {
             sender.backgroundColor = UIColor.greenColor()
             nextQuestionButton.hidden = false
             
-            nextQuestionButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            nextQuestionButton.transform = CGAffineTransformMakeScale(2.0, 2.0)
             
             UIView.animateWithDuration(2.0,
         delay: 0, usingSpringWithDamping: 3.70,

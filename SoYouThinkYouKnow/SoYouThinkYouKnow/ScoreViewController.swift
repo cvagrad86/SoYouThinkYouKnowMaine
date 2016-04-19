@@ -16,8 +16,11 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var yourScoreLabel: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+    
     @IBOutlet weak var moveToNextRound: UIButton!
     
+    @IBOutlet weak var multChoiceSign: UIImageView!
+  
 
     var currentScore = Int()
     var currentRound = Int()
@@ -30,7 +33,7 @@ class ScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        multChoiceSign.hidden = true
         //let  HighscoreDefault = NSUserDefaults.standardUserDefaults()
         //let TFScore = NSUserDefaults.standardUserDefaults()
         //let MCScore = NSUserDefaults.standardUserDefaults()
@@ -60,7 +63,8 @@ class ScoreViewController: UIViewController {
     
     
     func endOfFirstRound (notification: NSNotification) {
-       
+       print("round one score has been tallied")
+        
         scoreLabel.text = "Score: \(roundOne)"
         
         if case 0 ... 4 = roundOne {
@@ -93,7 +97,7 @@ class ScoreViewController: UIViewController {
     }
     
     func endofSecondRound (notification: NSNotification) {
-       
+       print("round two score has been tallied")
         
         scoreLabel.text = "Score: \(roundTwo)"
         
@@ -126,7 +130,7 @@ class ScoreViewController: UIViewController {
     
     func endofThirdRound (notification: NSNotification) {
         
-        
+        print("round three score has been tallied")
         
         scoreLabel.text = "Score: \(roundThree)"
         
@@ -160,7 +164,7 @@ class ScoreViewController: UIViewController {
     
     func endOfFourthRound (notification: NSNotification) {
         
-       
+       print("round four score has been tallied")
         
         scoreLabel.text = "Score: \(roundFour)"
         
@@ -197,19 +201,32 @@ class ScoreViewController: UIViewController {
     
     
     @IBAction func nextRound(sender: AnyObject) {
+        
+        var vc: UIViewController?
+        
         if currentRound == 1 {
             //go to Mult Choice vc
+            multChoiceSign.hidden = false
             
+            moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "mult_choice.png")!)
+            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("multipleChoiceViewController") as! MultipleChoiceViewController
             
         } else if currentRound == 2 {
             //go to Photos vc
             
+            vc = storyboard?.instantiateViewControllerWithIdentifier("photosViewController") as! PhotosViewController
+            
         } else if currentRound == 3 {
             //go to Maps vc
+            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("mapsViewController") as! MapsViewController
             
         } else if currentRound == 4 {
             
             //game over go to final vc
+            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("finalViewController") as! FinalViewController
         }
     }
     

@@ -92,6 +92,11 @@
 		936FCD311CC12B100095E59D /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD141CC12B100095E59D /* TransitionManager.swift */; };
 		936FCD321CC12B100095E59D /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD151CC12B100095E59D /* TransitionZoom.swift */; };
 		936FCD331CC12B100095E59D /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD161CC12B100095E59D /* UnwindSegue.swift */; };
+		938110CE1CC62F5C00B4B0A7 /* welcome_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 938110CD1CC62F5C00B4B0A7 /* welcome_sign.png */; };
+		938110D01CC62F7100B4B0A7 /* mult_choice.png in Resources */ = {isa = PBXBuildFile; fileRef = 938110CF1CC62F7100B4B0A7 /* mult_choice.png */; };
+		938110D31CC62F8400B4B0A7 /* maine_maps.png in Resources */ = {isa = PBXBuildFile; fileRef = 938110D11CC62F8400B4B0A7 /* maine_maps.png */; };
+		938110D41CC62F8400B4B0A7 /* name_that_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 938110D21CC62F8400B4B0A7 /* name_that_photo.png */; };
+		938110D61CC668B800B4B0A7 /* bonus_sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 938110D51CC668B800B4B0A7 /* bonus_sound1.mp3 */; };
 		938669AD1C8F278E00E85566 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669AC1C8F278E00E85566 /* Theme.swift */; };
 		938669B11C8F2AD900E85566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938669B01C8F2AD900E85566 /* ViewController.swift */; };
 		93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B472DD1C99890B003E66F5 /* Extensions.swift */; };
@@ -208,6 +213,11 @@
 		936FCD141CC12B100095E59D /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		936FCD151CC12B100095E59D /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		936FCD161CC12B100095E59D /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		938110CD1CC62F5C00B4B0A7 /* welcome_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_sign.png; sourceTree = "<group>"; };
+		938110CF1CC62F7100B4B0A7 /* mult_choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mult_choice.png; sourceTree = "<group>"; };
+		938110D11CC62F8400B4B0A7 /* maine_maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maine_maps.png; sourceTree = "<group>"; };
+		938110D21CC62F8400B4B0A7 /* name_that_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name_that_photo.png; sourceTree = "<group>"; };
+		938110D51CC668B800B4B0A7 /* bonus_sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bonus_sound1.mp3; sourceTree = "<group>"; };
 		938669AC1C8F278E00E85566 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		938669B01C8F2AD900E85566 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93B472DD1C99890B003E66F5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -310,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				936FCCF61CBFBBA00095E59D /* Cow.mp3 */,
+				938110D51CC668B800B4B0A7 /* bonus_sound1.mp3 */,
 				936FCCF41CBFBB900095E59D /* horn.wav */,
 				931623021CA53A9A007BF21D /* ayuhSound2.mp3 */,
 				931623001CA53A89007BF21D /* nope.mp3 */,
@@ -330,6 +341,10 @@
 		933CD5FE1C9FE590005C55F2 /* imageQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				938110D11CC62F8400B4B0A7 /* maine_maps.png */,
+				938110D21CC62F8400B4B0A7 /* name_that_photo.png */,
+				938110CF1CC62F7100B4B0A7 /* mult_choice.png */,
+				938110CD1CC62F5C00B4B0A7 /* welcome_sign.png */,
 				932D7BC21CC53B42005133C4 /* bonus_coin1.png */,
 				936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */,
 				930301401CBE390800A38ED7 /* weekendwarriorsmall.png */,
@@ -532,13 +547,16 @@
 				932D7BC31CC53B42005133C4 /* bonus_coin1.png in Resources */,
 				933CD6151C9FE5D0005C55F2 /* Joan-Benoit-Samuelson.png in Resources */,
 				93D233861CBB957F00F1ED25 /* trueblue.png in Resources */,
+				938110D31CC62F8400B4B0A7 /* maine_maps.png in Resources */,
 				93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */,
 				933CD61B1C9FE5D0005C55F2 /* maine_state_flower.png in Resources */,
+				938110CE1CC62F5C00B4B0A7 /* welcome_sign.png in Resources */,
 				933CD6131C9FE5D0005C55F2 /* geogre_mitchell.png in Resources */,
 				9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */,
 				933CD6181C9FE5D0005C55F2 /* judd_nelsonj_nelson1x.png in Resources */,
 				936FCD261CC12B100095E59D /* LoadingView.xib in Resources */,
 				930301491CBE390800A38ED7 /* mainahsmall.png in Resources */,
+				938110D41CC62F8400B4B0A7 /* name_that_photo.png in Resources */,
 				933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */,
 				933D1E891C91789B0061B205 /* RightOrWrong.plist in Resources */,
 				93D233821CBB957F00F1ED25 /* never.png in Resources */,
@@ -562,6 +580,7 @@
 				933CD61C1C9FE5D0005C55F2 /* maine-loon-2.png in Resources */,
 				9303013F1CBE351800A38ED7 /* photos_instructions1.png in Resources */,
 				933CD61F1C9FE5D0005C55F2 /* penobscot_fort_knox_maine.png in Resources */,
+				938110D61CC668B800B4B0A7 /* bonus_sound1.mp3 in Resources */,
 				93D233831CBB957F00F1ED25 /* never1.png in Resources */,
 				933CD6241C9FEE3E005C55F2 /* ImageQuiz.plist in Resources */,
 				933CD6121C9FE5D0005C55F2 /* christinas_world.jpeg.png in Resources */,
@@ -581,6 +600,7 @@
 				93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */,
 				93D233871CBB957F00F1ED25 /* weekendwarrior.png in Resources */,
 				936FCCF11CBF93A90095E59D /* lobster_coin@1x.png in Resources */,
+				938110D01CC62F7100B4B0A7 /* mult_choice.png in Resources */,
 				933CD6111C9FE5D0005C55F2 /* chickadee.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
