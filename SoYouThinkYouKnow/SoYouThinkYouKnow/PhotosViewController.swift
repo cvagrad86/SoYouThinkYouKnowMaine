@@ -40,6 +40,10 @@ class PhotosViewController: UIViewController {
         if sender.titleLabel!.text == correctAnswer {
             timer!.invalidate()
             timerLabel.hidden = true
+            button.enabled = false
+            button1.enabled = false
+            button2.enabled = false
+            button3.enabled = false
             currentScore = currentScore - (counter * 10)
             userScore.text = "Your score = \(currentScore)"
             
@@ -153,6 +157,10 @@ class PhotosViewController: UIViewController {
         image = currentQuestion["Image"] as? String
         titlesForButtons()
         nextQuestionButton.hidden = false
+        button.enabled = true
+        button1.enabled = true
+        button2.enabled = true
+        button3.enabled = true
     }
     
     func titlesForButtons() {

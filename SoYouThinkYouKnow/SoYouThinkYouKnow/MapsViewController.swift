@@ -181,7 +181,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
                                         self.nextButton.transform = CGAffineTransformIdentity
                 }, completion: nil)
 
-           
+          
+            
             //placeTheyChose.text = nextQuestion().name
             
             score = (score - thisTry.formatWithDecimalPlaces(1))

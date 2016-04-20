@@ -15,12 +15,10 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var yourScoreLabel: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var levelLabel: UILabel!
     
+    
+    @IBOutlet weak var nextRoundImage: UIImageView!
     @IBOutlet weak var moveToNextRound: UIButton!
-    
-    @IBOutlet weak var multChoiceSign: UIImageView!
-  
 
     var currentScore = Int()
     var currentRound = Int()
@@ -33,12 +31,6 @@ class ScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        multChoiceSign.hidden = true
-        //let  HighscoreDefault = NSUserDefaults.standardUserDefaults()
-        //let TFScore = NSUserDefaults.standardUserDefaults()
-        //let MCScore = NSUserDefaults.standardUserDefaults()
-        //let PhotosScore = NSUserDefaults.standardUserDefaults()
-        //let MapsScore = NSUserDefaults.standardUserDefaults()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScoreViewController.endOfFirstRound(_:)), name: "endOfRoundOne", object: nil)
         
@@ -65,32 +57,27 @@ class ScoreViewController: UIViewController {
     func endOfFirstRound (notification: NSNotification) {
        print("round one score has been tallied")
         
-        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "mult_choice.png")!)
+        nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "mult_choice.png")!)
+        
         
         scoreLabel.text = "Score: \(roundOne)"
         
         if case 0 ... 4 = roundOne {
-            levelLabel.text = "Never Been Heah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
         if case 5 ... 8 = roundOne {
-            levelLabel.text = "One Timah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
         if case 9 ... 11 = roundOne {
-            levelLabel.text = "Weekend Warrior"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
         if case 12 ... 15 = roundOne {
-            levelLabel.text = "Transplant"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
         }
         if case 16 ... 20 = roundOne{
-            levelLabel.text = "Mainah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
         }
         if case 21 ... 50 = roundOne {
-            levelLabel.text = "TRUE BLUE MAINAH"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         
@@ -102,32 +89,26 @@ class ScoreViewController: UIViewController {
     func endofSecondRound (notification: NSNotification) {
        print("round two score has been tallied")
         
-        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "name_that_photo.png")!)
+        nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "name_that_photo.png")!)
         
         scoreLabel.text = "Score: \(roundTwo)"
         
         if case 0 ... 4 = roundTwo {
-            levelLabel.text = "Never Been Heah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
         if case 5 ... 9 = roundTwo {
-            levelLabel.text = "One Timah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
         if case 10 ... 17 = roundTwo {
-            levelLabel.text = "Weekend Warrior"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
         if case 18 ... 25 = roundTwo {
-            levelLabel.text = "Transplant"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
         }
         if case 26 ... 33 = roundTwo{
-            levelLabel.text = "Mainah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
         }
         if case 34 ... 40 = roundTwo {
-            levelLabel.text = "TRUE BLUE MAINAH"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 2
@@ -138,33 +119,27 @@ class ScoreViewController: UIViewController {
         
         print("round three score has been tallied")
         
-        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "maine_maps.png")!)
+        nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "maine_maps.png")!)
         
         scoreLabel.text = "Score: \(roundThree)"
         
         
         if case 0 ... 30 = roundThree {
-            levelLabel.text = "Never Been Heah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
         if case 31 ... 45 = roundThree {
-            levelLabel.text = "One Timah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
         if case 46 ... 100 = roundThree {
-            levelLabel.text = "Weekend Warrior"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
         if case 101 ... 200 = roundThree {
-            levelLabel.text = "Transplant"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
         }
         if case 201 ... 400 = roundThree{
-            levelLabel.text = "Mainah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
         }
         if case 401 ... 1500 = roundThree {
-            levelLabel.text = "TRUE BLUE MAINAH"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 3
@@ -179,34 +154,28 @@ class ScoreViewController: UIViewController {
         scoreLabel.text = "Score: \(roundFour)"
         
         if case 0 ... 150 = roundFour {
-            levelLabel.text = "Never Been Heah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
         }
         if case 150 ... 299 = roundFour {
-            levelLabel.text = "One Timah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
         }
         if case 300 ... 499 = roundFour {
-            levelLabel.text = "Weekend Warrior"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
         }
         if case 500 ... 649 = roundFour {
-            levelLabel.text = "Transplant"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
         }
         if case 650 ... 799 = roundFour{
-            levelLabel.text = "Mainah"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
         }
         if case 800 ... 1000 = roundFour {
-            levelLabel.text = "TRUE BLUE MAINAH"
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 4
         print(currentRound)
         
         
-        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "the_end_sign copy.png")!)
+        nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "the_end_sign copy.png")!)
         
         Scoring.sharedGameData.overallscore = roundFour
     }
@@ -223,10 +192,14 @@ class ScoreViewController: UIViewController {
             
             vc = storyboard?.instantiateViewControllerWithIdentifier("multipleChoiceViewController") as! MultipleChoiceViewController
             
+            self.presentViewController(vc!, animated: true, completion: nil)
+            
         } else if currentRound == 2 {
             //go to Photos vc
 
             vc = storyboard?.instantiateViewControllerWithIdentifier("photosViewController") as! PhotosViewController
+            
+            self.presentViewController(vc!, animated: true, completion: nil)
             
             print("it is time to go to Photos")
             
@@ -235,11 +208,16 @@ class ScoreViewController: UIViewController {
 
             vc = storyboard?.instantiateViewControllerWithIdentifier("mapsViewController") as! MapsViewController
             
+            self.presentViewController(vc!, animated: true, completion: nil)
+            
         } else if currentRound == 4 {
             
             //game over go to final vc
             
             vc = storyboard?.instantiateViewControllerWithIdentifier("finalViewController") as! FinalViewController
+            
+            self.presentViewController(vc!, animated: true, completion: nil)
+            
         }
     }
     

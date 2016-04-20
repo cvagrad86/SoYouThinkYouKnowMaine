@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMobileAds
+import AVKit
+import AVFoundation
 
 class MultipleChoiceViewController: UIViewController {
 
@@ -19,7 +21,10 @@ class MultipleChoiceViewController: UIViewController {
     var Highscore = Int()
     var multchscore = 0
     var inARow = 0
+    var bonus = 0
+    var audioPlayer: AVAudioPlayer?
     
+    @IBOutlet weak var bonusCoin: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerButtons: [UIButton]!
@@ -38,6 +43,7 @@ class MultipleChoiceViewController: UIViewController {
             inARow = 0
             scoreLabel.text = "Your score = \(multchscore)"
             sender.backgroundColor = UIColor.redColor()
+            print(inARow)
             
         }
         for button in answerButtons {
@@ -58,7 +64,7 @@ class MultipleChoiceViewController: UIViewController {
         if inARow > 10 {
             //show bonus
             NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)
-            
+            bonusPoints()
         }
     }
     
@@ -104,6 +110,9 @@ class MultipleChoiceViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.loadRequest(GADRequest())
 
+        
+        self.bonusCoin.hidden = true
+
     }
     
     func saveScore () {
@@ -124,7 +133,39 @@ class MultipleChoiceViewController: UIViewController {
         question = currentQuestion["Question"] as? String
         cardButton.enabled = false
         titlesForButtons()
+        self.bonusCoin.hidden = true
+
     }
+    
+    func bonusAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bonus_sound1", ofType: "mp3")!))
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
+    func bonusPoints () {
+        print("you got a bonus")
+        bonus += 1
+        print("bonus points = \(bonus)")
+        Scoring.sharedGameData.bonusPoints = bonus
+        inARow = 0 
+        self.view.addSubview(bonusCoin)
+        self.bonusCoin.hidden = false
+        
+        
+        bonusAudio ()
+        UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+            self.bonusCoin.transform = CGAffineTransformMakeScale(1.5 , 1.5)
+            }, completion: nil)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)
+        
+    }
+
     
     func titlesForButtons() {
         for (idx,button) in answerButtons.enumerate() {
