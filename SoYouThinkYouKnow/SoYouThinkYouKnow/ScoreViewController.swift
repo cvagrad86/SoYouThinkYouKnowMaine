@@ -65,6 +65,8 @@ class ScoreViewController: UIViewController {
     func endOfFirstRound (notification: NSNotification) {
        print("round one score has been tallied")
         
+        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "mult_choice.png")!)
+        
         scoreLabel.text = "Score: \(roundOne)"
         
         if case 0 ... 4 = roundOne {
@@ -93,11 +95,14 @@ class ScoreViewController: UIViewController {
         }
         
         currentRound = 1
+        print(currentRound)
         
     }
     
     func endofSecondRound (notification: NSNotification) {
        print("round two score has been tallied")
+        
+        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "name_that_photo.png")!)
         
         scoreLabel.text = "Score: \(roundTwo)"
         
@@ -126,11 +131,14 @@ class ScoreViewController: UIViewController {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 2
+        print(currentRound)
     }
     
     func endofThirdRound (notification: NSNotification) {
         
         print("round three score has been tallied")
+        
+        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "maine_maps.png")!)
         
         scoreLabel.text = "Score: \(roundThree)"
         
@@ -160,6 +168,8 @@ class ScoreViewController: UIViewController {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 3
+        print(currentRound)
+        
     }
     
     func endOfFourthRound (notification: NSNotification) {
@@ -193,6 +203,10 @@ class ScoreViewController: UIViewController {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
         }
         currentRound = 4
+        print(currentRound)
+        
+        
+        moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "the_end_sign copy.png")!)
         
         Scoring.sharedGameData.overallscore = roundFour
     }
@@ -206,20 +220,19 @@ class ScoreViewController: UIViewController {
         
         if currentRound == 1 {
             //go to Mult Choice vc
-            multChoiceSign.hidden = false
-            
-            moveToNextRound.backgroundColor = UIColor(patternImage: UIImage(named: "mult_choice.png")!)
             
             vc = storyboard?.instantiateViewControllerWithIdentifier("multipleChoiceViewController") as! MultipleChoiceViewController
             
         } else if currentRound == 2 {
             //go to Photos vc
-            
+
             vc = storyboard?.instantiateViewControllerWithIdentifier("photosViewController") as! PhotosViewController
+            
+            print("it is time to go to Photos")
             
         } else if currentRound == 3 {
             //go to Maps vc
-            
+
             vc = storyboard?.instantiateViewControllerWithIdentifier("mapsViewController") as! MapsViewController
             
         } else if currentRound == 4 {

@@ -19,7 +19,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let MapboxAccessToken = "pk.eyJ1IjoiY3ZhZ3JhZDg2IiwiYSI6ImNpa3MzM2UwODA5ZW91eG03c2hkbmlpN2cifQ.yY8BbkFNfrBOJ2KSQ_JCxQ"
         return true
+        
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Phone) {
+            //iPhone
+            if Device.IS_3_5_INCHES() {
+                //iPhone 4
+                bgImage = "opening_graphic_iphone4.png"
+            } else if Device.IS_4_INCHES() {
+                //iPhone 5
+                bgImage = "opening_graphic4_iphone5.png"
+            } else if Device.IS_4_7_INCHES() {
+                //iPhone 6
+                bgImage = "opening_graphic4_iphone6.png"
+            } else if Device.IS_5_5_INCHES() {
+                //iPhone 6+
+                bgImage = "opening_graphic4_iphone6s.png"
+            }
+        } else {
+            //iPad
+            bgImage = "opening_graphic4_ipad.png"
+        }
+        
+        return true
     }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

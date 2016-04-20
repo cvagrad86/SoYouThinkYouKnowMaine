@@ -580,7 +580,7 @@
                                         <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XY1-WU-8cM" customClass="SpringImageView" customModule="SoYouThinkYouKnow" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XY1-WU-8cM" customClass="SpringImageView" customModule="SoYouThinkYouKnow" customModuleProvider="target">
                                         <rect key="frame" x="32" y="193" width="350" height="350"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="350" id="Kmz-oC-VdX"/>
@@ -682,6 +682,11 @@
                                     <constraint firstItem="Vxc-9o-LFP" firstAttribute="leading" secondItem="SON-dd-yMA" secondAttribute="leading" id="tu5-mw-R6m"/>
                                     <constraint firstItem="i2h-km-y4p" firstAttribute="leading" secondItem="dPe-cs-0WR" secondAttribute="trailing" constant="14" id="xsb-Q3-y0q"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lbR-7T-wFP"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>

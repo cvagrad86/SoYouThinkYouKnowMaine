@@ -14,29 +14,29 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opening_graphic4" translatesAutoresizingMaskIntoConstraints="NO" id="SzW-yw-8eb">
-                                <rect key="frame" x="0.0" y="107" width="768" height="935"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opening_graphic4_iphone6s.png" translatesAutoresizingMaskIntoConstraints="NO" id="SzW-yw-8eb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="SzW-yw-8eb" secondAttribute="trailing" id="Jo2-9x-WQN"/>
-                            <constraint firstItem="SzW-yw-8eb" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" constant="18" id="XUg-gU-cGa"/>
+                            <constraint firstItem="SzW-yw-8eb" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="XUg-gU-cGa"/>
                             <constraint firstItem="SzW-yw-8eb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="aik-jH-1DK"/>
-                            <constraint firstItem="SzW-yw-8eb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="107" id="oVN-g5-vaZ"/>
+                            <constraint firstItem="SzW-yw-8eb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="oVN-g5-vaZ"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263" y="17"/>
+            <point key="canvasLocation" x="-372" y="-123"/>
         </scene>
     </scenes>
     <resources>
-        <image name="opening_graphic4" width="1118" height="1690"/>
+        <image name="opening_graphic4_iphone6s.png" width="1242" height="2208"/>
     </resources>
 </document>
