@@ -31,12 +31,12 @@ class Scoring {
     
     static let sharedGameData = Scoring()
     
-    var tfscore: Int = 0
-    var mcscore: Int = 0
-    var mapsscore: Int = 0
-    var photoscore: Int = 0
-    var overallscore: Int = 0
-    var bonusPoints: Int = 0
+    var tfscore: Int = 4
+    var mcscore: Int = 24
+    var mapsscore: Int = 245
+    var photoscore: Int = 380
+    var overallscore: Int = 1204
+    var bonusPoints: Int = 2
     
     init () {
         

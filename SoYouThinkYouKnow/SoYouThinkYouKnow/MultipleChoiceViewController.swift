@@ -38,7 +38,8 @@ class MultipleChoiceViewController: UIViewController {
             multchscore += 2
             scoreLabel.text = "Your score = \(multchscore)"
             inARow += 1
-                    } else {
+            
+            } else {
             multchscore -= 2
             inARow = 0
             scoreLabel.text = "Your score = \(multchscore)"

@@ -63,6 +63,8 @@ class FinalViewController: UIViewController {
         endofSecondRound ()
         endofThirdRound ()
         overallScore ()
+        
+      
     }
     func bonusAdded(notification: NSNotification) {
        
@@ -180,26 +182,26 @@ class FinalViewController: UIViewController {
         print(Scoring.sharedGameData.mcscore)
         print(Scoring.sharedGameData.photoscore)
         print(Scoring.sharedGameData.mapsscore)
-        print(Scoring.sharedGameData.overallscore)
+    print(Scoring.sharedGameData.overallscore)
         print(Scoring.sharedGameData.bonusPoints)
         
         if case 0 ... 150 = Scoring.sharedGameData.overallscore {
-            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final.png")!)
         }
         if case 150 ... 299 = Scoring.sharedGameData.overallscore {
-            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahfinal.png")!)
         }
         if case 300 ... 499 = Scoring.sharedGameData.overallscore {
-            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarriorfinal.png")!)
         }
         if case 500 ... 649 = Scoring.sharedGameData.overallscore {
-            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "Transplantfinal.png")!)
         }
         if case 650 ... 799 = Scoring.sharedGameData.overallscore{
-            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "mainahfinal.png")!)
         }
         if case 800 ... 4000 = Scoring.sharedGameData.overallscore {
-            newRoundFourImage.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1final.png")!)
         }
         
     }
