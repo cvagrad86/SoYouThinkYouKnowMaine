@@ -16,13 +16,16 @@ class MultipleChoiceViewController: UIViewController {
     @IBOutlet weak var bannerView: GADBannerView!
     var correctAnswer: String?
     var question: String?
+    var audio: String?
     var answers = [String]()
     var questionIdx = 0
     var Highscore = Int()
     var multchscore = 0
     var inARow = 0
     var bonus = 0
-    var audioPlayer: AVAudioPlayer?
+    var mcaudioPlayer: AVAudioPlayer?
+    //var queuePlayer: AVQueuePlayer
+    var queuePlayer = AVQueuePlayer()
     
     @IBOutlet weak var bonusCoin: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -111,6 +114,7 @@ class MultipleChoiceViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.loadRequest(GADRequest())
 
+       
         
         self.bonusCoin.hidden = true
 
@@ -132,16 +136,32 @@ class MultipleChoiceViewController: UIViewController {
         answers = currentQuestion["Answers"] as! [String]
         correctAnswer = currentQuestion["CorrectAnswer"] as? String
         question = currentQuestion["Question"] as? String
+        
         cardButton.enabled = false
         titlesForButtons()
         self.bonusCoin.hidden = true
+        
+        audio = currentQuestion["Audio"] as? String
+        createPlayerItem(audio!, ofType: "mp3")
+        
+        queuePlayer.play()
+        //queuePlayer.removeAllItems()
 
+    }
+    
+    func createPlayerItem(item: String, ofType type: String) {
+        let path = NSBundle.mainBundle().pathForResource(item, ofType: type)
+        let url = NSURL.fileURLWithPath(path!)
+        let item = AVPlayerItem(URL: url)
+        queuePlayer.insertItem(item, afterItem: nil)
+        
     }
     
     func bonusAudio () {
         do {
-            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bonus_sound1", ofType: "mp3")!))
-            audioPlayer!.play()
+            mcaudioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bonus_sound1", ofType: "mp3")!))
+            
+            mcaudioPlayer!.play()
             
         } catch {
             print("Error")

@@ -7,6 +7,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Who was governor before LePage?</string>
+			<key>Audio</key>
+			<string>before_lepage</string>
 			<key>CorrectAnswer</key>
 			<string>John Baldacci</string>
 			<key>Answers</key>
@@ -20,6 +22,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which of these is NOT a county in Maine?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Strafford</string>
 			<key>Answers</key>
@@ -33,6 +37,8 @@
 		<dict>
 			<key>Question</key>
 			<string>US Route 1 extends from Florida all the way to which Maine town?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Fort Kent</string>
 			<key>Answers</key>
@@ -46,6 +52,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which mountain is the SECOND highest in Maine?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Sugarloaf</string>
 			<key>Answers</key>
@@ -59,6 +67,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which is Maine&apos;s most lucrative($$$) export?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Lobster</string>
 			<key>Answers</key>
@@ -72,6 +82,8 @@
 		<dict>
 			<key>Question</key>
 			<string>What does L.L. in L.L. Bean stand for?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Leon Leonwood</string>
 			<key>Answers</key>
@@ -85,6 +97,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which of these is closest to Maine&apos;s current population?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>1,300,000</string>
 			<key>Answers</key>
@@ -98,6 +112,8 @@
 		<dict>
 			<key>Question</key>
 			<string>How does Maine&apos;s land size compare to the rest of the country?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>39th largest</string>
 			<key>Answers</key>
@@ -111,6 +127,8 @@
 		<dict>
 			<key>Question</key>
 			<string>How many Senators in the MAINE Senate(not Washington D.C.)</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>35</string>
 			<key>Answers</key>
@@ -124,6 +142,8 @@
 		<dict>
 			<key>Question</key>
 			<string>What is the official motto of Maine?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Dirigo</string>
 			<key>Answers</key>
@@ -137,6 +157,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which is the smallest of Maine&apos;s counties in terms of land size?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Sagadahoc</string>
 			<key>Answers</key>
@@ -150,6 +172,8 @@
 		<dict>
 			<key>Question</key>
 			<string>What is Maine&apos;s longest river(starting and ending in Maine)?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Kennebec</string>
 			<key>Answers</key>
@@ -163,6 +187,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which of these famous people is NOT from Maine?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Dan Brown(novelist)</string>
 			<key>Answers</key>
@@ -176,6 +202,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which of these firsts did NOT happen in Maine?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>First Legal Lottery in 1963</string>
 			<key>Answers</key>
@@ -189,6 +217,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Why is Joshua Chamberlain so well known?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>all of these are correct</string>
 			<key>Answers</key>
@@ -202,6 +232,8 @@
 		<dict>
 			<key>Question</key>
 			<string>What is the easternmost point in Maine(and the US)?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>West Quoddy Head</string>
 			<key>Answers</key>
@@ -215,6 +247,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Maine is the number 1 producer of what?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Blueberries</string>
 			<key>Answers</key>
@@ -228,6 +262,8 @@
 		<dict>
 			<key>Question</key>
 			<string>The official insect of Maine is?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Honeybee</string>
 			<key>Answers</key>
@@ -241,6 +277,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Maine became a state as part of the _______________ Compromise.</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Missouri</string>
 			<key>Answers</key>
@@ -254,6 +292,8 @@
 		<dict>
 			<key>Question</key>
 			<string>Which of these is not one of Maine&apos;s top 5 largest cities/towns in terms of population?</string>
+			<key>Audio</key>
+			<string>mcquestion_sample</string>
 			<key>CorrectAnswer</key>
 			<string>Biddeford</string>
 			<key>Answers</key>
