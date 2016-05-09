@@ -9,6 +9,8 @@
 import UIKit
 import GameKit
 import GoogleMobileAds
+import AVKit
+import AVFoundation
 
 class ScoreViewController: UIViewController {
 
@@ -23,6 +25,7 @@ class ScoreViewController: UIViewController {
     var currentScore = Int()
     var currentRound = Int()
     var overallGameScore = Int()
+    var audioPlayer: AVAudioPlayer?
 
     var roundOne = Scoring.sharedGameData.tfscore
     var roundTwo = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore)
@@ -59,26 +62,67 @@ class ScoreViewController: UIViewController {
         
         nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "mult_choice.png")!)
         
-        
         scoreLabel.text = "Score: \(roundOne)"
         
         if case 0 ... 4 = roundOne {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_never_been_heah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 5 ... 8 = roundOne {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_one_timah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 9 ... 11 = roundOne {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_weekend_warrior", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 12 ... 15 = roundOne {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_transplant", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 16 ... 20 = roundOne{
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_mainah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 21 ... 50 = roundOne {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         
         currentRound = 1
@@ -95,21 +139,64 @@ class ScoreViewController: UIViewController {
         
         if case 0 ... 4 = roundTwo {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_never_been_heah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
+
         }
         if case 5 ... 9 = roundTwo {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_one_timah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 10 ... 17 = roundTwo {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_weekend_warrior", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 18 ... 25 = roundTwo {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_transplant", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 26 ... 33 = roundTwo{
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_mainah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 34 ... 40 = roundTwo {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         currentRound = 2
         print(currentRound)
@@ -126,21 +213,64 @@ class ScoreViewController: UIViewController {
         
         if case 0 ... 30 = roundThree {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_never_been_heah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
+
         }
         if case 31 ... 45 = roundThree {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_one_timah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 46 ... 100 = roundThree {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_weekend_warrior", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 101 ... 200 = roundThree {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_transplant", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 201 ... 400 = roundThree{
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_mainah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 401 ... 1500 = roundThree {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         currentRound = 3
         print(currentRound)
@@ -155,21 +285,64 @@ class ScoreViewController: UIViewController {
         
         if case 0 ... 150 = roundFour {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_never_been_heah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
+
         }
         if case 150 ... 299 = roundFour {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "onetimah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_one_timah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 300 ... 499 = roundFour {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "weekendwarrior.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_weekend_warrior", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 500 ... 649 = roundFour {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "Transplant.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_transplant", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 650 ... 799 = roundFour{
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "mainah.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_mainah", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         if case 800 ... 1000 = roundFour {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
         }
         currentRound = 4
         print(currentRound)

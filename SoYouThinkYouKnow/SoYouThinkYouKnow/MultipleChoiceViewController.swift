@@ -17,6 +17,8 @@ class MultipleChoiceViewController: UIViewController {
     var correctAnswer: String?
     var question: String?
     var audio: String?
+    var correctAudio: String?
+    var incorrectAudio: String?
     var answers = [String]()
     var questionIdx = 0
     var Highscore = Int()
@@ -41,12 +43,14 @@ class MultipleChoiceViewController: UIViewController {
             multchscore += 2
             scoreLabel.text = "Your score = \(multchscore)"
             inARow += 1
+            createPlayerItem(correctAudio!, ofType: "aiff")
             
             } else {
             multchscore -= 2
             inARow = 0
             scoreLabel.text = "Your score = \(multchscore)"
             sender.backgroundColor = UIColor.redColor()
+            createPlayerItem(incorrectAudio!, ofType: "aiff")
             print(inARow)
             
         }
@@ -95,7 +99,12 @@ class MultipleChoiceViewController: UIViewController {
         self.view.addSubview(scoreLabel)
         mcArray!.shuffle()
         cardButton.enabled = false
-        nextQuestion()
+        
+        UIView.animateWithDuration(2.0, delay: 2.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+            self.nextQuestion()
+            }, completion: nil)
+        
+        
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.blackColor().CGColor
@@ -142,7 +151,11 @@ class MultipleChoiceViewController: UIViewController {
         self.bonusCoin.hidden = true
         
         audio = currentQuestion["Audio"] as? String
-        createPlayerItem(audio!, ofType: "mp3")
+        correctAudio = currentQuestion["CorrectAudio"] as? String
+        incorrectAudio = currentQuestion["IncorrectAudio"] as? String
+        
+        createPlayerItem(audio!, ofType: "aiff")
+        
         
         queuePlayer.play()
         //queuePlayer.removeAllItems()
@@ -189,14 +202,20 @@ class MultipleChoiceViewController: UIViewController {
 
     
     func titlesForButtons() {
-        for (idx,button) in answerButtons.enumerate() {
-            button.titleLabel!.lineBreakMode = .ByWordWrapping
-            button.setTitle(answers[idx], forState: .Normal)
-            button.enabled = true
-            button.titleLabel?.textAlignment = .Center
-            button.titleLabel?.numberOfLines = 0
-            button.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        }
+        
+        UIView.animateWithDuration(3.5, delay: 0.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+            for (idx,button) in self.answerButtons.enumerate() {
+                button.titleLabel!.lineBreakMode = .ByWordWrapping
+                button.setTitle(self.answers[idx], forState: .Normal)
+                button.enabled = true
+                button.titleLabel?.textAlignment = .Center
+                button.titleLabel?.numberOfLines = 0
+                button.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            }
+
+            
+            }, completion: nil)
+
         
         questionLabel.text = question
     }

@@ -28,7 +28,6 @@
 		9315D1461CABA650003E4FE0 /* TransitionDismissalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315D1431CABA650003E4FE0 /* TransitionDismissalAnimator.swift */; };
 		9315D1471CABA650003E4FE0 /* TransitionPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315D1441CABA650003E4FE0 /* TransitionPresentationAnimator.swift */; };
 		9315D1491CABA6B7003E4FE0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315D1481CABA6B7003E4FE0 /* WelcomeViewController.swift */; };
-		931623011CA53A89007BF21D /* nope.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623001CA53A89007BF21D /* nope.mp3 */; };
 		931623031CA53A9A007BF21D /* ayuhSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623021CA53A9A007BF21D /* ayuhSound2.mp3 */; };
 		931623061CA54278007BF21D /* nope3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623051CA54277007BF21D /* nope3.mp3 */; };
 		932D7BC31CC53B42005133C4 /* bonus_coin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 932D7BC21CC53B42005133C4 /* bonus_coin1.png */; };
@@ -69,7 +68,6 @@
 		936FCCEF1CBF80DA0095E59D /* MyCustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */; };
 		936FCCF11CBF93A90095E59D /* lobster_coin@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */; };
 		936FCCF51CBFBB910095E59D /* horn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF41CBFBB900095E59D /* horn.wav */; };
-		936FCCF71CBFBBA00095E59D /* Cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 936FCCF61CBFBBA00095E59D /* Cow.mp3 */; };
 		936FCD171CC12B100095E59D /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCF91CC12B100095E59D /* AsyncButton.swift */; };
 		936FCD181CC12B100095E59D /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFA1CC12B100095E59D /* AsyncImageView.swift */; };
 		936FCD191CC12B100095E59D /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCCFB1CC12B100095E59D /* AutoTextView.swift */; };
@@ -99,6 +97,7 @@
 		936FCD311CC12B100095E59D /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD141CC12B100095E59D /* TransitionManager.swift */; };
 		936FCD321CC12B100095E59D /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD151CC12B100095E59D /* TransitionZoom.swift */; };
 		936FCD331CC12B100095E59D /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FCD161CC12B100095E59D /* UnwindSegue.swift */; };
+		937822851CDCBB5000CE50A5 /* audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937822841CDCBB4F00CE50A5 /* audio.swift */; };
 		938110CE1CC62F5C00B4B0A7 /* welcome_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 938110CD1CC62F5C00B4B0A7 /* welcome_sign.png */; };
 		938110D01CC62F7100B4B0A7 /* mult_choice.png in Resources */ = {isa = PBXBuildFile; fileRef = 938110CF1CC62F7100B4B0A7 /* mult_choice.png */; };
 		938110D31CC62F8400B4B0A7 /* maine_maps.png in Resources */ = {isa = PBXBuildFile; fileRef = 938110D11CC62F8400B4B0A7 /* maine_maps.png */; };
@@ -118,6 +117,52 @@
 		93C12C531CB9433200FFC17A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C12C521CB9433200FFC17A /* Notifications.swift */; };
 		93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C541CBAA33800FFC17A /* mainah.png */; };
 		93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C551CBAA33800FFC17A /* Transplant.png */; };
+		93C2DF7D1CE0701E00E81D03 /* back_up_take_another.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF4E1CE0701E00E81D03 /* back_up_take_another.aiff */; };
+		93C2DF7E1CE0701E00E81D03 /* corker.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF4F1CE0701E00E81D03 /* corker.aiff */; };
+		93C2DF7F1CE0701E00E81D03 /* nailed_that_one_chummy.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF501CE0701E00E81D03 /* nailed_that_one_chummy.aiff */; };
+		93C2DF801CE0701E00E81D03 /* negative.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF511CE0701E00E81D03 /* negative.aiff */; };
+		93C2DF811CE0701E00E81D03 /* tend_to_doubt_it.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF521CE0701E00E81D03 /* tend_to_doubt_it.aiff */; };
+		93C2DF821CE0701E00E81D03 /* that_aint_right.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF531CE0701E00E81D03 /* that_aint_right.aiff */; };
+		93C2DF831CE0701E00E81D03 /* wicked_pissah.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF541CE0701E00E81D03 /* wicked_pissah.aiff */; };
+		93C2DF841CE0701E00E81D03 /* yessir.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF551CE0701E00E81D03 /* yessir.aiff */; };
+		93C2DF851CE0701E00E81D03 /* map_instructions.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF571CE0701E00E81D03 /* map_instructions.aiff */; };
+		93C2DF861CE0701E00E81D03 /* mult_choice_instructions2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF581CE0701E00E81D03 /* mult_choice_instructions2.aiff */; };
+		93C2DF871CE0701E00E81D03 /* photos_instructions.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF591CE0701E00E81D03 /* photos_instructions.aiff */; };
+		93C2DF881CE0701E00E81D03 /* true_false_instructions.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF5A1CE0701E00E81D03 /* true_false_instructions.aiff */; };
+		93C2DF891CE0701E00E81D03 /* mc_before_lepage.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF5C1CE0701E00E81D03 /* mc_before_lepage.aiff */; };
+		93C2DF8A1CE0701E00E81D03 /* mc_county_in_maine.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF5D1CE0701E00E81D03 /* mc_county_in_maine.aiff */; };
+		93C2DF8B1CE0701E00E81D03 /* mc_current_population.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF5E1CE0701E00E81D03 /* mc_current_population.aiff */; };
+		93C2DF8C1CE0701E00E81D03 /* mc_eastermost_point.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF5F1CE0701E00E81D03 /* mc_eastermost_point.aiff */; };
+		93C2DF8D1CE0701E00E81D03 /* mc_famous_people.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF601CE0701E00E81D03 /* mc_famous_people.aiff */; };
+		93C2DF8E1CE0701E00E81D03 /* mc_firsts.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF611CE0701E00E81D03 /* mc_firsts.aiff */; };
+		93C2DF8F1CE0701E00E81D03 /* mc_insect.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF621CE0701E00E81D03 /* mc_insect.aiff */; };
+		93C2DF901CE0701E00E81D03 /* mc_joshua_chamberlain.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF631CE0701E00E81D03 /* mc_joshua_chamberlain.aiff */; };
+		93C2DF911CE0701E00E81D03 /* mc_land_size.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF641CE0701E00E81D03 /* mc_land_size.aiff */; };
+		93C2DF921CE0701E00E81D03 /* mc_ll_bean.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF651CE0701E00E81D03 /* mc_ll_bean.aiff */; };
+		93C2DF931CE0701E00E81D03 /* mc_longest_river.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF661CE0701E00E81D03 /* mc_longest_river.aiff */; };
+		93C2DF941CE0701E00E81D03 /* mc_lucrative_export.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF671CE0701E00E81D03 /* mc_lucrative_export.aiff */; };
+		93C2DF951CE0701E00E81D03 /* mc_missouri_compromise.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF681CE0701E00E81D03 /* mc_missouri_compromise.aiff */; };
+		93C2DF961CE0701E00E81D03 /* mc_motto.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF691CE0701E00E81D03 /* mc_motto.aiff */; };
+		93C2DF971CE0701E00E81D03 /* mc_number_one_producer.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF6A1CE0701E00E81D03 /* mc_number_one_producer.aiff */; };
+		93C2DF981CE0701E00E81D03 /* mc_second_highest_mtn.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF6B1CE0701E00E81D03 /* mc_second_highest_mtn.aiff */; };
+		93C2DF991CE0701E00E81D03 /* mc_senators.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF6C1CE0701E00E81D03 /* mc_senators.aiff */; };
+		93C2DF9A1CE0701E00E81D03 /* mc_smallest_county.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF6D1CE0701E00E81D03 /* mc_smallest_county.aiff */; };
+		93C2DF9B1CE0701E00E81D03 /* mc_top5_populations.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF6E1CE0701E00E81D03 /* mc_top5_populations.aiff */; };
+		93C2DF9C1CE0701E00E81D03 /* mc_us_route_one.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF6F1CE0701E00E81D03 /* mc_us_route_one.aiff */; };
+		93C2DF9D1CE0701E00E81D03 /* score_mainah.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF711CE0701E00E81D03 /* score_mainah.aiff */; };
+		93C2DF9E1CE0701E00E81D03 /* score_mainah_short.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF721CE0701E00E81D03 /* score_mainah_short.aiff */; };
+		93C2DF9F1CE0701E00E81D03 /* score_never_been_heah.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF731CE0701E00E81D03 /* score_never_been_heah.aiff */; };
+		93C2DFA01CE0701E00E81D03 /* score_never_been_heah_short.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF741CE0701E00E81D03 /* score_never_been_heah_short.aiff */; };
+		93C2DFA11CE0701E00E81D03 /* score_one_timah.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF751CE0701E00E81D03 /* score_one_timah.aiff */; };
+		93C2DFA21CE0701E00E81D03 /* score_one_timah_short.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF761CE0701E00E81D03 /* score_one_timah_short.aiff */; };
+		93C2DFA31CE0701E00E81D03 /* score_transplant.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF771CE0701E00E81D03 /* score_transplant.aiff */; };
+		93C2DFA41CE0701E00E81D03 /* score_transplant_short.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF781CE0701E00E81D03 /* score_transplant_short.aiff */; };
+		93C2DFA51CE0701E00E81D03 /* score_true_blue_mainah.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF791CE0701E00E81D03 /* score_true_blue_mainah.aiff */; };
+		93C2DFA61CE0701E00E81D03 /* score_true_blue_mainah2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF7A1CE0701E00E81D03 /* score_true_blue_mainah2.aiff */; };
+		93C2DFA71CE0701E00E81D03 /* score_true_blue_short.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF7B1CE0701E00E81D03 /* score_true_blue_short.aiff */; };
+		93C2DFA81CE0701E00E81D03 /* score_weekend_warrior_short.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF7C1CE0701E00E81D03 /* score_weekend_warrior_short.aiff */; };
+		93C2DFAA1CE080CF00E81D03 /* ayuhSound2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DFA91CE080CF00E81D03 /* ayuhSound2.aiff */; };
+		93C2DFAC1CE0826500E81D03 /* score_weekend_warrior.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DFAB1CE0826500E81D03 /* score_weekend_warrior.aiff */; };
 		93D233791CBB8BF500F1ED25 /* never1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D233781CBB8BF500F1ED25 /* never1.png */; };
 		93D233811CBB957F00F1ED25 /* mainah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337A1CBB957F00F1ED25 /* mainah.png */; };
 		93D233821CBB957F00F1ED25 /* never.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337B1CBB957F00F1ED25 /* never.png */; };
@@ -163,7 +208,6 @@
 		9315D1431CABA650003E4FE0 /* TransitionDismissalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDismissalAnimator.swift; sourceTree = "<group>"; };
 		9315D1441CABA650003E4FE0 /* TransitionPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionPresentationAnimator.swift; sourceTree = "<group>"; };
 		9315D1481CABA6B7003E4FE0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		931623001CA53A89007BF21D /* nope.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nope.mp3; sourceTree = "<group>"; };
 		931623021CA53A9A007BF21D /* ayuhSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ayuhSound2.mp3; sourceTree = "<group>"; };
 		931623041CA540EF007BF21D /* nope1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nope1.m4a; sourceTree = "<group>"; };
 		931623051CA54277007BF21D /* nope3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nope3.mp3; sourceTree = "<group>"; };
@@ -205,7 +249,6 @@
 		936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomPageViewController.swift; sourceTree = "<group>"; };
 		936FCCF01CBF93A90095E59D /* lobster_coin@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lobster_coin@1x.png"; sourceTree = "<group>"; };
 		936FCCF41CBFBB900095E59D /* horn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horn.wav; sourceTree = "<group>"; };
-		936FCCF61CBFBBA00095E59D /* Cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cow.mp3; sourceTree = "<group>"; };
 		936FCCF91CC12B100095E59D /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		936FCCFA1CC12B100095E59D /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		936FCCFB1CC12B100095E59D /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
@@ -237,6 +280,7 @@
 		936FCD151CC12B100095E59D /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		936FCD161CC12B100095E59D /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		937822831CDC931D00CE50A5 /* mcquestion_sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mcquestion_sample.mp3; path = SoYouThinkYouKnow/mcquestion_sample.mp3; sourceTree = "<group>"; };
+		937822841CDCBB4F00CE50A5 /* audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = audio.swift; sourceTree = "<group>"; };
 		938110CD1CC62F5C00B4B0A7 /* welcome_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_sign.png; sourceTree = "<group>"; };
 		938110CF1CC62F7100B4B0A7 /* mult_choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mult_choice.png; sourceTree = "<group>"; };
 		938110D11CC62F8400B4B0A7 /* maine_maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maine_maps.png; sourceTree = "<group>"; };
@@ -256,6 +300,52 @@
 		93C12C521CB9433200FFC17A /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		93C12C541CBAA33800FFC17A /* mainah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainah.png; path = scoreLabels/mainah.png; sourceTree = "<group>"; };
 		93C12C551CBAA33800FFC17A /* Transplant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Transplant.png; path = scoreLabels/Transplant.png; sourceTree = "<group>"; };
+		93C2DF4E1CE0701E00E81D03 /* back_up_take_another.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = back_up_take_another.aiff; sourceTree = "<group>"; };
+		93C2DF4F1CE0701E00E81D03 /* corker.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = corker.aiff; sourceTree = "<group>"; };
+		93C2DF501CE0701E00E81D03 /* nailed_that_one_chummy.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = nailed_that_one_chummy.aiff; sourceTree = "<group>"; };
+		93C2DF511CE0701E00E81D03 /* negative.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = negative.aiff; sourceTree = "<group>"; };
+		93C2DF521CE0701E00E81D03 /* tend_to_doubt_it.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = tend_to_doubt_it.aiff; sourceTree = "<group>"; };
+		93C2DF531CE0701E00E81D03 /* that_aint_right.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = that_aint_right.aiff; sourceTree = "<group>"; };
+		93C2DF541CE0701E00E81D03 /* wicked_pissah.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = wicked_pissah.aiff; sourceTree = "<group>"; };
+		93C2DF551CE0701E00E81D03 /* yessir.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = yessir.aiff; sourceTree = "<group>"; };
+		93C2DF571CE0701E00E81D03 /* map_instructions.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_instructions.aiff; sourceTree = "<group>"; };
+		93C2DF581CE0701E00E81D03 /* mult_choice_instructions2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mult_choice_instructions2.aiff; sourceTree = "<group>"; };
+		93C2DF591CE0701E00E81D03 /* photos_instructions.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = photos_instructions.aiff; sourceTree = "<group>"; };
+		93C2DF5A1CE0701E00E81D03 /* true_false_instructions.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = true_false_instructions.aiff; sourceTree = "<group>"; };
+		93C2DF5C1CE0701E00E81D03 /* mc_before_lepage.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_before_lepage.aiff; sourceTree = "<group>"; };
+		93C2DF5D1CE0701E00E81D03 /* mc_county_in_maine.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_county_in_maine.aiff; sourceTree = "<group>"; };
+		93C2DF5E1CE0701E00E81D03 /* mc_current_population.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_current_population.aiff; sourceTree = "<group>"; };
+		93C2DF5F1CE0701E00E81D03 /* mc_eastermost_point.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_eastermost_point.aiff; sourceTree = "<group>"; };
+		93C2DF601CE0701E00E81D03 /* mc_famous_people.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_famous_people.aiff; sourceTree = "<group>"; };
+		93C2DF611CE0701E00E81D03 /* mc_firsts.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_firsts.aiff; sourceTree = "<group>"; };
+		93C2DF621CE0701E00E81D03 /* mc_insect.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_insect.aiff; sourceTree = "<group>"; };
+		93C2DF631CE0701E00E81D03 /* mc_joshua_chamberlain.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_joshua_chamberlain.aiff; sourceTree = "<group>"; };
+		93C2DF641CE0701E00E81D03 /* mc_land_size.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_land_size.aiff; sourceTree = "<group>"; };
+		93C2DF651CE0701E00E81D03 /* mc_ll_bean.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_ll_bean.aiff; sourceTree = "<group>"; };
+		93C2DF661CE0701E00E81D03 /* mc_longest_river.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_longest_river.aiff; sourceTree = "<group>"; };
+		93C2DF671CE0701E00E81D03 /* mc_lucrative_export.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_lucrative_export.aiff; sourceTree = "<group>"; };
+		93C2DF681CE0701E00E81D03 /* mc_missouri_compromise.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_missouri_compromise.aiff; sourceTree = "<group>"; };
+		93C2DF691CE0701E00E81D03 /* mc_motto.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_motto.aiff; sourceTree = "<group>"; };
+		93C2DF6A1CE0701E00E81D03 /* mc_number_one_producer.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_number_one_producer.aiff; sourceTree = "<group>"; };
+		93C2DF6B1CE0701E00E81D03 /* mc_second_highest_mtn.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_second_highest_mtn.aiff; sourceTree = "<group>"; };
+		93C2DF6C1CE0701E00E81D03 /* mc_senators.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_senators.aiff; sourceTree = "<group>"; };
+		93C2DF6D1CE0701E00E81D03 /* mc_smallest_county.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_smallest_county.aiff; sourceTree = "<group>"; };
+		93C2DF6E1CE0701E00E81D03 /* mc_top5_populations.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_top5_populations.aiff; sourceTree = "<group>"; };
+		93C2DF6F1CE0701E00E81D03 /* mc_us_route_one.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mc_us_route_one.aiff; sourceTree = "<group>"; };
+		93C2DF711CE0701E00E81D03 /* score_mainah.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_mainah.aiff; sourceTree = "<group>"; };
+		93C2DF721CE0701E00E81D03 /* score_mainah_short.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_mainah_short.aiff; sourceTree = "<group>"; };
+		93C2DF731CE0701E00E81D03 /* score_never_been_heah.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_never_been_heah.aiff; sourceTree = "<group>"; };
+		93C2DF741CE0701E00E81D03 /* score_never_been_heah_short.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_never_been_heah_short.aiff; sourceTree = "<group>"; };
+		93C2DF751CE0701E00E81D03 /* score_one_timah.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_one_timah.aiff; sourceTree = "<group>"; };
+		93C2DF761CE0701E00E81D03 /* score_one_timah_short.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_one_timah_short.aiff; sourceTree = "<group>"; };
+		93C2DF771CE0701E00E81D03 /* score_transplant.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_transplant.aiff; sourceTree = "<group>"; };
+		93C2DF781CE0701E00E81D03 /* score_transplant_short.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_transplant_short.aiff; sourceTree = "<group>"; };
+		93C2DF791CE0701E00E81D03 /* score_true_blue_mainah.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_true_blue_mainah.aiff; sourceTree = "<group>"; };
+		93C2DF7A1CE0701E00E81D03 /* score_true_blue_mainah2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_true_blue_mainah2.aiff; sourceTree = "<group>"; };
+		93C2DF7B1CE0701E00E81D03 /* score_true_blue_short.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_true_blue_short.aiff; sourceTree = "<group>"; };
+		93C2DF7C1CE0701E00E81D03 /* score_weekend_warrior_short.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_weekend_warrior_short.aiff; sourceTree = "<group>"; };
+		93C2DFA91CE080CF00E81D03 /* ayuhSound2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ayuhSound2.aiff; sourceTree = "<group>"; };
+		93C2DFAB1CE0826500E81D03 /* score_weekend_warrior.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_weekend_warrior.aiff; sourceTree = "<group>"; };
 		93D233781CBB8BF500F1ED25 /* never1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never1.png; path = scoreLabels/never1.png; sourceTree = "<group>"; };
 		93D2337A1CBB957F00F1ED25 /* mainah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainah.png; path = scoreLabels/mainah.png; sourceTree = "<group>"; };
 		93D2337B1CBB957F00F1ED25 /* never.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never.png; path = scoreLabels/never.png; sourceTree = "<group>"; };
@@ -353,13 +443,12 @@
 		931622FF1CA539C9007BF21D /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				93C2DF4C1CE0701E00E81D03 /* final_audio */,
 				93DDC0391CDC7A2C00E767C1 /* mcquestion_sample.mp3 */,
 				932E5E0F1CD8AFB9008D9AA5 /* before_lepage.mp3 */,
-				936FCCF61CBFBBA00095E59D /* Cow.mp3 */,
 				938110D51CC668B800B4B0A7 /* bonus_sound1.mp3 */,
 				936FCCF41CBFBB900095E59D /* horn.wav */,
 				931623021CA53A9A007BF21D /* ayuhSound2.mp3 */,
-				931623001CA53A89007BF21D /* nope.mp3 */,
 				931623041CA540EF007BF21D /* nope1.m4a */,
 				931623051CA54277007BF21D /* nope3.mp3 */,
 				936D6F0F1CACEC8000B58151 /* opening_sound3.mp3 */,
@@ -507,8 +596,94 @@
 				936D6F111CAD827E00B58151 /* Locations.swift */,
 				93C12C521CB9433200FFC17A /* Notifications.swift */,
 				938110D71CC7585100B4B0A7 /* Device.swift */,
+				937822841CDCBB4F00CE50A5 /* audio.swift */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		93C2DF4C1CE0701E00E81D03 /* final_audio */ = {
+			isa = PBXGroup;
+			children = (
+				93C2DF4D1CE0701E00E81D03 /* general_sounds */,
+				93C2DF561CE0701E00E81D03 /* instructions */,
+				93C2DF5B1CE0701E00E81D03 /* mc_questions */,
+				93C2DF701CE0701E00E81D03 /* score_audio */,
+			);
+			path = final_audio;
+			sourceTree = "<group>";
+		};
+		93C2DF4D1CE0701E00E81D03 /* general_sounds */ = {
+			isa = PBXGroup;
+			children = (
+				93C2DFA91CE080CF00E81D03 /* ayuhSound2.aiff */,
+				93C2DF4E1CE0701E00E81D03 /* back_up_take_another.aiff */,
+				93C2DF4F1CE0701E00E81D03 /* corker.aiff */,
+				93C2DF501CE0701E00E81D03 /* nailed_that_one_chummy.aiff */,
+				93C2DF511CE0701E00E81D03 /* negative.aiff */,
+				93C2DF521CE0701E00E81D03 /* tend_to_doubt_it.aiff */,
+				93C2DF531CE0701E00E81D03 /* that_aint_right.aiff */,
+				93C2DF541CE0701E00E81D03 /* wicked_pissah.aiff */,
+				93C2DF551CE0701E00E81D03 /* yessir.aiff */,
+			);
+			path = general_sounds;
+			sourceTree = "<group>";
+		};
+		93C2DF561CE0701E00E81D03 /* instructions */ = {
+			isa = PBXGroup;
+			children = (
+				93C2DF571CE0701E00E81D03 /* map_instructions.aiff */,
+				93C2DF581CE0701E00E81D03 /* mult_choice_instructions2.aiff */,
+				93C2DF591CE0701E00E81D03 /* photos_instructions.aiff */,
+				93C2DF5A1CE0701E00E81D03 /* true_false_instructions.aiff */,
+			);
+			path = instructions;
+			sourceTree = "<group>";
+		};
+		93C2DF5B1CE0701E00E81D03 /* mc_questions */ = {
+			isa = PBXGroup;
+			children = (
+				93C2DF5C1CE0701E00E81D03 /* mc_before_lepage.aiff */,
+				93C2DF5D1CE0701E00E81D03 /* mc_county_in_maine.aiff */,
+				93C2DF5E1CE0701E00E81D03 /* mc_current_population.aiff */,
+				93C2DF5F1CE0701E00E81D03 /* mc_eastermost_point.aiff */,
+				93C2DF601CE0701E00E81D03 /* mc_famous_people.aiff */,
+				93C2DF611CE0701E00E81D03 /* mc_firsts.aiff */,
+				93C2DF621CE0701E00E81D03 /* mc_insect.aiff */,
+				93C2DF631CE0701E00E81D03 /* mc_joshua_chamberlain.aiff */,
+				93C2DF641CE0701E00E81D03 /* mc_land_size.aiff */,
+				93C2DF651CE0701E00E81D03 /* mc_ll_bean.aiff */,
+				93C2DF661CE0701E00E81D03 /* mc_longest_river.aiff */,
+				93C2DF671CE0701E00E81D03 /* mc_lucrative_export.aiff */,
+				93C2DF681CE0701E00E81D03 /* mc_missouri_compromise.aiff */,
+				93C2DF691CE0701E00E81D03 /* mc_motto.aiff */,
+				93C2DF6A1CE0701E00E81D03 /* mc_number_one_producer.aiff */,
+				93C2DF6B1CE0701E00E81D03 /* mc_second_highest_mtn.aiff */,
+				93C2DF6C1CE0701E00E81D03 /* mc_senators.aiff */,
+				93C2DF6D1CE0701E00E81D03 /* mc_smallest_county.aiff */,
+				93C2DF6E1CE0701E00E81D03 /* mc_top5_populations.aiff */,
+				93C2DF6F1CE0701E00E81D03 /* mc_us_route_one.aiff */,
+			);
+			path = mc_questions;
+			sourceTree = "<group>";
+		};
+		93C2DF701CE0701E00E81D03 /* score_audio */ = {
+			isa = PBXGroup;
+			children = (
+				93C2DF711CE0701E00E81D03 /* score_mainah.aiff */,
+				93C2DF721CE0701E00E81D03 /* score_mainah_short.aiff */,
+				93C2DF731CE0701E00E81D03 /* score_never_been_heah.aiff */,
+				93C2DF741CE0701E00E81D03 /* score_never_been_heah_short.aiff */,
+				93C2DF751CE0701E00E81D03 /* score_one_timah.aiff */,
+				93C2DF761CE0701E00E81D03 /* score_one_timah_short.aiff */,
+				93C2DF771CE0701E00E81D03 /* score_transplant.aiff */,
+				93C2DF781CE0701E00E81D03 /* score_transplant_short.aiff */,
+				93C2DF791CE0701E00E81D03 /* score_true_blue_mainah.aiff */,
+				93C2DF7A1CE0701E00E81D03 /* score_true_blue_mainah2.aiff */,
+				93C2DF7B1CE0701E00E81D03 /* score_true_blue_short.aiff */,
+				93C2DF7C1CE0701E00E81D03 /* score_weekend_warrior_short.aiff */,
+				93C2DFAB1CE0826500E81D03 /* score_weekend_warrior.aiff */,
+			);
+			path = score_audio;
 			sourceTree = "<group>";
 		};
 		EACD145F7AA34A1F86356EC3 /* Frameworks */ = {
@@ -592,79 +767,123 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C2DF891CE0701E00E81D03 /* mc_before_lepage.aiff in Resources */,
+				93C2DF831CE0701E00E81D03 /* wicked_pissah.aiff in Resources */,
+				93C2DF7E1CE0701E00E81D03 /* corker.aiff in Resources */,
+				93C2DFA41CE0701E00E81D03 /* score_transplant_short.aiff in Resources */,
+				93C2DF821CE0701E00E81D03 /* that_aint_right.aiff in Resources */,
 				93DDC03A1CDC7A2C00E767C1 /* mcquestion_sample.mp3 in Resources */,
 				936D6F101CACEC8000B58151 /* opening_sound3.mp3 in Resources */,
+				93C2DFAA1CE080CF00E81D03 /* ayuhSound2.aiff in Resources */,
 				931623061CA54278007BF21D /* nope3.mp3 in Resources */,
+				93C2DFA81CE0701E00E81D03 /* score_weekend_warrior_short.aiff in Resources */,
+				93C2DF941CE0701E00E81D03 /* mc_lucrative_export.aiff in Resources */,
 				932D7BC31CC53B42005133C4 /* bonus_coin1.png in Resources */,
 				932E5E101CD8AFB9008D9AA5 /* before_lepage.mp3 in Resources */,
 				933CD6151C9FE5D0005C55F2 /* Joan-Benoit-Samuelson.png in Resources */,
+				93C2DFA31CE0701E00E81D03 /* score_transplant.aiff in Resources */,
 				93D233861CBB957F00F1ED25 /* trueblue.png in Resources */,
 				938110D31CC62F8400B4B0A7 /* maine_maps.png in Resources */,
 				93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */,
 				938110E21CC758F500B4B0A7 /* opening_graphic4_iphone5.png in Resources */,
 				933CD61B1C9FE5D0005C55F2 /* maine_state_flower.png in Resources */,
+				93C2DF8D1CE0701E00E81D03 /* mc_famous_people.aiff in Resources */,
 				938110CE1CC62F5C00B4B0A7 /* welcome_sign.png in Resources */,
 				933CD6131C9FE5D0005C55F2 /* geogre_mitchell.png in Resources */,
 				9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */,
 				938110E11CC758F500B4B0A7 /* opening_graphic4_ipadRetina.png in Resources */,
+				93C2DF9F1CE0701E00E81D03 /* score_never_been_heah.aiff in Resources */,
 				936C2EE71CD0EE6400B7DCF4 /* weekendwarriorfinal.png in Resources */,
 				933CD6181C9FE5D0005C55F2 /* judd_nelsonj_nelson1x.png in Resources */,
 				936FCD261CC12B100095E59D /* LoadingView.xib in Resources */,
 				938110DF1CC758F500B4B0A7 /* opening_graphic_iphone4.png in Resources */,
+				93C2DF801CE0701E00E81D03 /* negative.aiff in Resources */,
+				93C2DF931CE0701E00E81D03 /* mc_longest_river.aiff in Resources */,
 				930301491CBE390800A38ED7 /* mainahsmall.png in Resources */,
 				938110D41CC62F8400B4B0A7 /* name_that_photo.png in Resources */,
+				93C2DF921CE0701E00E81D03 /* mc_ll_bean.aiff in Resources */,
 				933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */,
 				933D1E891C91789B0061B205 /* RightOrWrong.plist in Resources */,
+				93C2DF851CE0701E00E81D03 /* map_instructions.aiff in Resources */,
+				93C2DF841CE0701E00E81D03 /* yessir.aiff in Resources */,
 				93D233821CBB957F00F1ED25 /* never.png in Resources */,
 				930301471CBE390800A38ED7 /* onetimahsmall.png in Resources */,
 				936C2EE81CD0EE6400B7DCF4 /* mainahfinal.png in Resources */,
 				930301451CBE390800A38ED7 /* weekendwarriorsmall.png in Resources */,
+				93C2DFA11CE0701E00E81D03 /* score_one_timah.aiff in Resources */,
 				930497991C8ADDDD0073B6C9 /* LaunchScreen.storyboard in Resources */,
+				93C2DF861CE0701E00E81D03 /* mult_choice_instructions2.aiff in Resources */,
 				936C2EE61CD0EE6400B7DCF4 /* Transplantfinal.png in Resources */,
-				936FCCF71CBFBBA00095E59D /* Cow.mp3 in Resources */,
+				93C2DF9C1CE0701E00E81D03 /* mc_us_route_one.aiff in Resources */,
+				93C2DF811CE0701E00E81D03 /* tend_to_doubt_it.aiff in Resources */,
+				93C2DF971CE0701E00E81D03 /* mc_number_one_producer.aiff in Resources */,
+				93C2DF7F1CE0701E00E81D03 /* nailed_that_one_chummy.aiff in Resources */,
+				93C2DF8E1CE0701E00E81D03 /* mc_firsts.aiff in Resources */,
 				930497961C8ADDDD0073B6C9 /* Assets.xcassets in Resources */,
 				938110E61CC7714700B4B0A7 /* the_end_sign copy.png in Resources */,
+				93C2DFA71CE0701E00E81D03 /* score_true_blue_short.aiff in Resources */,
+				93C2DFA61CE0701E00E81D03 /* score_true_blue_mainah2.aiff in Resources */,
 				93D233811CBB957F00F1ED25 /* mainah.png in Resources */,
 				9303014B1CBE3D3500A38ED7 /* truebluesmall.png in Resources */,
+				93C2DF9B1CE0701E00E81D03 /* mc_top5_populations.aiff in Resources */,
+				93C2DF991CE0701E00E81D03 /* mc_senators.aiff in Resources */,
 				936FCD231CC12B100095E59D /* Info.plist in Resources */,
 				936FCCF51CBFBB910095E59D /* horn.wav in Resources */,
 				9315D1401CAAAFCE003E4FE0 /* Locations.plist in Resources */,
-				931623011CA53A89007BF21D /* nope.mp3 in Resources */,
+				93C2DF9A1CE0701E00E81D03 /* mc_smallest_county.aiff in Resources */,
 				93D233841CBB957F00F1ED25 /* onetimah.png in Resources */,
 				93D233851CBB957F00F1ED25 /* Transplant.png in Resources */,
 				93D233791CBB8BF500F1ED25 /* never1.png in Resources */,
+				93C2DF8A1CE0701E00E81D03 /* mc_county_in_maine.aiff in Resources */,
 				930497941C8ADDDD0073B6C9 /* Main.storyboard in Resources */,
 				930301461CBE390800A38ED7 /* Transplantsmall.png in Resources */,
+				93C2DFA21CE0701E00E81D03 /* score_one_timah_short.aiff in Resources */,
 				936C2EEA1CD0EE6400B7DCF4 /* trueblue1final.png in Resources */,
+				93C2DF8F1CE0701E00E81D03 /* mc_insect.aiff in Resources */,
 				933CD6221C9FE5D0005C55F2 /* thunderhole_seacoastdayhikersdotcom.png in Resources */,
 				933CD61C1C9FE5D0005C55F2 /* maine-loon-2.png in Resources */,
 				9303013F1CBE351800A38ED7 /* photos_instructions1.png in Resources */,
 				933CD61F1C9FE5D0005C55F2 /* penobscot_fort_knox_maine.png in Resources */,
+				93C2DF881CE0701E00E81D03 /* true_false_instructions.aiff in Resources */,
+				93C2DF961CE0701E00E81D03 /* mc_motto.aiff in Resources */,
 				938110D61CC668B800B4B0A7 /* bonus_sound1.mp3 in Resources */,
 				93D233831CBB957F00F1ED25 /* never1.png in Resources */,
 				933CD6241C9FEE3E005C55F2 /* ImageQuiz.plist in Resources */,
 				938110E31CC758F500B4B0A7 /* opening_graphic4_iphone6.png in Resources */,
+				93C2DF951CE0701E00E81D03 /* mc_missouri_compromise.aiff in Resources */,
 				938110E01CC758F500B4B0A7 /* opening_graphic4_ipad.png in Resources */,
 				933CD6121C9FE5D0005C55F2 /* christinas_world.jpeg.png in Resources */,
 				933CD61E1C9FE5D0005C55F2 /* Paul_Bunyan_statue_in_Bangor.png in Resources */,
+				93C2DF8C1CE0701E00E81D03 /* mc_eastermost_point.aiff in Resources */,
+				93C2DF901CE0701E00E81D03 /* mc_joshua_chamberlain.aiff in Resources */,
 				933CD61A1C9FE5D0005C55F2 /* Louis-Sockalexis-Historic-Photo.png in Resources */,
+				93C2DF871CE0701E00E81D03 /* photos_instructions.aiff in Resources */,
 				936C2EE91CD0EE6400B7DCF4 /* never1final.png in Resources */,
 				930301481CBE390800A38ED7 /* never1small.png in Resources */,
+				93C2DF9E1CE0701E00E81D03 /* score_mainah_short.aiff in Resources */,
+				93C2DF7D1CE0701E00E81D03 /* back_up_take_another.aiff in Resources */,
 				933CD6191C9FE5D0005C55F2 /* longfellow.png in Resources */,
 				933CD6211C9FE5D0005C55F2 /* puffin.png in Resources */,
+				93C2DF981CE0701E00E81D03 /* mc_second_highest_mtn.aiff in Resources */,
 				9303013C1CBE351800A38ED7 /* true_false_instructions1.png in Resources */,
 				931623031CA53A9A007BF21D /* ayuhSound2.mp3 in Resources */,
 				9303013D1CBE351800A38ED7 /* mult_choice_instructions1.png in Resources */,
 				93D233891CBB9B6000F1ED25 /* trueblue1.png in Resources */,
+				93C2DFAC1CE0826500E81D03 /* score_weekend_warrior.aiff in Resources */,
+				93C2DF9D1CE0701E00E81D03 /* score_mainah.aiff in Resources */,
 				93D2338B1CBCE16500F1ED25 /* portlandHeadLight2.png in Resources */,
 				933CD6141C9FE5D0005C55F2 /* James_G._Blaine.png in Resources */,
 				933CD61D1C9FE5D0005C55F2 /* old_orchard_beach_pier.png in Resources */,
 				933CD6161C9FE5D0005C55F2 /* Josh_Chamberlain.png in Resources */,
 				938110E41CC758F500B4B0A7 /* opening_graphic4_iphone6s.png in Resources */,
 				93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */,
+				93C2DF8B1CE0701E00E81D03 /* mc_current_population.aiff in Resources */,
+				93C2DFA01CE0701E00E81D03 /* score_never_been_heah_short.aiff in Resources */,
 				93D233871CBB957F00F1ED25 /* weekendwarrior.png in Resources */,
+				93C2DFA51CE0701E00E81D03 /* score_true_blue_mainah.aiff in Resources */,
 				936FCCF11CBF93A90095E59D /* lobster_coin@1x.png in Resources */,
 				938110D01CC62F7100B4B0A7 /* mult_choice.png in Resources */,
+				93C2DF911CE0701E00E81D03 /* mc_land_size.aiff in Resources */,
 				933CD6111C9FE5D0005C55F2 /* chickadee.png in Resources */,
 				936C2EE51CD0EE6400B7DCF4 /* onetimahfinal.png in Resources */,
 			);
@@ -733,6 +952,7 @@
 				9315D1471CABA650003E4FE0 /* TransitionPresentationAnimator.swift in Sources */,
 				936FCD191CC12B100095E59D /* AutoTextView.swift in Sources */,
 				936FCD321CC12B100095E59D /* TransitionZoom.swift in Sources */,
+				937822851CDCBB5000CE50A5 /* audio.swift in Sources */,
 				936FCD251CC12B100095E59D /* LoadingView.swift in Sources */,
 				936FCD241CC12B100095E59D /* KeyboardLayoutConstraint.swift in Sources */,
 				936FCD1C1CC12B100095E59D /* DesignableImageView.swift in Sources */,
