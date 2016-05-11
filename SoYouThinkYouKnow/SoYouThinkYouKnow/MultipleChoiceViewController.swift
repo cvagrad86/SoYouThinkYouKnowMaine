@@ -82,12 +82,14 @@ class MultipleChoiceViewController: UIViewController {
         cardButton.enabled = true
         if questionIdx < mcArray!.count - 1 {
             questionIdx += 1
-            
-            
         } else {
             showAlert()
         }
-        nextQuestion()
+        
+        UIView.animateWithDuration(2.0, delay: 2.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+            self.nextQuestion()
+            }, completion: nil)
+        
         
     }
     

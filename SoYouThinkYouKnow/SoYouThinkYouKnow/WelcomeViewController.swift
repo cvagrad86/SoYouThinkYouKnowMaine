@@ -40,6 +40,7 @@ class WelcomeViewController: UIViewController, BWWalkthroughViewControllerDelega
         walkthrough.delegate = self
        
         walkthrough.addViewController(page_two)
+        print("page two of walkthrough")
         walkthrough.addViewController(page_three)
         walkthrough.addViewController(page_four)
         walkthrough.addViewController(page_five)

@@ -16,7 +16,7 @@ class ScoreViewController: UIViewController {
 
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var yourScoreLabel: UIImageView!
-    @IBOutlet weak var scoreLabel: UILabel!
+   
     
     
     @IBOutlet weak var nextRoundImage: UIImageView!
@@ -62,7 +62,7 @@ class ScoreViewController: UIViewController {
         
         nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "mult_choice.png")!)
         
-        scoreLabel.text = "Score: \(roundOne)"
+        
         
         if case 0 ... 4 = roundOne {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
@@ -117,7 +117,7 @@ class ScoreViewController: UIViewController {
         if case 21 ... 50 = roundOne {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
             do {
-                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue_mainah2", ofType: "aiff")!))
                 audioPlayer!.play()
                 
             } catch {
@@ -135,7 +135,7 @@ class ScoreViewController: UIViewController {
         
         nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "name_that_photo.png")!)
         
-        scoreLabel.text = "Score: \(roundTwo)"
+        
         
         if case 0 ... 4 = roundTwo {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
@@ -191,7 +191,7 @@ class ScoreViewController: UIViewController {
         if case 34 ... 40 = roundTwo {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
             do {
-                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue_mainah2", ofType: "aiff")!))
                 audioPlayer!.play()
                 
             } catch {
@@ -208,7 +208,7 @@ class ScoreViewController: UIViewController {
         
         nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "maine_maps.png")!)
         
-        scoreLabel.text = "Score: \(roundThree)"
+       
         
         
         if case 0 ... 30 = roundThree {
@@ -265,7 +265,7 @@ class ScoreViewController: UIViewController {
         if case 401 ... 1500 = roundThree {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
             do {
-                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue_mainah2", ofType: "aiff")!))
                 audioPlayer!.play()
                 
             } catch {
@@ -281,7 +281,7 @@ class ScoreViewController: UIViewController {
         
        print("round four score has been tallied")
         
-        scoreLabel.text = "Score: \(roundFour)"
+        
         
         if case 0 ... 150 = roundFour {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "never1.png")!)
@@ -337,7 +337,7 @@ class ScoreViewController: UIViewController {
         if case 800 ... 1000 = roundFour {
             yourScoreLabel.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1.png")!)
             do {
-                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue", ofType: "aiff")!))
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("score_true_blue_mainah2", ofType: "aiff")!))
                 audioPlayer!.play()
                 
             } catch {
