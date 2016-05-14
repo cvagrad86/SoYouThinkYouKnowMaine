@@ -48,12 +48,12 @@ class FinalViewController: UIViewController {
         //to show percentile 
         // = \(Double(Scoring.sharedGameData.tfscore) / 40)%
         
-        roundOneScore.text = "\(Scoring.sharedGameData.tfscore)"
-        roundTwoScore.text = "\(Scoring.sharedGameData.mcscore)"
-        roundThreeScore.text = "\(Scoring.sharedGameData.photoscore)"
-        roundFourScore.text = "\(Scoring.sharedGameData.mapsscore)"
-        finalScoreLabel2.text = "\(Scoring.sharedGameData.overallscore)"
-        bonusPointsEarned.text = ("\(Scoring.sharedGameData.bonusPoints)")
+        roundOneScore.text = "True-False: \(Scoring.sharedGameData.tfscore)"
+        roundTwoScore.text = "Multiple Choice: \(Scoring.sharedGameData.mcscore)"
+        roundThreeScore.text = "Photos: \(Scoring.sharedGameData.photoscore)"
+        roundFourScore.text = "Maps: \(Scoring.sharedGameData.mapsscore)"
+        finalScoreLabel2.text = "Final Score: \(Scoring.sharedGameData.overallscore)"
+        bonusPointsEarned.text = ("Bonus Points: \(Scoring.sharedGameData.bonusPoints)")
     
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FinalViewController.bonusAdded(_:)), name: "bonusPointAdded", object: nil)

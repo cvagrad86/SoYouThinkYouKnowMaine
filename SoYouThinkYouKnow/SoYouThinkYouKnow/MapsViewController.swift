@@ -43,11 +43,13 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
     
     
     
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             nextButton.hidden = true
             nextQuestion()
             bonusCoin.hidden = true
+            
             
             //put regular map on based on user choice
             let styleURL = NSURL(string: "mapbox://styles/cvagrad86/cihlqsphk000gb4kqezw4sjbd")
@@ -105,6 +107,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         bonusAudio ()
        UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
             self.bonusCoin.transform = CGAffineTransformMakeScale(1.5 , 1.5)
+        
             }, completion: nil)
         
          NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)

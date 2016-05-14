@@ -116,7 +116,6 @@
 		93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B472DD1C99890B003E66F5 /* Extensions.swift */; };
 		93C12C531CB9433200FFC17A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C12C521CB9433200FFC17A /* Notifications.swift */; };
 		93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C541CBAA33800FFC17A /* mainah.png */; };
-		93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C12C551CBAA33800FFC17A /* Transplant.png */; };
 		93C2DF7D1CE0701E00E81D03 /* back_up_take_another.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF4E1CE0701E00E81D03 /* back_up_take_another.aiff */; };
 		93C2DF7E1CE0701E00E81D03 /* corker.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF4F1CE0701E00E81D03 /* corker.aiff */; };
 		93C2DF7F1CE0701E00E81D03 /* nailed_that_one_chummy.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF501CE0701E00E81D03 /* nailed_that_one_chummy.aiff */; };
@@ -164,9 +163,7 @@
 		93C2DFAA1CE080CF00E81D03 /* ayuhSound2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DFA91CE080CF00E81D03 /* ayuhSound2.aiff */; };
 		93C2DFAC1CE0826500E81D03 /* score_weekend_warrior.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DFAB1CE0826500E81D03 /* score_weekend_warrior.aiff */; };
 		93D233791CBB8BF500F1ED25 /* never1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D233781CBB8BF500F1ED25 /* never1.png */; };
-		93D233811CBB957F00F1ED25 /* mainah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337A1CBB957F00F1ED25 /* mainah.png */; };
 		93D233821CBB957F00F1ED25 /* never.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337B1CBB957F00F1ED25 /* never.png */; };
-		93D233831CBB957F00F1ED25 /* never1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337C1CBB957F00F1ED25 /* never1.png */; };
 		93D233841CBB957F00F1ED25 /* onetimah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337D1CBB957F00F1ED25 /* onetimah.png */; };
 		93D233851CBB957F00F1ED25 /* Transplant.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337E1CBB957F00F1ED25 /* Transplant.png */; };
 		93D233861CBB957F00F1ED25 /* trueblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337F1CBB957F00F1ED25 /* trueblue.png */; };
@@ -180,6 +177,8 @@
 		93DFB5FE1C90338800A1F99D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5FD1C90338800A1F99D /* PhotosViewController.swift */; };
 		93DFB6001C9033A000A1F99D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB5FF1C9033A000A1F99D /* MapsViewController.swift */; };
 		93DFB6021C9033BA00A1F99D /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFB6011C9033BA00A1F99D /* FinalViewController.swift */; };
+		93FF6F871CE5BB1100D86C32 /* wicked_close_bonus_coin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93FF6F861CE5BB1100D86C32 /* wicked_close_bonus_coin1.png */; };
+		93FF6F891CE5C15E00D86C32 /* ten_bonus_coin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93FF6F881CE5C15E00D86C32 /* ten_bonus_coin1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -363,6 +362,8 @@
 		93DFB5FD1C90338800A1F99D /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		93DFB5FF1C9033A000A1F99D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		93DFB6011C9033BA00A1F99D /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		93FF6F861CE5BB1100D86C32 /* wicked_close_bonus_coin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wicked_close_bonus_coin1.png; path = scoreLabels/wicked_close_bonus_coin1.png; sourceTree = "<group>"; };
+		93FF6F881CE5C15E00D86C32 /* ten_bonus_coin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ten_bonus_coin1.png; path = scoreLabels/ten_bonus_coin1.png; sourceTree = "<group>"; };
 		C8874DF0F92134C9F97576D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -480,7 +481,9 @@
 				938110DD1CC758F500B4B0A7 /* opening_graphic4_iphone6.png */,
 				938110DE1CC758F500B4B0A7 /* opening_graphic4_iphone6s.png */,
 				938110D11CC62F8400B4B0A7 /* maine_maps.png */,
+				93FF6F881CE5C15E00D86C32 /* ten_bonus_coin1.png */,
 				938110D21CC62F8400B4B0A7 /* name_that_photo.png */,
+				93FF6F861CE5BB1100D86C32 /* wicked_close_bonus_coin1.png */,
 				938110CF1CC62F7100B4B0A7 /* mult_choice.png */,
 				938110CD1CC62F5C00B4B0A7 /* welcome_sign.png */,
 				932D7BC21CC53B42005133C4 /* bonus_coin1.png */,
@@ -724,7 +727,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Eric Chamberlin";
 				TargetAttributes = {
 					9304978A1C8ADDDD0073B6C9 = {
@@ -789,6 +792,7 @@
 				933CD61B1C9FE5D0005C55F2 /* maine_state_flower.png in Resources */,
 				93C2DF8D1CE0701E00E81D03 /* mc_famous_people.aiff in Resources */,
 				938110CE1CC62F5C00B4B0A7 /* welcome_sign.png in Resources */,
+				93FF6F871CE5BB1100D86C32 /* wicked_close_bonus_coin1.png in Resources */,
 				933CD6131C9FE5D0005C55F2 /* geogre_mitchell.png in Resources */,
 				9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */,
 				938110E11CC758F500B4B0A7 /* opening_graphic4_ipadRetina.png in Resources */,
@@ -823,7 +827,6 @@
 				938110E61CC7714700B4B0A7 /* the_end_sign copy.png in Resources */,
 				93C2DFA71CE0701E00E81D03 /* score_true_blue_short.aiff in Resources */,
 				93C2DFA61CE0701E00E81D03 /* score_true_blue_mainah2.aiff in Resources */,
-				93D233811CBB957F00F1ED25 /* mainah.png in Resources */,
 				9303014B1CBE3D3500A38ED7 /* truebluesmall.png in Resources */,
 				93C2DF9B1CE0701E00E81D03 /* mc_top5_populations.aiff in Resources */,
 				93C2DF991CE0701E00E81D03 /* mc_senators.aiff in Resources */,
@@ -847,7 +850,6 @@
 				93C2DF881CE0701E00E81D03 /* true_false_instructions.aiff in Resources */,
 				93C2DF961CE0701E00E81D03 /* mc_motto.aiff in Resources */,
 				938110D61CC668B800B4B0A7 /* bonus_sound1.mp3 in Resources */,
-				93D233831CBB957F00F1ED25 /* never1.png in Resources */,
 				933CD6241C9FEE3E005C55F2 /* ImageQuiz.plist in Resources */,
 				938110E31CC758F500B4B0A7 /* opening_graphic4_iphone6.png in Resources */,
 				93C2DF951CE0701E00E81D03 /* mc_missouri_compromise.aiff in Resources */,
@@ -868,6 +870,7 @@
 				9303013C1CBE351800A38ED7 /* true_false_instructions1.png in Resources */,
 				931623031CA53A9A007BF21D /* ayuhSound2.mp3 in Resources */,
 				9303013D1CBE351800A38ED7 /* mult_choice_instructions1.png in Resources */,
+				93FF6F891CE5C15E00D86C32 /* ten_bonus_coin1.png in Resources */,
 				93D233891CBB9B6000F1ED25 /* trueblue1.png in Resources */,
 				93C2DFAC1CE0826500E81D03 /* score_weekend_warrior.aiff in Resources */,
 				93C2DF9D1CE0701E00E81D03 /* score_mainah.aiff in Resources */,
@@ -876,7 +879,6 @@
 				933CD61D1C9FE5D0005C55F2 /* old_orchard_beach_pier.png in Resources */,
 				933CD6161C9FE5D0005C55F2 /* Josh_Chamberlain.png in Resources */,
 				938110E41CC758F500B4B0A7 /* opening_graphic4_iphone6s.png in Resources */,
-				93C12C5B1CBAA33900FFC17A /* Transplant.png in Resources */,
 				93C2DF8B1CE0701E00E81D03 /* mc_current_population.aiff in Resources */,
 				93C2DFA01CE0701E00E81D03 /* score_never_been_heah_short.aiff in Resources */,
 				93D233871CBB957F00F1ED25 /* weekendwarrior.png in Resources */,

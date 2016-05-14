@@ -169,7 +169,7 @@ class TrueFalseViewController: UIViewController {
             outOfTime()
             if truefalsescore < 0 {
                 truefalsescore = 0
-                Scoring.sharedGameData.tfscore = truefalsescore
+                
             }
         }
         
@@ -196,7 +196,8 @@ class TrueFalseViewController: UIViewController {
             self.performSegueWithIdentifier("ScoreSegue", sender: self)
             
             NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundOne", object: self)
-            
+            print(self.truefalsescore)
+            Scoring.sharedGameData.tfscore = self.truefalsescore
             //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
         })
         

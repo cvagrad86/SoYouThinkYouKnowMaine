@@ -29,6 +29,7 @@ class MultipleChoiceViewController: UIViewController {
     //var queuePlayer: AVQueuePlayer
     var queuePlayer = AVQueuePlayer()
     
+   
     @IBOutlet weak var bonusCoin: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
@@ -84,6 +85,7 @@ class MultipleChoiceViewController: UIViewController {
             questionIdx += 1
         } else {
             showAlert()
+            queuePlayer.pause()
         }
         
         UIView.animateWithDuration(2.0, delay: 2.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
@@ -128,7 +130,7 @@ class MultipleChoiceViewController: UIViewController {
        
         
         self.bonusCoin.hidden = true
-
+        
     }
     
     func saveScore () {
@@ -184,18 +186,20 @@ class MultipleChoiceViewController: UIViewController {
     }
     
     func bonusPoints () {
-        print("you got a bonus")
+        
         bonus += 1
-        print("bonus points = \(bonus)")
+        
         Scoring.sharedGameData.bonusPoints = bonus
         inARow = 0 
         self.view.addSubview(bonusCoin)
+        
         self.bonusCoin.hidden = false
         
         
         bonusAudio ()
         UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
             self.bonusCoin.transform = CGAffineTransformMakeScale(1.5 , 1.5)
+          
             }, completion: nil)
         
         NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)
