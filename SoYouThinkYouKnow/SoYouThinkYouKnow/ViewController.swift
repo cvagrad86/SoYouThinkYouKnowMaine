@@ -19,7 +19,7 @@ let endOfRoundTwo = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundTwoKey"
 let endOfRoundThree = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundThreeKey"
 let endOfRoundFour = "com.ericchamberlin.SoYouThinkYouKnow.endOfRoundFourKey"
 
-class ViewController: UIViewController, EGCDelegate {
+class ViewController: UIViewController {
 
     var score = 0
     @IBOutlet weak var welcomeSign: UIButton!
@@ -69,7 +69,7 @@ class ViewController: UIViewController, EGCDelegate {
         //welcomeSign.enabled = true
     
         openingAudio()
-        EGC.sharedInstance(self)
+        
         loadQuizData()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToMultChoice(_:)), name: "endOfRoundOne", object: nil)
@@ -144,23 +144,7 @@ class ViewController: UIViewController, EGCDelegate {
         let pathIMG = NSBundle.mainBundle().pathForResource("ImageQuiz", ofType: "plist")
         let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
         imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
-       /*
-        let  HighscoreDefault = NSUserDefaults.standardUserDefaults()
-        let TFScore = NSUserDefaults.standardUserDefaults()
-        let MCScore = NSUserDefaults.standardUserDefaults()
-        let PhotosScore = NSUserDefaults.standardUserDefaults()
-        let MapsScore = NSUserDefaults.standardUserDefaults()
-        
-        var TFtotal = TFScore.valueForKey("tfscore") as! NSInteger
-        var MCTotal = MCScore.valueForKey("mcscore") as! NSInteger
-        var MapsTotal = MapsScore.valueForKey("mapscore") as! NSInteger
-        var PhotoTotal = PhotosScore.valueForKey("photoscore") as! NSInteger
-
-        //TFtotal = score
-        //MCTotal = score
-//MapsTotal = score
-        //PhotoTotal = score
- */
+      
         
     }
     
@@ -168,57 +152,10 @@ class ViewController: UIViewController, EGCDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Set new view controller delegate, that's when you change UIViewController
-        // If you have several UIViewController just add this in your UIViewControllers for set new Delegate
-        EGC.delegate = self
+
+        
     }
     
-    /// ############################################################ ///
-    ///        Mark: - Delegate function of EasyGameCenter           ///
-    /// ############################################################ ///
-    /**
-     Listener Player is authentified
-     Optional function
-     */
-    func EGCAuthentified(authentified:Bool) {
-        print("Player Authentified = \(authentified)")
-    }
-    /**
-     Listener when Achievements is in cache
-     Optional function
-     */
-    func EGCInCache() {
-        // Call when GkAchievement & GKAchievementDescription in cache
-    }
     
-    /// ############################################################ ///
-    ///  Mark: - Delegate function of EasyGameCenter for MultiPlaye  ///
-    /// ############################################################ ///
-    /**
-     Listener When Match Started
-     Optional function
-     */
-    func EGCMatchStarted() {
-        print("MatchStarted")
-    }
-    /**
-     Listener When Match Recept Data
-     When player send data to all player
-     Optional function
-     */
-        /**
-     Listener When Match End
-     Optional function
-     */
-    func EGCMatchEnded() {
-        print("MatchEnded")
-    }
-    /**
-     Listener When Match Cancel
-     Optional function
-     */
-    func EGCMatchCancel() {
-        print("Match cancel")
-    }
    
 }

@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMobileAds
+import AVKit
+import AVFoundation
 
 class PhotosViewController: UIViewController {
     
@@ -17,6 +19,7 @@ class PhotosViewController: UIViewController {
     var startTime = NSTimeInterval()
     var timer:NSTimer?
     
+    @IBOutlet weak var bonusCoin: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
@@ -27,10 +30,13 @@ class PhotosViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     
+    var audioPlayer: AVAudioPlayer?
+    
     var correctAnswer: String?
     var answers = [String]()
     var image: String?
     var questionIdx = 0
+    var bonus = 0
 
     @IBOutlet var pictureTiles: [UILabel]!
     @IBOutlet var buttonHandler: [UIButton]!
@@ -71,13 +77,17 @@ class PhotosViewController: UIViewController {
             Scoring.sharedGameData.photoscore = 0
             showAlert()
         }
+        if counter < 1 {
+            bonusPoints()
+            print(counter)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
         nextQuestionButton.hidden = true
-        
+        bonusCoin.hidden = true
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.blackColor().CGColor
@@ -112,6 +122,7 @@ class PhotosViewController: UIViewController {
         startButton.hidden = false
         updateTime()
         counter = 0
+        bonusCoin.hidden = true
         
         timerLabel.hidden = true
         
@@ -135,6 +146,38 @@ class PhotosViewController: UIViewController {
         _ = String(format: "%02d", seconds)
         _ = String(format: "%02d", fraction)
         
+        
+    }
+    
+    func bonusAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bonus_sound1", ofType: "mp3")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
+    func bonusPoints () {
+        
+        bonus += 1
+        
+        Scoring.sharedGameData.bonusPoints = bonus
+        
+        self.view.addSubview(bonusCoin)
+        
+        self.bonusCoin.hidden = false
+        
+        
+        bonusAudio ()
+        UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+            self.bonusCoin.transform = CGAffineTransformMakeScale(1.5 , 1.5)
+            
+            }, completion: nil)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("bonusPointAdded", object: self)
         
     }
     

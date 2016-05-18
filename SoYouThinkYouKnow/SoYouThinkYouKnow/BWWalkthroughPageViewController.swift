@@ -24,6 +24,10 @@ SOFTWARE.
 
 
 import UIKit
+import AVKit
+import AVFoundation
+
+
 
 public enum WalkthroughAnimationType:String{
     case Linear = "Linear"
@@ -41,7 +45,12 @@ public enum WalkthroughAnimationType:String{
     }
 }
 
+
+
+
+
 public class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
+    var audioPlayer: AVAudioPlayer?
     
     private var animation:WalkthroughAnimationType = .Linear
     private var subsWeights:[CGPoint] = Array()
@@ -86,6 +95,7 @@ public class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPag
         
     }
     
+  
     public func walkthroughDidScroll(position: CGFloat, offset: CGFloat) {
         
         for(var i = 0; i < subsWeights.count ;i++){
@@ -169,5 +179,7 @@ public class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPag
             view.subviews[index].layer.transform = transform
         }
     }
+    
+    
     
 }

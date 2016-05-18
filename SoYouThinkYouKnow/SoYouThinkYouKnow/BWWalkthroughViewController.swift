@@ -23,7 +23,10 @@ SOFTWARE.
 */
 
 import UIKit
+import AVKit
+import AVFoundation
 
+var audioPlayer: AVAudioPlayer?
 // MARK: - Protocols -
 
 /**
@@ -78,7 +81,9 @@ At the moment it's only used to perform custom animations on didScroll.
     public var currentViewController:UIViewController{ //the controller for the currently visible page
         get{
             let currentPage = self.currentPage;
+            
             return controllers[currentPage];
+            
         }
     }
     
@@ -128,7 +133,7 @@ At the moment it's only used to perform custom animations on didScroll.
         
         scrollview.delegate = self
         scrollview.translatesAutoresizingMaskIntoConstraints = false
-        
+        print(currentPage)
         view.insertSubview(scrollview, atIndex: 0) //scrollview is inserted as first view of the hierarchy
         
         // Set scrollview related constraints
@@ -156,6 +161,7 @@ At the moment it's only used to perform custom animations on didScroll.
             
             delegate?.walkthroughNextButtonPressed?()
             gotoPage(currentPage + 1)
+            print(currentPage)
         }
     }
     
@@ -246,6 +252,51 @@ At the moment it's only used to perform custom animations on didScroll.
         
         pageControl?.currentPage = currentPage
         
+        
+        if currentPage == 0{
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("true_false_instructions", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
+
+        }
+        
+        if currentPage == 1{
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("mult_choice_instructions2", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
+            
+        }
+
+        if currentPage == 2{
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("photos_instructions", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
+            
+        }
+
+        if currentPage == 3{
+            do {
+                audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("map_instructions", ofType: "aiff")!))
+                audioPlayer!.play()
+                
+            } catch {
+                print("Error")
+            }
+            
+        }
+
         // Notify delegate about the new page
         
         delegate?.walkthroughPageDidChange?(currentPage)

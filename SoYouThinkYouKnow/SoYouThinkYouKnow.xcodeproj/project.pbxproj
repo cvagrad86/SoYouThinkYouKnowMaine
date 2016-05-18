@@ -30,9 +30,19 @@
 		9315D1491CABA6B7003E4FE0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315D1481CABA6B7003E4FE0 /* WelcomeViewController.swift */; };
 		931623031CA53A9A007BF21D /* ayuhSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623021CA53A9A007BF21D /* ayuhSound2.mp3 */; };
 		931623061CA54278007BF21D /* nope3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 931623051CA54277007BF21D /* nope3.mp3 */; };
+		93269C311CE9A5260066E511 /* map_elm_city.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C271CE9A5250066E511 /* map_elm_city.aiff */; };
+		93269C321CE9A5260066E511 /* map_highest_point.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C281CE9A5250066E511 /* map_highest_point.aiff */; };
+		93269C331CE9A5260066E511 /* map_home_of_beavers.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C291CE9A5250066E511 /* map_home_of_beavers.aiff */; };
+		93269C341CE9A5260066E511 /* map_llbean.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C2A1CE9A5250066E511 /* map_llbean.aiff */; };
+		93269C351CE9A5260066E511 /* map_national_park.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C2B1CE9A5250066E511 /* map_national_park.aiff */; };
+		93269C361CE9A5260066E511 /* map_oldest_fair.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C2C1CE9A5250066E511 /* map_oldest_fair.aiff */; };
+		93269C371CE9A5260066E511 /* map_oldest_town.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C2D1CE9A5250066E511 /* map_oldest_town.aiff */; };
+		93269C381CE9A5260066E511 /* map_original_capital.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C2E1CE9A5250066E511 /* map_original_capital.aiff */; };
+		93269C391CE9A5260066E511 /* map_third_largest_city.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C2F1CE9A5250066E511 /* map_third_largest_city.aiff */; };
+		93269C3A1CE9A5260066E511 /* map_umfk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C301CE9A5250066E511 /* map_umfk.aiff */; };
+		93269C461CE9E7FA0066E511 /* wicked_Fast.png in Resources */ = {isa = PBXBuildFile; fileRef = 93269C451CE9E7FA0066E511 /* wicked_Fast.png */; };
 		932D7BC31CC53B42005133C4 /* bonus_coin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 932D7BC21CC53B42005133C4 /* bonus_coin1.png */; };
 		932E5E101CD8AFB9008D9AA5 /* before_lepage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 932E5E0F1CD8AFB9008D9AA5 /* before_lepage.mp3 */; };
-		933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933489021C99934C00EF7694 /* EasyGameCenter.swift */; };
 		933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */; };
 		933CD6111C9FE5D0005C55F2 /* chickadee.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD5FF1C9FE5D0005C55F2 /* chickadee.png */; };
 		933CD6121C9FE5D0005C55F2 /* christinas_world.jpeg.png in Resources */ = {isa = PBXBuildFile; fileRef = 933CD6001C9FE5D0005C55F2 /* christinas_world.jpeg.png */; };
@@ -210,9 +220,29 @@
 		931623021CA53A9A007BF21D /* ayuhSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ayuhSound2.mp3; sourceTree = "<group>"; };
 		931623041CA540EF007BF21D /* nope1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nope1.m4a; sourceTree = "<group>"; };
 		931623051CA54277007BF21D /* nope3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nope3.mp3; sourceTree = "<group>"; };
+		93269C271CE9A5250066E511 /* map_elm_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_elm_city.aiff; sourceTree = "<group>"; };
+		93269C281CE9A5250066E511 /* map_highest_point.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_highest_point.aiff; sourceTree = "<group>"; };
+		93269C291CE9A5250066E511 /* map_home_of_beavers.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_home_of_beavers.aiff; sourceTree = "<group>"; };
+		93269C2A1CE9A5250066E511 /* map_llbean.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_llbean.aiff; sourceTree = "<group>"; };
+		93269C2B1CE9A5250066E511 /* map_national_park.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_national_park.aiff; sourceTree = "<group>"; };
+		93269C2C1CE9A5250066E511 /* map_oldest_fair.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_oldest_fair.aiff; sourceTree = "<group>"; };
+		93269C2D1CE9A5250066E511 /* map_oldest_town.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_oldest_town.aiff; sourceTree = "<group>"; };
+		93269C2E1CE9A5250066E511 /* map_original_capital.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_original_capital.aiff; sourceTree = "<group>"; };
+		93269C2F1CE9A5250066E511 /* map_third_largest_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_third_largest_city.aiff; sourceTree = "<group>"; };
+		93269C301CE9A5250066E511 /* map_umfk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_umfk.aiff; sourceTree = "<group>"; };
+		93269C3B1CE9A7440066E511 /* map_elm_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_elm_city.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_elm_city.aiff"; sourceTree = "<group>"; };
+		93269C3C1CE9A7440066E511 /* map_highest_point.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_highest_point.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_highest_point.aiff"; sourceTree = "<group>"; };
+		93269C3D1CE9A7440066E511 /* map_home_of_beavers.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_home_of_beavers.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_home_of_beavers.aiff"; sourceTree = "<group>"; };
+		93269C3E1CE9A7440066E511 /* map_llbean.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_llbean.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_llbean.aiff"; sourceTree = "<group>"; };
+		93269C3F1CE9A7440066E511 /* map_national_park.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_national_park.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_national_park.aiff"; sourceTree = "<group>"; };
+		93269C401CE9A7440066E511 /* map_oldest_fair.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_oldest_fair.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_oldest_fair.aiff"; sourceTree = "<group>"; };
+		93269C411CE9A7440066E511 /* map_oldest_town.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_oldest_town.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_oldest_town.aiff"; sourceTree = "<group>"; };
+		93269C421CE9A7440066E511 /* map_original_capital.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_original_capital.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_original_capital.aiff"; sourceTree = "<group>"; };
+		93269C431CE9A7440066E511 /* map_third_largest_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_third_largest_city.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_third_largest_city.aiff"; sourceTree = "<group>"; };
+		93269C441CE9A7440066E511 /* map_umfk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_umfk.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_umfk.aiff"; sourceTree = "<group>"; };
+		93269C451CE9E7FA0066E511 /* wicked_Fast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wicked_Fast.png; path = scoreLabels/wicked_Fast.png; sourceTree = "<group>"; };
 		932D7BC21CC53B42005133C4 /* bonus_coin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bonus_coin1.png; path = Assets.xcassets/bonus_coin1.imageset/bonus_coin1.png; sourceTree = "<group>"; };
 		932E5E0F1CD8AFB9008D9AA5 /* before_lepage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = before_lepage.mp3; path = questions_audio/before_lepage.mp3; sourceTree = "<group>"; };
-		933489021C99934C00EF7694 /* EasyGameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
 		933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MultipleChoice.plist; sourceTree = "<group>"; };
 		933CD5FF1C9FE5D0005C55F2 /* chickadee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chickadee.png; sourceTree = "<group>"; };
 		933CD6001C9FE5D0005C55F2 /* christinas_world.jpeg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = christinas_world.jpeg.png; sourceTree = "<group>"; };
@@ -392,6 +422,16 @@
 		930497821C8ADDDC0073B6C9 = {
 			isa = PBXGroup;
 			children = (
+				93269C3B1CE9A7440066E511 /* map_elm_city.aiff */,
+				93269C3C1CE9A7440066E511 /* map_highest_point.aiff */,
+				93269C3D1CE9A7440066E511 /* map_home_of_beavers.aiff */,
+				93269C3E1CE9A7440066E511 /* map_llbean.aiff */,
+				93269C3F1CE9A7440066E511 /* map_national_park.aiff */,
+				93269C401CE9A7440066E511 /* map_oldest_fair.aiff */,
+				93269C411CE9A7440066E511 /* map_oldest_town.aiff */,
+				93269C421CE9A7440066E511 /* map_original_capital.aiff */,
+				93269C431CE9A7440066E511 /* map_third_largest_city.aiff */,
+				93269C441CE9A7440066E511 /* map_umfk.aiff */,
 				937822831CDC931D00CE50A5 /* mcquestion_sample.mp3 */,
 				930497A01C8B3C8F0073B6C9 /* GameKit.framework */,
 				9304978D1C8ADDDD0073B6C9 /* SoYouThinkYouKnow */,
@@ -464,9 +504,27 @@
 			path = app_icon;
 			sourceTree = "<group>";
 		};
+		93269C261CE9A5250066E511 /* map clues */ = {
+			isa = PBXGroup;
+			children = (
+				93269C271CE9A5250066E511 /* map_elm_city.aiff */,
+				93269C281CE9A5250066E511 /* map_highest_point.aiff */,
+				93269C291CE9A5250066E511 /* map_home_of_beavers.aiff */,
+				93269C2A1CE9A5250066E511 /* map_llbean.aiff */,
+				93269C2B1CE9A5250066E511 /* map_national_park.aiff */,
+				93269C2C1CE9A5250066E511 /* map_oldest_fair.aiff */,
+				93269C2D1CE9A5250066E511 /* map_oldest_town.aiff */,
+				93269C2E1CE9A5250066E511 /* map_original_capital.aiff */,
+				93269C2F1CE9A5250066E511 /* map_third_largest_city.aiff */,
+				93269C301CE9A5250066E511 /* map_umfk.aiff */,
+			);
+			path = "map clues";
+			sourceTree = "<group>";
+		};
 		933CD5FE1C9FE590005C55F2 /* imageQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				93269C451CE9E7FA0066E511 /* wicked_Fast.png */,
 				936C2EDF1CD0EE6400B7DCF4 /* onetimahfinal.png */,
 				936C2EE01CD0EE6400B7DCF4 /* Transplantfinal.png */,
 				936C2EE11CD0EE6400B7DCF4 /* weekendwarriorfinal.png */,
@@ -570,7 +628,6 @@
 		938669AE1C8F28D200E85566 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				933489021C99934C00EF7694 /* EasyGameCenter.swift */,
 				938669B01C8F2AD900E85566 /* ViewController.swift */,
 				93DFB5F71C90333500A1F99D /* TrueFalseViewController.swift */,
 				93DFB5F91C90335200A1F99D /* ScoreViewController.swift */,
@@ -607,6 +664,7 @@
 		93C2DF4C1CE0701E00E81D03 /* final_audio */ = {
 			isa = PBXGroup;
 			children = (
+				93269C261CE9A5250066E511 /* map clues */,
 				93C2DF4D1CE0701E00E81D03 /* general_sounds */,
 				93C2DF561CE0701E00E81D03 /* instructions */,
 				93C2DF5B1CE0701E00E81D03 /* mc_questions */,
@@ -770,6 +828,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93269C311CE9A5260066E511 /* map_elm_city.aiff in Resources */,
+				93269C321CE9A5260066E511 /* map_highest_point.aiff in Resources */,
+				93269C331CE9A5260066E511 /* map_home_of_beavers.aiff in Resources */,
+				93269C341CE9A5260066E511 /* map_llbean.aiff in Resources */,
+				93269C351CE9A5260066E511 /* map_national_park.aiff in Resources */,
+				93269C361CE9A5260066E511 /* map_oldest_fair.aiff in Resources */,
+				93269C371CE9A5260066E511 /* map_oldest_town.aiff in Resources */,
+				93269C381CE9A5260066E511 /* map_original_capital.aiff in Resources */,
+				93269C391CE9A5260066E511 /* map_third_largest_city.aiff in Resources */,
+				93269C3A1CE9A5260066E511 /* map_umfk.aiff in Resources */,
 				93C2DF891CE0701E00E81D03 /* mc_before_lepage.aiff in Resources */,
 				93C2DF831CE0701E00E81D03 /* wicked_pissah.aiff in Resources */,
 				93C2DF7E1CE0701E00E81D03 /* corker.aiff in Resources */,
@@ -862,6 +930,7 @@
 				93C2DF871CE0701E00E81D03 /* photos_instructions.aiff in Resources */,
 				936C2EE91CD0EE6400B7DCF4 /* never1final.png in Resources */,
 				930301481CBE390800A38ED7 /* never1small.png in Resources */,
+				93269C461CE9E7FA0066E511 /* wicked_Fast.png in Resources */,
 				93C2DF9E1CE0701E00E81D03 /* score_mainah_short.aiff in Resources */,
 				93C2DF7D1CE0701E00E81D03 /* back_up_take_another.aiff in Resources */,
 				933CD6191C9FE5D0005C55F2 /* longfellow.png in Resources */,
@@ -983,7 +1052,6 @@
 				936FCD171CC12B100095E59D /* AsyncButton.swift in Sources */,
 				936FCD291CC12B100095E59D /* Spring.swift in Sources */,
 				93DFB5FE1C90338800A1F99D /* PhotosViewController.swift in Sources */,
-				933489031C99934C00EF7694 /* EasyGameCenter.swift in Sources */,
 				936FCD331CC12B100095E59D /* UnwindSegue.swift in Sources */,
 				9315D1461CABA650003E4FE0 /* TransitionDismissalAnimator.swift in Sources */,
 				936FCD2C1CC12B100095E59D /* SpringImageView.swift in Sources */,
@@ -1134,7 +1202,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericchamberlin.SoYouThinkYouKnow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b29227a9-4026-4248-98aa-4a1b43bbe342";
 			};
 			name = Release;
 		};

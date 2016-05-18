@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Social
+import GameplayKit
+
+
 
 class FinalViewController: UIViewController {
 
@@ -204,6 +208,40 @@ class FinalViewController: UIViewController {
             finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "trueblue1final.png")!)
         }
         
+    }
+    
+    @IBAction func tweetButton(sender: AnyObject) {
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            
+            var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            self.presentViewController(tweetShare, animated: true, completion: nil)
+            
+        } else {
+            
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBAction func fbButton(sender: AnyObject) {
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            
+            self.presentViewController(fbShare, animated: true, completion: nil)
+            
+        } else {
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
 
 }

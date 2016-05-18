@@ -32,6 +32,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         var score = 1000.00
         var audioPlayer: AVAudioPlayer?
         var bonus = 0
+        var queuePlayer = AVQueuePlayer()
    
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var bonusCoin: UIImageView!
@@ -92,12 +93,13 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         distanceBetweenSpots.hidden = true
         mapView!.removeAnnotations(mapView!.annotations!)
         bonusCoin.hidden = true
+        
             }
     
     func bonusPoints () {
-       print("you got a bonus")
+       
         bonus += 1
-        print("bonus points = \(bonus)")
+        
         Scoring.sharedGameData.bonusPoints = bonus
         
        self.view.addSubview(bonusCoin)
@@ -123,20 +125,30 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             print("Error")
         }
     }
+    
+    func createPlayerItem(item: String, ofType type: String) {
+        let path = NSBundle.mainBundle().pathForResource(item, ofType: type)
+        let url = NSURL.fileURLWithPath(path!)
+        let item = AVPlayerItem(URL: url)
+        queuePlayer.insertItem(item, afterItem: nil)
+        
+    }
 
     
     
     func nextQuestion() -> Place {
         let thisLocation = CLLocation()
-        var currentQuestion:Place = Place(name: "", location: thisLocation, hint: "")
+        var currentQuestion:Place = Place(name: "", location: thisLocation, hint: "", audio: "")
         if questionIdx < place.count  {
             currentQuestion =  place[questionIdx]
             spotToLocate.text = currentQuestion.hint
             placeToLocate = currentQuestion.location
-            
+            createPlayerItem(currentQuestion.audio, ofType: "aiff")
+            queuePlayer.play()
         } else {
             showAlert()
         }
+        
         
     return currentQuestion
     }
@@ -172,6 +184,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
                 bonusPoints()
             }
             nextButton.hidden = false
+        
+            queuePlayer.advanceToNextItem()
             
             nextButton.transform = CGAffineTransformMakeScale(2.0, 2.0)
             

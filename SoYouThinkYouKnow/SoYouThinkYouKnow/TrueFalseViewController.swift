@@ -161,7 +161,7 @@ class TrueFalseViewController: UIViewController {
     }
     
     func updateprogressView() {
-        progressBar.progress -= 0.01/10
+        progressBar.progress -= 0.01/40
         
         
         
