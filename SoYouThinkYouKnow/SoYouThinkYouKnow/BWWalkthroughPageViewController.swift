@@ -29,6 +29,7 @@ import AVFoundation
 
 
 
+
 public enum WalkthroughAnimationType:String{
     case Linear = "Linear"
     case Curve = "Curve"
@@ -95,6 +96,8 @@ public class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPag
         
     }
     
+    @IBAction func gameCenter(sender: AnyObject) {
+    }
   
     public func walkthroughDidScroll(position: CGFloat, offset: CGFloat) {
         

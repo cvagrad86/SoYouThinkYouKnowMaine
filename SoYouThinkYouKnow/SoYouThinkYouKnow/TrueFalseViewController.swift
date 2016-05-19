@@ -179,6 +179,18 @@ class TrueFalseViewController: UIViewController {
         timer.invalidate()
         showAlert()
         disableButtons()
+        endAudio()
+    }
+    
+    func endAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("end_horn", ofType: "aiff")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
     }
     
     func disableButtons() {
@@ -196,9 +208,9 @@ class TrueFalseViewController: UIViewController {
             self.performSegueWithIdentifier("ScoreSegue", sender: self)
             
             NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundOne", object: self)
-            print(self.truefalsescore)
-            Scoring.sharedGameData.tfscore = self.truefalsescore
-            //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
+            
+                Scoring.sharedGameData.tfscore = self.truefalsescore
+            
         })
         
         alertController.addAction(ok)

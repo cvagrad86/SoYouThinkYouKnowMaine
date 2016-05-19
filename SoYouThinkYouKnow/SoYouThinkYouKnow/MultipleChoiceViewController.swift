@@ -86,6 +86,7 @@ class MultipleChoiceViewController: UIViewController {
         } else {
             showAlert()
             queuePlayer.pause()
+            self.endAudio ()
         }
         
         UIView.animateWithDuration(2.0, delay: 2.0, usingSpringWithDamping: 4, initialSpringVelocity: 4, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
@@ -185,6 +186,17 @@ class MultipleChoiceViewController: UIViewController {
         }
     }
     
+    func endAudio () {
+        do {
+            mcaudioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("end_horn", ofType: "aiff")!))
+            
+            mcaudioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
     func bonusPoints () {
         
         bonus += 1
@@ -236,7 +248,7 @@ class MultipleChoiceViewController: UIViewController {
             
             
             NSNotificationCenter.defaultCenter().postNotificationName("endOfRoundTwo", object: self)
-            //vc = self.storyboard?.instantiateViewControllerWithIdentifier("scoreViewController") as! ScoreViewController
+            
         })
         
         alertController.addAction(ok)

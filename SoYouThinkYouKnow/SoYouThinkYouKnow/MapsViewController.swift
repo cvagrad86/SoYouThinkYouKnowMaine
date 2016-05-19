@@ -147,12 +147,24 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             queuePlayer.play()
         } else {
             showAlert()
+            endAudio()
         }
         
         
     return currentQuestion
     }
     
+    
+    func tapAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("map_tap2", ofType: "aiff")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
         
         func handleSingleTap(tap: UITapGestureRecognizer) {
             // convert tap location (CGPoint)
@@ -169,7 +181,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             }
             let polyline = MGLPolyline(coordinates: &coordinates, count: UInt(coordinates.count))
             mapView!.addAnnotation(polyline)
-            
+            tapAudio()
             let meters:CLLocationDistance = placeToLocate.distanceFromLocation(CLLocation(latitude: location.latitude, longitude: location.longitude))
             
             let distance = (meters.formatWithDecimalPlaces(2) * 0.0006214)
@@ -211,7 +223,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             
             questionIdx += 1
             Scoring.sharedGameData.mapsscore = newscore
-            print(newscore)
+            
             
             if score < 0.0 {
                 newscore = 0
@@ -220,6 +232,17 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             }
             
         }
+    
+    func endAudio() {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("end_horn", ofType: "aiff")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
     
     
     func showAlert() {
@@ -251,6 +274,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         
         
     }
+
+
 
 
 

@@ -9,7 +9,8 @@
 import UIKit
 import Social
 import GameplayKit
-
+import GameKit
+import GameController
 
 
 class FinalViewController: UIViewController {
@@ -242,6 +243,69 @@ class FinalViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func gameCenter(sender: AnyObject) {
+        saveHighscore(Scoring.sharedGameData.overallscore)
+        showLeaderBoard()
+    }
+    
+    func authPlayer(){
+        let localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {
+            (view, error) in
+            
+            if view != nil {
+                
+                self.presentViewController(view!, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                print(GKLocalPlayer.localPlayer().authenticated)
+                
+            }
+            
+            
+        }
+    }
+    
+    
+    func saveHighscore(number : Int){
+        
+        if GKLocalPlayer.localPlayer().authenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "TopMainah")
+            
+            scoreReporter.value = Int64(number)
+            
+            let scoreArray : [GKScore] = [scoreReporter]
+            
+            GKScore.reportScores(scoreArray, withCompletionHandler: nil)
+            
+        }
+        
+        
+    }
+    
+    func showLeaderBoard(){
+        let viewController = self.view.window?.rootViewController
+        let gcvc = GKGameCenterViewController()
+        
+        //gcvc.gameCenterDelegate = self
+        
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+            self.presentViewController(gcvc, animated: true, completion: { _ in })
+        })
+        
+        viewController?.presentViewController(gcvc, animated: true, completion: nil)
+    }
+    
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
 }

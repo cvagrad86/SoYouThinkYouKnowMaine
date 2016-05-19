@@ -41,6 +41,8 @@
 		93269C391CE9A5260066E511 /* map_third_largest_city.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C2F1CE9A5250066E511 /* map_third_largest_city.aiff */; };
 		93269C3A1CE9A5260066E511 /* map_umfk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93269C301CE9A5250066E511 /* map_umfk.aiff */; };
 		93269C461CE9E7FA0066E511 /* wicked_Fast.png in Resources */ = {isa = PBXBuildFile; fileRef = 93269C451CE9E7FA0066E511 /* wicked_Fast.png */; };
+		932D46CD1CEC9FDD00524BA9 /* first_page.png in Resources */ = {isa = PBXBuildFile; fileRef = 932D46CC1CEC9FDD00524BA9 /* first_page.png */; };
+		932D46CF1CECA16C00524BA9 /* GameCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D46CE1CECA16C00524BA9 /* GameCenterViewController.swift */; };
 		932D7BC31CC53B42005133C4 /* bonus_coin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 932D7BC21CC53B42005133C4 /* bonus_coin1.png */; };
 		932E5E101CD8AFB9008D9AA5 /* before_lepage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 932E5E0F1CD8AFB9008D9AA5 /* before_lepage.mp3 */; };
 		933CD5FD1C9FDA19005C55F2 /* MultipleChoice.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */; };
@@ -172,6 +174,13 @@
 		93C2DFA81CE0701E00E81D03 /* score_weekend_warrior_short.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DF7C1CE0701E00E81D03 /* score_weekend_warrior_short.aiff */; };
 		93C2DFAA1CE080CF00E81D03 /* ayuhSound2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DFA91CE080CF00E81D03 /* ayuhSound2.aiff */; };
 		93C2DFAC1CE0826500E81D03 /* score_weekend_warrior.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C2DFAB1CE0826500E81D03 /* score_weekend_warrior.aiff */; };
+		93C492361CECB1BF0027471C /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C492351CECB1BF0027471C /* EasyGameCenter.swift */; };
+		93C492381CEDA42A0027471C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C492371CEDA42A0027471C /* SystemConfiguration.framework */; };
+		93C4923A1CEDB33E0027471C /* end_horn.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C492391CEDB33E0027471C /* end_horn.aiff */; };
+		93C4923E1CEDB88A0027471C /* map_tap.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C4923B1CEDB88A0027471C /* map_tap.aiff */; };
+		93C4923F1CEDB88A0027471C /* correct_answer.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C4923C1CEDB88A0027471C /* correct_answer.aiff */; };
+		93C492401CEDB88A0027471C /* wrong_answer.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C4923D1CEDB88A0027471C /* wrong_answer.aiff */; };
+		93C492421CEDBBEB0027471C /* map_tap2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 93C492411CEDBBEB0027471C /* map_tap2.aiff */; };
 		93D233791CBB8BF500F1ED25 /* never1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D233781CBB8BF500F1ED25 /* never1.png */; };
 		93D233821CBB957F00F1ED25 /* never.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337B1CBB957F00F1ED25 /* never.png */; };
 		93D233841CBB957F00F1ED25 /* onetimah.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2337D1CBB957F00F1ED25 /* onetimah.png */; };
@@ -230,17 +239,19 @@
 		93269C2E1CE9A5250066E511 /* map_original_capital.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_original_capital.aiff; sourceTree = "<group>"; };
 		93269C2F1CE9A5250066E511 /* map_third_largest_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_third_largest_city.aiff; sourceTree = "<group>"; };
 		93269C301CE9A5250066E511 /* map_umfk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_umfk.aiff; sourceTree = "<group>"; };
-		93269C3B1CE9A7440066E511 /* map_elm_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_elm_city.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_elm_city.aiff"; sourceTree = "<group>"; };
-		93269C3C1CE9A7440066E511 /* map_highest_point.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_highest_point.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_highest_point.aiff"; sourceTree = "<group>"; };
-		93269C3D1CE9A7440066E511 /* map_home_of_beavers.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_home_of_beavers.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_home_of_beavers.aiff"; sourceTree = "<group>"; };
-		93269C3E1CE9A7440066E511 /* map_llbean.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_llbean.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_llbean.aiff"; sourceTree = "<group>"; };
-		93269C3F1CE9A7440066E511 /* map_national_park.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_national_park.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_national_park.aiff"; sourceTree = "<group>"; };
-		93269C401CE9A7440066E511 /* map_oldest_fair.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_oldest_fair.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_oldest_fair.aiff"; sourceTree = "<group>"; };
-		93269C411CE9A7440066E511 /* map_oldest_town.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_oldest_town.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_oldest_town.aiff"; sourceTree = "<group>"; };
-		93269C421CE9A7440066E511 /* map_original_capital.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_original_capital.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_original_capital.aiff"; sourceTree = "<group>"; };
-		93269C431CE9A7440066E511 /* map_third_largest_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_third_largest_city.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_third_largest_city.aiff"; sourceTree = "<group>"; };
-		93269C441CE9A7440066E511 /* map_umfk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_umfk.aiff; path = "SoYouThinkYouKnow/final_audio/map clues/map_umfk.aiff"; sourceTree = "<group>"; };
+		93269C3B1CE9A7440066E511 /* map_elm_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_elm_city.aiff; path = "final_audio/map clues/map_elm_city.aiff"; sourceTree = "<group>"; };
+		93269C3C1CE9A7440066E511 /* map_highest_point.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_highest_point.aiff; path = "final_audio/map clues/map_highest_point.aiff"; sourceTree = "<group>"; };
+		93269C3D1CE9A7440066E511 /* map_home_of_beavers.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_home_of_beavers.aiff; path = "final_audio/map clues/map_home_of_beavers.aiff"; sourceTree = "<group>"; };
+		93269C3E1CE9A7440066E511 /* map_llbean.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_llbean.aiff; path = "final_audio/map clues/map_llbean.aiff"; sourceTree = "<group>"; };
+		93269C3F1CE9A7440066E511 /* map_national_park.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_national_park.aiff; path = "final_audio/map clues/map_national_park.aiff"; sourceTree = "<group>"; };
+		93269C401CE9A7440066E511 /* map_oldest_fair.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_oldest_fair.aiff; path = "final_audio/map clues/map_oldest_fair.aiff"; sourceTree = "<group>"; };
+		93269C411CE9A7440066E511 /* map_oldest_town.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_oldest_town.aiff; path = "final_audio/map clues/map_oldest_town.aiff"; sourceTree = "<group>"; };
+		93269C421CE9A7440066E511 /* map_original_capital.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_original_capital.aiff; path = "final_audio/map clues/map_original_capital.aiff"; sourceTree = "<group>"; };
+		93269C431CE9A7440066E511 /* map_third_largest_city.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_third_largest_city.aiff; path = "final_audio/map clues/map_third_largest_city.aiff"; sourceTree = "<group>"; };
+		93269C441CE9A7440066E511 /* map_umfk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = map_umfk.aiff; path = "final_audio/map clues/map_umfk.aiff"; sourceTree = "<group>"; };
 		93269C451CE9E7FA0066E511 /* wicked_Fast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wicked_Fast.png; path = scoreLabels/wicked_Fast.png; sourceTree = "<group>"; };
+		932D46CC1CEC9FDD00524BA9 /* first_page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_page.png; sourceTree = "<group>"; };
+		932D46CE1CECA16C00524BA9 /* GameCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterViewController.swift; sourceTree = "<group>"; };
 		932D7BC21CC53B42005133C4 /* bonus_coin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bonus_coin1.png; path = Assets.xcassets/bonus_coin1.imageset/bonus_coin1.png; sourceTree = "<group>"; };
 		932E5E0F1CD8AFB9008D9AA5 /* before_lepage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = before_lepage.mp3; path = questions_audio/before_lepage.mp3; sourceTree = "<group>"; };
 		933CD5FC1C9FDA19005C55F2 /* MultipleChoice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MultipleChoice.plist; sourceTree = "<group>"; };
@@ -308,7 +319,7 @@
 		936FCD141CC12B100095E59D /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		936FCD151CC12B100095E59D /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		936FCD161CC12B100095E59D /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
-		937822831CDC931D00CE50A5 /* mcquestion_sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mcquestion_sample.mp3; path = SoYouThinkYouKnow/mcquestion_sample.mp3; sourceTree = "<group>"; };
+		937822831CDC931D00CE50A5 /* mcquestion_sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mcquestion_sample.mp3; sourceTree = "<group>"; };
 		937822841CDCBB4F00CE50A5 /* audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = audio.swift; sourceTree = "<group>"; };
 		938110CD1CC62F5C00B4B0A7 /* welcome_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_sign.png; sourceTree = "<group>"; };
 		938110CF1CC62F7100B4B0A7 /* mult_choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mult_choice.png; sourceTree = "<group>"; };
@@ -375,6 +386,13 @@
 		93C2DF7C1CE0701E00E81D03 /* score_weekend_warrior_short.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_weekend_warrior_short.aiff; sourceTree = "<group>"; };
 		93C2DFA91CE080CF00E81D03 /* ayuhSound2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ayuhSound2.aiff; sourceTree = "<group>"; };
 		93C2DFAB1CE0826500E81D03 /* score_weekend_warrior.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = score_weekend_warrior.aiff; sourceTree = "<group>"; };
+		93C492351CECB1BF0027471C /* EasyGameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
+		93C492371CEDA42A0027471C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		93C492391CEDB33E0027471C /* end_horn.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = end_horn.aiff; path = general_sounds/end_horn.aiff; sourceTree = "<group>"; };
+		93C4923B1CEDB88A0027471C /* map_tap.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_tap.aiff; sourceTree = "<group>"; };
+		93C4923C1CEDB88A0027471C /* correct_answer.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = correct_answer.aiff; sourceTree = "<group>"; };
+		93C4923D1CEDB88A0027471C /* wrong_answer.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = wrong_answer.aiff; sourceTree = "<group>"; };
+		93C492411CEDBBEB0027471C /* map_tap2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = map_tap2.aiff; sourceTree = "<group>"; };
 		93D233781CBB8BF500F1ED25 /* never1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never1.png; path = scoreLabels/never1.png; sourceTree = "<group>"; };
 		93D2337A1CBB957F00F1ED25 /* mainah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainah.png; path = scoreLabels/mainah.png; sourceTree = "<group>"; };
 		93D2337B1CBB957F00F1ED25 /* never.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = never.png; path = scoreLabels/never.png; sourceTree = "<group>"; };
@@ -402,6 +420,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C492381CEDA42A0027471C /* SystemConfiguration.framework in Frameworks */,
 				930497A11C8B3C8F0073B6C9 /* GameKit.framework in Frameworks */,
 				416937D8BA44B3BF7FBC2667 /* libPods.a in Frameworks */,
 			);
@@ -422,17 +441,6 @@
 		930497821C8ADDDC0073B6C9 = {
 			isa = PBXGroup;
 			children = (
-				93269C3B1CE9A7440066E511 /* map_elm_city.aiff */,
-				93269C3C1CE9A7440066E511 /* map_highest_point.aiff */,
-				93269C3D1CE9A7440066E511 /* map_home_of_beavers.aiff */,
-				93269C3E1CE9A7440066E511 /* map_llbean.aiff */,
-				93269C3F1CE9A7440066E511 /* map_national_park.aiff */,
-				93269C401CE9A7440066E511 /* map_oldest_fair.aiff */,
-				93269C411CE9A7440066E511 /* map_oldest_town.aiff */,
-				93269C421CE9A7440066E511 /* map_original_capital.aiff */,
-				93269C431CE9A7440066E511 /* map_third_largest_city.aiff */,
-				93269C441CE9A7440066E511 /* map_umfk.aiff */,
-				937822831CDC931D00CE50A5 /* mcquestion_sample.mp3 */,
 				930497A01C8B3C8F0073B6C9 /* GameKit.framework */,
 				9304978D1C8ADDDD0073B6C9 /* SoYouThinkYouKnow */,
 				9304978C1C8ADDDD0073B6C9 /* Products */,
@@ -484,6 +492,17 @@
 		931622FF1CA539C9007BF21D /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				93269C3B1CE9A7440066E511 /* map_elm_city.aiff */,
+				93269C3C1CE9A7440066E511 /* map_highest_point.aiff */,
+				93269C3D1CE9A7440066E511 /* map_home_of_beavers.aiff */,
+				93269C3E1CE9A7440066E511 /* map_llbean.aiff */,
+				93269C3F1CE9A7440066E511 /* map_national_park.aiff */,
+				93269C401CE9A7440066E511 /* map_oldest_fair.aiff */,
+				93269C411CE9A7440066E511 /* map_oldest_town.aiff */,
+				93269C421CE9A7440066E511 /* map_original_capital.aiff */,
+				93269C431CE9A7440066E511 /* map_third_largest_city.aiff */,
+				93269C441CE9A7440066E511 /* map_umfk.aiff */,
+				937822831CDC931D00CE50A5 /* mcquestion_sample.mp3 */,
 				93C2DF4C1CE0701E00E81D03 /* final_audio */,
 				93DDC0391CDC7A2C00E767C1 /* mcquestion_sample.mp3 */,
 				932E5E0F1CD8AFB9008D9AA5 /* before_lepage.mp3 */,
@@ -524,6 +543,7 @@
 		933CD5FE1C9FE590005C55F2 /* imageQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				932D46CC1CEC9FDD00524BA9 /* first_page.png */,
 				93269C451CE9E7FA0066E511 /* wicked_Fast.png */,
 				936C2EDF1CD0EE6400B7DCF4 /* onetimahfinal.png */,
 				936C2EE01CD0EE6400B7DCF4 /* Transplantfinal.png */,
@@ -638,6 +658,8 @@
 				9315D1481CABA6B7003E4FE0 /* WelcomeViewController.swift */,
 				936FCCEE1CBF80DA0095E59D /* MyCustomPageViewController.swift */,
 				936FCCE81CBF7C290095E59D /* WalkthroughVC1.swift */,
+				932D46CE1CECA16C00524BA9 /* GameCenterViewController.swift */,
+				93C492351CECB1BF0027471C /* EasyGameCenter.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -664,6 +686,7 @@
 		93C2DF4C1CE0701E00E81D03 /* final_audio */ = {
 			isa = PBXGroup;
 			children = (
+				93C492391CEDB33E0027471C /* end_horn.aiff */,
 				93269C261CE9A5250066E511 /* map clues */,
 				93C2DF4D1CE0701E00E81D03 /* general_sounds */,
 				93C2DF561CE0701E00E81D03 /* instructions */,
@@ -676,10 +699,14 @@
 		93C2DF4D1CE0701E00E81D03 /* general_sounds */ = {
 			isa = PBXGroup;
 			children = (
+				93C492411CEDBBEB0027471C /* map_tap2.aiff */,
 				93C2DFA91CE080CF00E81D03 /* ayuhSound2.aiff */,
 				93C2DF4E1CE0701E00E81D03 /* back_up_take_another.aiff */,
 				93C2DF4F1CE0701E00E81D03 /* corker.aiff */,
 				93C2DF501CE0701E00E81D03 /* nailed_that_one_chummy.aiff */,
+				93C4923B1CEDB88A0027471C /* map_tap.aiff */,
+				93C4923C1CEDB88A0027471C /* correct_answer.aiff */,
+				93C4923D1CEDB88A0027471C /* wrong_answer.aiff */,
 				93C2DF511CE0701E00E81D03 /* negative.aiff */,
 				93C2DF521CE0701E00E81D03 /* tend_to_doubt_it.aiff */,
 				93C2DF531CE0701E00E81D03 /* that_aint_right.aiff */,
@@ -750,6 +777,7 @@
 		EACD145F7AA34A1F86356EC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93C492371CEDA42A0027471C /* SystemConfiguration.framework */,
 				31BA4D2335B74A4179ACCBDD /* libPods.a */,
 			);
 			name = Frameworks;
@@ -830,6 +858,7 @@
 			files = (
 				93269C311CE9A5260066E511 /* map_elm_city.aiff in Resources */,
 				93269C321CE9A5260066E511 /* map_highest_point.aiff in Resources */,
+				93C4923E1CEDB88A0027471C /* map_tap.aiff in Resources */,
 				93269C331CE9A5260066E511 /* map_home_of_beavers.aiff in Resources */,
 				93269C341CE9A5260066E511 /* map_llbean.aiff in Resources */,
 				93269C351CE9A5260066E511 /* map_national_park.aiff in Resources */,
@@ -837,6 +866,7 @@
 				93269C371CE9A5260066E511 /* map_oldest_town.aiff in Resources */,
 				93269C381CE9A5260066E511 /* map_original_capital.aiff in Resources */,
 				93269C391CE9A5260066E511 /* map_third_largest_city.aiff in Resources */,
+				932D46CD1CEC9FDD00524BA9 /* first_page.png in Resources */,
 				93269C3A1CE9A5260066E511 /* map_umfk.aiff in Resources */,
 				93C2DF891CE0701E00E81D03 /* mc_before_lepage.aiff in Resources */,
 				93C2DF831CE0701E00E81D03 /* wicked_pissah.aiff in Resources */,
@@ -855,6 +885,7 @@
 				93C2DFA31CE0701E00E81D03 /* score_transplant.aiff in Resources */,
 				93D233861CBB957F00F1ED25 /* trueblue.png in Resources */,
 				938110D31CC62F8400B4B0A7 /* maine_maps.png in Resources */,
+				93C492421CEDBBEB0027471C /* map_tap2.aiff in Resources */,
 				93C12C5A1CBAA33900FFC17A /* mainah.png in Resources */,
 				938110E21CC758F500B4B0A7 /* opening_graphic4_iphone5.png in Resources */,
 				933CD61B1C9FE5D0005C55F2 /* maine_state_flower.png in Resources */,
@@ -865,6 +896,7 @@
 				9303013E1CBE351800A38ED7 /* maps_instructions1.png in Resources */,
 				938110E11CC758F500B4B0A7 /* opening_graphic4_ipadRetina.png in Resources */,
 				93C2DF9F1CE0701E00E81D03 /* score_never_been_heah.aiff in Resources */,
+				93C492401CEDB88A0027471C /* wrong_answer.aiff in Resources */,
 				936C2EE71CD0EE6400B7DCF4 /* weekendwarriorfinal.png in Resources */,
 				933CD6181C9FE5D0005C55F2 /* judd_nelsonj_nelson1x.png in Resources */,
 				936FCD261CC12B100095E59D /* LoadingView.xib in Resources */,
@@ -878,6 +910,7 @@
 				933D1E891C91789B0061B205 /* RightOrWrong.plist in Resources */,
 				93C2DF851CE0701E00E81D03 /* map_instructions.aiff in Resources */,
 				93C2DF841CE0701E00E81D03 /* yessir.aiff in Resources */,
+				93C4923F1CEDB88A0027471C /* correct_answer.aiff in Resources */,
 				93D233821CBB957F00F1ED25 /* never.png in Resources */,
 				930301471CBE390800A38ED7 /* onetimahsmall.png in Resources */,
 				936C2EE81CD0EE6400B7DCF4 /* mainahfinal.png in Resources */,
@@ -900,6 +933,7 @@
 				93C2DF991CE0701E00E81D03 /* mc_senators.aiff in Resources */,
 				936FCD231CC12B100095E59D /* Info.plist in Resources */,
 				936FCCF51CBFBB910095E59D /* horn.wav in Resources */,
+				93C4923A1CEDB33E0027471C /* end_horn.aiff in Resources */,
 				9315D1401CAAAFCE003E4FE0 /* Locations.plist in Resources */,
 				93C2DF9A1CE0701E00E81D03 /* mc_smallest_county.aiff in Resources */,
 				93D233841CBB957F00F1ED25 /* onetimah.png in Resources */,
@@ -1034,6 +1068,7 @@
 				9304978F1C8ADDDD0073B6C9 /* AppDelegate.swift in Sources */,
 				93DFB5FA1C90335200A1F99D /* ScoreViewController.swift in Sources */,
 				936FCD2B1CC12B100095E59D /* SpringButton.swift in Sources */,
+				932D46CF1CECA16C00524BA9 /* GameCenterViewController.swift in Sources */,
 				936FCD281CC12B100095E59D /* SoundPlayer.swift in Sources */,
 				936FCD1D1CC12B100095E59D /* DesignableLabel.swift in Sources */,
 				936FCD1F1CC12B100095E59D /* DesignableTextField.swift in Sources */,
@@ -1044,6 +1079,7 @@
 				936FCD201CC12B100095E59D /* DesignableTextView.swift in Sources */,
 				936FCD311CC12B100095E59D /* TransitionManager.swift in Sources */,
 				936FCD211CC12B100095E59D /* DesignableView.swift in Sources */,
+				93C492361CECB1BF0027471C /* EasyGameCenter.swift in Sources */,
 				93DFB5F81C90333500A1F99D /* TrueFalseViewController.swift in Sources */,
 				933D1E8B1C917ACE0061B205 /* Configuration.swift in Sources */,
 				93B472DE1C99890B003E66F5 /* Extensions.swift in Sources */,

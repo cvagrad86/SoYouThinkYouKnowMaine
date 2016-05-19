@@ -298,6 +298,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>219DAAFF508A02533FA004F0054C0C28</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B87EA378BBD3B5FF5567AFDD3D49DC02</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>22A156810076F6D1A7E3B62042878526</key>
 		<dict>
 			<key>fileRef</key>
@@ -535,7 +548,7 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>BF6239712676CA04BED3131139C66B38</string>
+				<string>219DAAFF508A02533FA004F0054C0C28</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1462,6 +1475,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>B87EA378BBD3B5FF5567AFDD3D49DC02</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>GoogleMobileAds.framework</string>
+			<key>path</key>
+			<string>Frameworks/GoogleMobileAds.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1509,19 +1535,6 @@
 			<string>default_marker@2x.png</string>
 			<key>path</key>
 			<string>Mapbox.framework/Mapbox.bundle/default_marker@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF6239712676CA04BED3131139C66B38</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C6B331263462DB19983E350A6380AC4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1617,19 +1630,6 @@
 			<string>Compass@3x.png</string>
 			<key>path</key>
 			<string>Mapbox.framework/Mapbox.bundle/Compass@3x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C6B331263462DB19983E350A6380AC4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleMobileAds.framework</string>
-			<key>path</key>
-			<string>GoogleMobileAdsSdkiOS-7.7.1/GoogleMobileAds.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

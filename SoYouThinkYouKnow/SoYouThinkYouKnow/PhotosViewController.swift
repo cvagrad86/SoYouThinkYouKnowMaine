@@ -50,6 +50,7 @@ class PhotosViewController: UIViewController {
             button1.enabled = false
             button2.enabled = false
             button3.enabled = false
+            correctAudio ()
             currentScore = currentScore - (counter * 10)
             userScore.text = "Your score = \(currentScore)"
             
@@ -68,6 +69,7 @@ class PhotosViewController: UIViewController {
         } else {
             sender.backgroundColor = UIColor.redColor()
             counter += 5
+            incorrectAudio ()
         }
        
         Scoring.sharedGameData.photoscore = currentScore
@@ -79,7 +81,7 @@ class PhotosViewController: UIViewController {
         }
         if counter < 1 {
             bonusPoints()
-            print(counter)
+            
         }
     }
     
@@ -116,6 +118,7 @@ class PhotosViewController: UIViewController {
             questionIdx += 1
         } else {
             showAlert()
+            endAudio()
         }
         //nextQuestion()
         unHide()
@@ -152,6 +155,39 @@ class PhotosViewController: UIViewController {
     func bonusAudio () {
         do {
             audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bonus_sound1", ofType: "mp3")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
+    func correctAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("correct_answer", ofType: "aiff")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
+    func incorrectAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("wrong_answer", ofType: "aiff")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
+    func endAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("end_horn", ofType: "aiff")!))
             
             audioPlayer!.play()
             

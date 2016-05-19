@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         //welcomeSign.enabled = true
     
         openingAudio()
-        
+        EGC.sharedInstance(self)
         loadQuizData()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToMultChoice(_:)), name: "endOfRoundOne", object: nil)
@@ -79,6 +79,12 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.goToMaps(_:)), name: "endOfRoundThree", object: nil)
     
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        EGC.delegate = self
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -149,12 +155,7 @@ class ViewController: UIViewController {
     }
     
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-
-        
-    }
+  
     
     
    
