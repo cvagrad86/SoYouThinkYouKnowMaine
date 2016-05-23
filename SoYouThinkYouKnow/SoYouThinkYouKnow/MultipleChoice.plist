@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>Question</key>
+			<string>Who was governor before LePage?</string>
+			<key>Audio</key>
+			<string>mc_before_lepage</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>back_up_take_another</string>
+			<key>CorrectAnswer</key>
+			<string>John Baldacci</string>
+			<key>Answers</key>
+			<array>
+				<string>Angus King</string>
+				<string>John Baldacci</string>
+				<string>Joshua Chamberlain</string>
+				<string>Who cares?</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which of these is NOT a county in Maine?</string>
+			<key>CorrectAudio</key>
+			<string>corker</string>
+			<key>IncorrectAudio</key>
+			<string>back_up_take_another</string>
+			<key>Audio</key>
+			<string>mc_county_in_maine</string>
+			<key>CorrectAnswer</key>
+			<string>Strafford</string>
+			<key>Answers</key>
+			<array>
+				<string>Cumberland</string>
+				<string>Washington</string>
+				<string>Franklin</string>
+				<string>Strafford</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>US Route 1 extends from Florida all the way to which Maine town?</string>
+			<key>Audio</key>
+			<string>mc_us_route_one</string>
+			<key>CorrectAudio</key>
+			<string>nailed_that_one_chummy</string>
+			<key>IncorrectAudio</key>
+			<string>negative</string>
+			<key>CorrectAnswer</key>
+			<string>Fort Kent</string>
+			<key>Answers</key>
+			<array>
+				<string>Fort Kent</string>
+				<string>Houlton</string>
+				<string>Greenville</string>
+				<string>Aroostook</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which mountain is the SECOND highest in Maine?</string>
+			<key>Audio</key>
+			<string>mc_second_highest_mtn</string>
+			<key>CorrectAudio</key>
+			<string>ata_boy</string>
+			<key>IncorrectAudio</key>
+			<string>that_aint_right</string>
+			<key>CorrectAnswer</key>
+			<string>Sugarloaf</string>
+			<key>Answers</key>
+			<array>
+				<string>Saddleback</string>
+				<string>Katahdin</string>
+				<string>Sugarloaf</string>
+				<string>Mount Battie</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which is Maine&apos;s most lucrative($$$) export?</string>
+			<key>Audio</key>
+			<string>mc_lucrative_export</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>dont_be_so_foolish_bw</string>
+			<key>CorrectAnswer</key>
+			<string>Lobster</string>
+			<key>Answers</key>
+			<array>
+				<string>Lobster</string>
+				<string>Lumber</string>
+				<string>Paper</string>
+				<string>Blueberries</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What does L.L. in L.L. Bean stand for?</string>
+			<key>Audio</key>
+			<string>mc_ll_bean</string>
+			<key>CorrectAudio</key>
+			<string>corker</string>
+			<key>IncorrectAudio</key>
+			<string>tend_to_doubt_it</string>
+			<key>CorrectAnswer</key>
+			<string>Leon Leonwood</string>
+			<key>Answers</key>
+			<array>
+				<string>Unknown?</string>
+				<string>Leon Leonwood</string>
+				<string>Little Lenny</string>
+				<string>Larry Latter</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which of these is closest to Maine&apos;s current population?</string>
+			<key>Audio</key>
+			<string>mc_current_population</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>wicked_pissah</string>
+			<key>CorrectAnswer</key>
+			<string>1,300,000</string>
+			<key>Answers</key>
+			<array>
+				<string>1,000,000</string>
+				<string>1,900,000</string>
+				<string>1,300,000</string>
+				<string>950,000</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>How does Maine&apos;s land size compare to the rest of the country?</string>
+			<key>Audio</key>
+			<string>mc_land_size</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>tend_to_doubt_it</string>
+			<key>CorrectAnswer</key>
+			<string>39th largest</string>
+			<key>Answers</key>
+			<array>
+				<string>12th largest</string>
+				<string>39th largest</string>
+				<string>41st largest</string>
+				<string>25th largest</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>How many Senators in the MAINE Senate(not Washington D.C.)</string>
+			<key>Audio</key>
+			<string>mc_senators</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>try_again_mc</string>
+			<key>CorrectAnswer</key>
+			<string>35</string>
+			<key>Answers</key>
+			<array>
+				<string>Maine has a Senate?</string>
+				<string>35</string>
+				<string>151</string>
+				<string>9</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is the official motto of Maine?</string>
+			<key>Audio</key>
+			<string>mc_motto</string>
+			<key>CorrectAudio</key>
+			<string>nailed_that_one_chummy</string>
+			<key>IncorrectAudio</key>
+			<string>that_aint_right</string>
+			<key>CorrectAnswer</key>
+			<string>Dirigo</string>
+			<key>Answers</key>
+			<array>
+				<string>Dirigo</string>
+				<string>Vacationland</string>
+				<string>Live free or die</string>
+				<string>Pine Street State</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which is the smallest of Maine&apos;s counties in terms of land size?</string>
+			<key>Audio</key>
+			<string>mc_smallest_county</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>tend_to_doubt_it</string>
+			<key>CorrectAnswer</key>
+			<string>Sagadahoc</string>
+			<key>Answers</key>
+			<array>
+				<string>Somerset</string>
+				<string>York</string>
+				<string>Lincoln</string>
+				<string>Sagadahoc</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is Maine&apos;s longest river(starting and ending in Maine)?</string>
+			<key>Audio</key>
+			<string>mc_longest_river</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>wicked_pissah</string>
+			<key>CorrectAnswer</key>
+			<string>Kennebec</string>
+			<key>Answers</key>
+			<array>
+				<string>Saint John River</string>
+				<string>Saco</string>
+				<string>Kennebec</string>
+				<string>Penobscot</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which of these famous people is NOT from Maine?</string>
+			<key>Audio</key>
+			<string>mc_famous_people</string>
+			<key>CorrectAudio</key>
+			<string>ayuhSound2</string>
+			<key>IncorrectAudio</key>
+			<string>tend_to_doubt_it</string>
+			<key>CorrectAnswer</key>
+			<string>Dan Brown(novelist)</string>
+			<key>Answers</key>
+			<array>
+				<string>Liv Tyler(actress)</string>
+				<string>Dan Brown(novelist)</string>
+				<string>Stephen King(author)</string>
+				<string>Judd Nelson(actor)</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which of these firsts did NOT happen in Maine?</string>
+			<key>Audio</key>
+			<string>mc_firsts</string>
+			<key>CorrectAudio</key>
+			<string>nailed_that_one_chummy</string>
+			<key>IncorrectAudio</key>
+			<string>back_up_take_another</string>
+			<key>CorrectAnswer</key>
+			<string>Legal Lottery in 1963</string>
+			<key>Answers</key>
+			<array>
+				<string>Navel Battle of Revolutionary war(Machias)</string>
+				<string>Ship built by English colonists in Americas.</string>
+				<string>Sawmill in US was established near York in 1623</string>
+				<string>Legal Lottery in 1963</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Why is Joshua Chamberlain so well known?</string>
+			<key>Audio</key>
+			<string>mc_joshua_chamberlain</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>negative</string>
+			<key>CorrectAnswer</key>
+			<string>all of these are correct</string>
+			<key>Answers</key>
+			<array>
+				<string>Famous General from the Civil War</string>
+				<string>all of these are correct</string>
+				<string>Governor of Maine</string>
+				<string>President of Bowdoin College</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>What is the easternmost point in Maine(and the US)?</string>
+			<key>Audio</key>
+			<string>mc_eastermost_point</string>
+			<key>CorrectAudio</key>
+			<string>ayuh_ayuh_ayuh_bw</string>
+			<key>IncorrectAudio</key>
+			<string>numb_mc</string>
+			<key>CorrectAnswer</key>
+			<string>West Quoddy Head</string>
+			<key>Answers</key>
+			<array>
+				<string>West Quoddy Head</string>
+				<string>Eastport</string>
+				<string>Dont know, never been past Bangor</string>
+				<string>Bar Harbor</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine is the number 1 producer of what?</string>
+			<key>Audio</key>
+			<string>mc_number_one_producer</string>
+			<key>CorrectAudio</key>
+			<string>nailed_that_one_chummy</string>
+			<key>IncorrectAudio</key>
+			<string>tend_to_doubt_it</string>
+			<key>CorrectAnswer</key>
+			<string>Blueberries</string>
+			<key>Answers</key>
+			<array>
+				<string>Potholes</string>
+				<string>Blueberries</string>
+				<string>Embarrassing governors</string>
+				<string>Paper</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>The official insect of Maine is?</string>
+			<key>Audio</key>
+			<string>mc_insect</string>
+			<key>CorrectAudio</key>
+			<string>yessir</string>
+			<key>IncorrectAudio</key>
+			<string>wicked_pissah</string>
+			<key>CorrectAnswer</key>
+			<string>Honeybee</string>
+			<key>Answers</key>
+			<array>
+				<string>Honeybee</string>
+				<string>Bald Eagle</string>
+				<string>Monarch Butterfly</string>
+				<string>Chickadee</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine became a state as part of the _______________ Compromise.</string>
+			<key>Audio</key>
+			<string>mc_missouri_compromise</string>
+			<key>IncorrectAudio</key>
+			<string>back_up_take_another</string>
+			<key>CorrectAudio</key>
+			<string>ayuhSound2</string>
+			<key>CorrectAnswer</key>
+			<string>Missouri</string>
+			<key>Answers</key>
+			<array>
+				<string>French and Indian</string>
+				<string>Boston</string>
+				<string>Wicked Nice</string>
+				<string>Missouri</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Which of these is not one of Maine&apos;s top 5 largest cities/towns in terms of population?</string>
+			<key>Audio</key>
+			<string>mc_top5_populations</string>
+			<key>CorrectAudio</key>
+			<string>nailed_that_one_chummy</string>
+			<key>IncorrectAudio</key>
+			<string>negative</string>
+			<key>CorrectAnswer</key>
+			<string>Biddeford</string>
+			<key>Answers</key>
+			<array>
+				<string>South Portland</string>
+				<string>Lewiston</string>
+				<string>Biddeford</string>
+				<string>Bangor</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

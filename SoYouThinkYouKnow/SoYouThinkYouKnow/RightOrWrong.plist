@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>Question</key>
+			<string>University of Maine&apos;s largest campus is located in Orono. </string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine&apos;s governor serves 1 six year term.</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>York is only name in Maine that is shared by city/town AND county. </string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine&apos;s government consists of Governor, Board of Trutees, and Supreme Court</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine has 2 U.S. Senators - Susan Collins and Angus King</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Augusta is Maine&apos;s capital and it is in Oxford County. </string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Margaret Chase Smith was Maine&apos;s first female governor. </string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine used to be part of Massachusetts</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine is only state with only one syllable</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Sugarloaf is Maine&apos;s highest mountain</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Penobscot is Maine&apos;s largest(area/size) county.</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine is the least populated state in the United States.</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine became a state in 1820.</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>A Mainer has never been Vice President of the United States. </string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Augusta has always been Maine&apos;s capital city.</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Sebago is Maine&apos;s largest lake.</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine was the 35th state to join the US.</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine has 22 counties</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>The Moose is the official state animal in Maine</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine is the only state bordered by only one other state. </string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Geographically Maine is bigger than the other five New England States combined.</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine&apos;s Aroostook County is larger than Connecticut and Rhode Island combined</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>William King was Maine&apos;s first governor</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>Maine is one of only two states that can split their electoral votes in the presidential election.</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>The Maine state flag includes a mule deer in the center of the emblem.</string>
+			<key>CorrectAnswer</key>
+			<string>Nope</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>No person from Maine has ever been president. </string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+		<dict>
+			<key>Question</key>
+			<string>The governor of Maine receives a salary of $70,000, which as of 2013 is the lowest of the 50 state governors.</string>
+			<key>CorrectAnswer</key>
+			<string>Ayuh</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Places</key>
+	<array>
+		<dict>
+			<key>lat</key>
+			<real>43.161748</real>
+			<key>long</key>
+			<real>-70.648258</real>
+			<key>title</key>
+			<string>York</string>
+			<key>hint</key>
+			<string>Click on Maine&apos;s oldest city/town</string>
+		</dict>
+	</array>
+</dict>
+</plist>
