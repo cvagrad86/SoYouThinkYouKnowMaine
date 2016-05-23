@@ -148,6 +148,14 @@ At the moment it's only used to perform custom animations on didScroll.
         
         pageControl?.numberOfPages = controllers.count
         pageControl?.currentPage = 0
+        
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("true_false_instructions", ofType: "aiff")!))
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
     }
     
     

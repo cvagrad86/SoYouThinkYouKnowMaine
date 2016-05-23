@@ -16,9 +16,6 @@ class ScoreViewController: UIViewController {
 
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var yourScoreLabel: UIImageView!
-   
-    
-    
     @IBOutlet weak var nextRoundImage: UIImageView!
     @IBOutlet weak var moveToNextRound: UIButton!
 
@@ -27,11 +24,6 @@ class ScoreViewController: UIViewController {
     var overallGameScore = Int()
     var audioPlayer: AVAudioPlayer?
 
-    //var roundOne = Scoring.sharedGameData.tfscore
-    //var roundTwo = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore)
-    //var roundThree = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore + Scoring.sharedGameData.photoscore)
-   // var roundFour = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore + Scoring.sharedGameData.photoscore + Scoring.sharedGameData.mapsscore)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,8 +40,9 @@ class ScoreViewController: UIViewController {
         self.yourScoreLabel.center.x = 32
         self.yourScoreLabel.center.y = 200
         self.yourScoreLabel.alpha = 1.0
+        //self.yourScoreLabel.contentMode = .ScaleAspectFit
+        //self.view.addSubview(self.yourScoreLabel)
         }), completion: nil)
-        
         
         bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"
         bannerView.rootViewController = self
@@ -360,7 +353,7 @@ class ScoreViewController: UIViewController {
         
         nextRoundImage.backgroundColor = UIColor(patternImage: UIImage(named: "the_end_sign copy.png")!)
         
-        //Scoring.sharedGameData.overallscore = roundFour
+       
     }
     
     

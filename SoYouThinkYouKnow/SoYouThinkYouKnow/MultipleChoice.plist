@@ -67,7 +67,7 @@
 			<key>Audio</key>
 			<string>mc_second_highest_mtn</string>
 			<key>CorrectAudio</key>
-			<string>yessir</string>
+			<string>ata_boy</string>
 			<key>IncorrectAudio</key>
 			<string>that_aint_right</string>
 			<key>CorrectAnswer</key>
@@ -88,7 +88,7 @@
 			<key>CorrectAudio</key>
 			<string>yessir</string>
 			<key>IncorrectAudio</key>
-			<string>tend_to_doubt_it</string>
+			<string>dont_be_so_foolish_bw</string>
 			<key>CorrectAnswer</key>
 			<string>Lobster</string>
 			<key>Answers</key>
@@ -164,7 +164,7 @@
 			<key>CorrectAudio</key>
 			<string>yessir</string>
 			<key>IncorrectAudio</key>
-			<string>back_up_take_another</string>
+			<string>try_again_mc</string>
 			<key>CorrectAnswer</key>
 			<string>35</string>
 			<key>Answers</key>
@@ -295,9 +295,9 @@
 			<key>Audio</key>
 			<string>mc_eastermost_point</string>
 			<key>CorrectAudio</key>
-			<string>yessir</string>
+			<string>ayuh_ayuh_ayuh_bw</string>
 			<key>IncorrectAudio</key>
-			<string>wicked_pissah</string>
+			<string>numb_mc</string>
 			<key>CorrectAnswer</key>
 			<string>West Quoddy Head</string>
 			<key>Answers</key>

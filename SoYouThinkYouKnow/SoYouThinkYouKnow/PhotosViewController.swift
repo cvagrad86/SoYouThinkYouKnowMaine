@@ -103,7 +103,7 @@ class PhotosViewController: UIViewController {
         button3.layer.borderWidth = 2
         button3.layer.borderColor = UIColor.blackColor().CGColor
         
-        imgArray!.shuffle()
+        //imgArray!.shuffle()
         timerLabel.hidden = true
         
         bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"

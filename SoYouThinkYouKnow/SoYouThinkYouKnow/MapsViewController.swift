@@ -67,9 +67,6 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             singleTap.requireGestureRecognizerToFail(doubleTap)
             mapView!.addGestureRecognizer(singleTap)
         
-            
-            var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.3235,
-                longitude: -69.1653), zoomLevel: 5.8, animated: false)
 
             let addSpot = UILongPressGestureRecognizer(target: self, action: "action:")
             addSpot.minimumPressDuration = 1
@@ -81,10 +78,14 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             self.view.addSubview(distanceBetweenSpots)
             self.view.addSubview(nextButton)
             
+            mapSizes()
+            
             
             bannerView.adUnitID = "ca-app-pub-2234370748694357/4389721028"
             bannerView.rootViewController = self
             bannerView.loadRequest(GADRequest())
+            
+            
         }
     
     @IBAction func nextMap(sender: AnyObject) {
@@ -95,7 +96,41 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
         bonusCoin.hidden = true
         
             }
-    
+    func mapSizes () {
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Phone) {
+            //iPhone
+            if Device.IS_3_5_INCHES() {
+                //iPhone 4
+                
+                var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.2235,
+                    longitude: -69.2753), zoomLevel: 5.2, animated: false)
+            } else if Device.IS_4_INCHES() {
+                //iPhone 5
+                print("iPhone 5")
+                var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.2800,
+                    longitude: -69.1653), zoomLevel: 5.55, animated: false)
+            } else if Device.IS_4_7_INCHES() {
+                //iPhone 6
+                print("iPhone 6")
+                var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.2235,
+                    longitude: -69.1653), zoomLevel: 5.8, animated: false)
+            } else {
+                if Device.IS_5_5_INCHES() {
+                    //iPhone 6plus
+                    print("iPhone 6plus")
+                    var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.2235,
+                        longitude: -69.1653), zoomLevel: 6.0, animated: false)
+                    
+                }
+            }
+        }
+        
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
+            var centerScreenPoint = mapView!.setCenterCoordinate(CLLocationCoordinate2D(latitude: 45.3,
+                longitude: -69.1653), zoomLevel: 6.55, animated: false)
+        }
+
+    }
     func bonusPoints () {
        
         bonus += 1
@@ -165,6 +200,17 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             print("Error")
         }
     }
+    
+    func wayOffAudio () {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("way_off_base_mc", ofType: "aiff")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
         
         func handleSingleTap(tap: UITapGestureRecognizer) {
             // convert tap location (CGPoint)
@@ -194,6 +240,10 @@ class MapsViewController: UIViewController, MGLMapViewDelegate  {
             if distance < 5.0 {
                 bonusCoin.hidden = false
                 bonusPoints()
+            }
+            
+            if distance > 100.0 {
+                wayOffAudio()
             }
             nextButton.hidden = false
         

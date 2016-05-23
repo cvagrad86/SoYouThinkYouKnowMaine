@@ -1,0 +1,16 @@
+PODS:
+  - Canvas (0.1.2)
+  - Google-Mobile-Ads-SDK (7.8.1)
+  - Mapbox-iOS-SDK (3.0.1)
+
+DEPENDENCIES:
+  - Canvas (~> 0.1)
+  - Google-Mobile-Ads-SDK (~> 7.0)
+  - Mapbox-iOS-SDK
+
+SPEC CHECKSUMS:
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  Google-Mobile-Ads-SDK: 3c2a6656117989469bfe7645640aa1de024a4c6c
+  Mapbox-iOS-SDK: 61e79f3dd8432617bd1a66b2d7273ab5ce923ca9
+
+COCOAPODS: 0.39.0

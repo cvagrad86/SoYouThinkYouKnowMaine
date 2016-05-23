@@ -11,6 +11,8 @@ import Social
 import GameplayKit
 import GameKit
 import GameController
+import AVKit
+import AVFoundation
 
 
 class FinalViewController: UIViewController {
@@ -41,6 +43,7 @@ class FinalViewController: UIViewController {
     var roundFour = (Scoring.sharedGameData.tfscore + Scoring.sharedGameData.mcscore + Scoring.sharedGameData.photoscore + Scoring.sharedGameData.mapsscore)
     
     var bonus = Scoring.sharedGameData.bonusPoints
+    var audioplayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         
@@ -68,17 +71,17 @@ class FinalViewController: UIViewController {
         endofSecondRound ()
         endofThirdRound ()
         overallScore ()
-        
-      
+    
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        finalAudio()
     }
     func bonusAdded(notification: NSNotification) {
        
         
-        
-        
-        //self.bonusCoin.hidden = false
         self.bonusCoin.backgroundColor = UIColor(patternImage: UIImage(named: "bonus_coin1.png")!)
-        print("bonus added")
+        
     }
     
     
@@ -191,7 +194,28 @@ class FinalViewController: UIViewController {
         print(Scoring.sharedGameData.bonusPoints)
         
         if case 0 ... 150 = Scoring.sharedGameData.overallscore {
-            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final.png")!)
+            if (UIDevice.currentDevice().userInterfaceIdiom == .Phone) {
+                //iPhone
+                if Device.IS_3_5_INCHES() {
+                    //iPhone 4
+                    finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final125.png")!)
+                } else if Device.IS_4_INCHES() {
+                    //iPhone 5
+                    finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final125.png")!)
+                } else if Device.IS_4_7_INCHES() {
+                    //iPhone 6
+                    finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final196.png")!)
+                } else {
+                    if Device.IS_5_5_INCHES() {
+                        //iPhone 6plus
+                        finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final.png")!)
+                    }
+                }
+            }
+            if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
+                finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final.png")!)
+            }
+            
         }
         if case 150 ... 299 = Scoring.sharedGameData.overallscore {
             finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "onetimahfinal.png")!)
@@ -211,13 +235,34 @@ class FinalViewController: UIViewController {
         
     }
     
+    func finalAudio() {
+        do {
+            audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("share_score_mc", ofType: "aiff")!))
+            
+            audioPlayer!.play()
+            
+        } catch {
+            print("Error")
+        }
+    }
+    
     @IBAction func tweetButton(sender: AnyObject) {
         
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             
-            var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let screen = UIScreen.mainScreen()
             
-            self.presentViewController(tweetShare, animated: true, completion: nil)
+            if let window = UIApplication.sharedApplication().keyWindow {
+                UIGraphicsBeginImageContextWithOptions(screen.bounds.size, false, 0);
+                window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
+                let image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                
+                let composeSheet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                composeSheet.setInitialText("My high score on So you Think you know Maine...can you beat it?? Go download it from the App store!! #soyouthinkyouknowmaine")
+                composeSheet.addImage(image)
+                
+                presentViewController(composeSheet, animated: true, completion: nil)
             
         } else {
             
@@ -228,8 +273,9 @@ class FinalViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
+    }
     
-    
+    /*
     @IBAction func fbButton(sender: AnyObject) {
         
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
@@ -244,6 +290,44 @@ class FinalViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
+    */
+    
+    
+    @IBAction func fbScreenShotShare(sender: AnyObject) {
+        
+        let screen = UIScreen.mainScreen()
+        
+        if let window = UIApplication.sharedApplication().keyWindow {
+            UIGraphicsBeginImageContextWithOptions(screen.bounds.size, false, 0);
+            window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
+            let image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            let composeSheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            composeSheet.setInitialText("My high score on So you Think you know Maine...can you beat it?? Go download it from the App store!!")
+            composeSheet.addImage(image)
+            
+            presentViewController(composeSheet, animated: true, completion: nil)
+        }
+        
+    }
+        /*
+        var postPhrase = "New high score \((Scoring.sharedGameData.overallscore))!"
+        
+        //Generate the screenshot
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        var image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        var postImage = UIImage(named: "\(image)")
+        
+        let shareToFacebook = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        shareToFacebook.setInitialText(postPhrase)
+        shareToFacebook.addImage(postImage)
+        presentViewController(shareToFacebook, animated: true, completion: nil)
+ */
+    
     
     @IBAction func gameCenter(sender: AnyObject) {
         saveHighscore(Scoring.sharedGameData.overallscore)
@@ -294,12 +378,13 @@ class FinalViewController: UIViewController {
         let gcvc = GKGameCenterViewController()
         
         //gcvc.gameCenterDelegate = self
+       
         
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
             self.presentViewController(gcvc, animated: true, completion: { _ in })
         })
         
-        viewController?.presentViewController(gcvc, animated: true, completion: nil)
+        //viewController?.presentViewController(gcvc, animated: true, completion: nil)
     }
     
     
@@ -307,5 +392,30 @@ class FinalViewController: UIViewController {
         gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
         
     }
+    
+    func scoreSizes () {
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Phone) {
+            //iPhone
+            if Device.IS_3_5_INCHES() {
+                //iPhone 4
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final125.png")!)
+            } else if Device.IS_4_INCHES() {
+                //iPhone 5
+                finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final125.png")!)
+            } else if Device.IS_4_7_INCHES() {
+                //iPhone 6
+                finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final196.png")!)
+            } else {
+                if Device.IS_5_5_INCHES() {
+                    //iPhone 6plus
+                    finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final.png")!)
+                }
+            }
+        }
+        
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
+            finalScoreImage.backgroundColor = UIColor(patternImage: UIImage(named: "never1final.png")!)
+        }
 
+}
 }
